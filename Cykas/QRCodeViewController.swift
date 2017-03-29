@@ -14,6 +14,7 @@ class QRCodeViewController: UIViewController ,AVCaptureMetadataOutputObjectsDele
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        //Ciao
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
