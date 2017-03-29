@@ -15,6 +15,8 @@
 		13DC5AC81E8BC7AF00EBC24F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DC5AC61E8BC7AF00EBC24F /* LaunchScreen.storyboard */; };
 		13DC5AD31E8BC7AF00EBC24F /* CykasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5AD21E8BC7AF00EBC24F /* CykasTests.swift */; };
 		13DC5ADE1E8BC7AF00EBC24F /* CykasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */; };
+		9D6CEB391E8BFBF800DEB1D2 /* DBPathRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CEB381E8BFBF800DEB1D2 /* DBPathRecognizer.swift */; };
+		9D6CEB3B1E8BFDBC00DEB1D2 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CEB3A1E8BFDBC00DEB1D2 /* RenderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		13DC5AD91E8BC7AF00EBC24F /* CykasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CykasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CykasUITests.swift; sourceTree = "<group>"; };
 		13DC5ADF1E8BC7AF00EBC24F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D6CEB381E8BFBF800DEB1D2 /* DBPathRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPathRecognizer.swift; sourceTree = "<group>"; };
+		9D6CEB3A1E8BFDBC00DEB1D2 /* RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				13DC5AC61E8BC7AF00EBC24F /* LaunchScreen.storyboard */,
 				13DC5AC91E8BC7AF00EBC24F /* Info.plist */,
 				13DC5AC11E8BC7AF00EBC24F /* Cykas.xcdatamodeld */,
+				9D6CEB381E8BFBF800DEB1D2 /* DBPathRecognizer.swift */,
+				9D6CEB3A1E8BFDBC00DEB1D2 /* RenderView.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -196,7 +202,7 @@
 				TargetAttributes = {
 					13DC5AB61E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = HXS684F792;
+						DevelopmentTeam = BRD4WW9Y7C;
 						ProvisioningStyle = Automatic;
 					};
 					13DC5ACD1E8BC7AF00EBC24F = {
@@ -265,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6CEB3B1E8BFDBC00DEB1D2 /* RenderView.swift in Sources */,
+				9D6CEB391E8BFBF800DEB1D2 /* DBPathRecognizer.swift in Sources */,
 				13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */,
 				13DC5AC31E8BC7AF00EBC24F /* Cykas.xcdatamodeld in Sources */,
 				13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */,
@@ -419,10 +427,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HXS684F792;
+				DEVELOPMENT_TEAM = BRD4WW9Y7C;
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio.Cykas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -432,10 +440,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HXS684F792;
+				DEVELOPMENT_TEAM = BRD4WW9Y7C;
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio.Cykas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -518,6 +526,7 @@
 				13DC5AE41E8BC7AF00EBC24F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13DC5AE51E8BC7AF00EBC24F /* Build configuration list for PBXNativeTarget "CykasTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +535,7 @@
 				13DC5AE71E8BC7AF00EBC24F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13DC5AE81E8BC7AF00EBC24F /* Build configuration list for PBXNativeTarget "CykasUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +544,7 @@
 				13DC5AEA1E8BC7AF00EBC24F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

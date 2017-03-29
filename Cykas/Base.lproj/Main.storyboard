@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCode Reader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4T-Za-fON" userLabel="title">
+                                <rect key="frame" x="16" y="50" width="343" height="27"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="         " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k0-kZ-gl6" userLabel="messageLabel">
+                                <rect key="frame" x="16" y="628" width="343" height="21"/>
+                                <color key="backgroundColor" red="0.74759148316062174" green="0.74759148316062174" blue="0.74759148316062174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQJ-IR-xdq" userLabel="gestureLabel">
+                                <rect key="frame" x="161" y="85" width="198" height="27"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.019891490399700729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.97603131807998145" green="0.9969994867838885" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5k0-kZ-gl6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Up-0l-Xaa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5k0-kZ-gl6" secondAttribute="trailing" id="5EN-V9-sPY"/>
+                            <constraint firstItem="sQJ-IR-xdq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BzF-Gs-7fd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5k0-kZ-gl6" secondAttribute="bottom" constant="18" id="VIx-7F-Pb7"/>
+                            <constraint firstItem="E4T-Za-fON" firstAttribute="trailing" secondItem="sQJ-IR-xdq" secondAttribute="trailing" id="cJC-KZ-wd6"/>
+                            <constraint firstItem="sQJ-IR-xdq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="145" id="ccN-20-nhe"/>
+                            <constraint firstItem="sQJ-IR-xdq" firstAttribute="top" secondItem="E4T-Za-fON" secondAttribute="bottom" constant="8" id="dkD-ck-jPi"/>
+                            <constraint firstItem="5k0-kZ-gl6" firstAttribute="top" secondItem="sQJ-IR-xdq" secondAttribute="bottom" constant="516.5" id="fAL-Ai-ATL"/>
+                            <constraint firstItem="E4T-Za-fON" firstAttribute="leading" secondItem="5k0-kZ-gl6" secondAttribute="leading" id="iia-dz-uET"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gestureLabel" destination="sQJ-IR-xdq" id="iwe-HA-yLT"/>
+                        <outlet property="messageLabel" destination="5k0-kZ-gl6" id="mG7-Me-6PQ"/>
+                        <outlet property="renderView" destination="8bC-Xf-vdC" id="ssZ-6t-rTw"/>
+                        <outlet property="titleLabel" destination="E4T-Za-fON" id="68o-AF-YzJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
