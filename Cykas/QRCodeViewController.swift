@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class QRCodeViewController: UIViewController ,AVCaptureMetadataOutputObjectsDelegate{
 
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
