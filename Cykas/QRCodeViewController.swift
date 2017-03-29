@@ -10,11 +10,13 @@ import UIKit
 import AVFoundation
 
 class QRCodeViewController: UIViewController ,AVCaptureMetadataOutputObjectsDelegate{
-
+    //Declaring variables
+    var captureSession:AVCaptureSession?
+    var videoPreviewLayer:AVCaptureVideoPreviewLayer?
+    var qrCodeFrameView:UIView?
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        //Ciao
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
