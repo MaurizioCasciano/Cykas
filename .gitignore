@@ -4,3 +4,9 @@
 *.xcuserstate
 
 Cykas/Assets\.xcassets/AppIcon\.appiconset/Contents\.json
+
+*.plist
+
+*.xcscheme
+
+\.DS_Store

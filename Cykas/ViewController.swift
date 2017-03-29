@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class QRCodeViewController: UIViewController ,AVCaptureMetadataOutputObjectsDelegate{
+class ViewController: UIViewController ,AVCaptureMetadataOutputObjectsDelegate{
     //Declaring variables
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -52,6 +52,8 @@ class QRCodeViewController: UIViewController ,AVCaptureMetadataOutputObjectsDele
         videoPreviewLayer?.frame = view.layer.bounds
         view.layer.addSublayer(videoPreviewLayer!)
         
+        // Start video capture.
+        captureSession?.startRunning()
 
     }
     
