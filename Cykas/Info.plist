@@ -31,7 +31,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>CFBundleSignature</key>
-	<string>we need it to recognize a gesture</string>
+	<string>We need it</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>NSCameraUsageDescription</key>

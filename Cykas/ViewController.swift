@@ -22,7 +22,9 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     
     @IBOutlet var templateTextField: UITextField!
   
-    
+	
+	var QRCODEONLY = true
+	
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
@@ -30,77 +32,83 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
 	override func viewDidLoad() {
 		super.viewDidLoad()
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
-        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
-        
-        do {
-            // Get an instance of the AVCaptureDeviceInput class using the previous device object.
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-            
-            // Initialize the captureSession object.
-            captureSession = AVCaptureSession()
-            
-            // Set the input device on the capture session.
-            captureSession?.addInput(input)
-            
-        } catch {
-            // If any error occurs, simply print it out and don't continue any more.
-            print(error)
-            return
-        }
-        
-        
-        // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
-        let captureMetadataOutput = AVCaptureMetadataOutput()
-        captureSession?.addOutput(captureMetadataOutput)
-        
-        // Set delegate and use the default dispatch queue to execute the call back
-        captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-        captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
-        
-        // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-        videoPreviewLayer?.frame = view.layer.bounds
-        view.layer.addSublayer(videoPreviewLayer!)
-        
-        // Start video capture.
-        captureSession?.startRunning()
-        
-        
-        // Move the message label and top bar to the front
-        view.bringSubview(toFront: messageLabel)
-        view.bringSubview(toFront: titleLabel)
-        view.bringSubview(toFront: gestureLabel)
-        view.bringSubview(toFront: addButton)
-        view.bringSubview(toFront: clearButton)
-        view.bringSubview(toFront: gestureView)
-        view.bringSubview(toFront: templateTextField)
-        
-        // Initialize QR Code Frame to highlight the QR code
-        qrCodeFrameView = UIView()
-        
-        if let qrCodeFrameView = qrCodeFrameView {
-            qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-            qrCodeFrameView.layer.borderWidth = 2
-            view.addSubview(qrCodeFrameView)
-            view.bringSubview(toFront: qrCodeFrameView)
-        }
-        
-        //Now start code for secrets
-        //********************************************************************************************
-        //********************************************************************************************
-        //********************************************************************************************
-        //********************************************************************************************
-        //********************************************************************************************
-        //********************************************************************************************
-        //********************************************************************************************
-       
-        pennyPincherGestureRecognizer.enableMultipleStrokes = true
-        pennyPincherGestureRecognizer.allowedTimeBetweenMultipleStrokes = 0.2
-        pennyPincherGestureRecognizer.cancelsTouchesInView = false
-        pennyPincherGestureRecognizer.addTarget(self, action: #selector(didRecognize(_:)))
-        
-        gestureView.addGestureRecognizer(pennyPincherGestureRecognizer)
+		
+		//Now start code for secrets
+		//********************************************************************************************
+		//********************************************************************************************
+		//********************************************************************************************
+		//********************************************************************************************
+		//********************************************************************************************
+		//********************************************************************************************
+		//********************************************************************************************
+		
+		pennyPincherGestureRecognizer.enableMultipleStrokes = true
+		pennyPincherGestureRecognizer.allowedTimeBetweenMultipleStrokes = 0.2
+		pennyPincherGestureRecognizer.cancelsTouchesInView = false
+		pennyPincherGestureRecognizer.addTarget(self, action: #selector(didRecognize(_:)))
+		
+		gestureView.addGestureRecognizer(pennyPincherGestureRecognizer)
+		
+		if(QRCODEONLY){
+			let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+			
+			do {
+				// Get an instance of the AVCaptureDeviceInput class using the previous device object.
+				let input = try AVCaptureDeviceInput(device: captureDevice)
+				
+				// Initialize the captureSession object.
+				captureSession = AVCaptureSession()
+				
+				// Set the input device on the capture session.
+				captureSession?.addInput(input)
+				
+			} catch {
+				// If any error occurs, simply print it out and don't continue any more.
+				print(error)
+				return
+			}
+			
+			
+			// Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
+			let captureMetadataOutput = AVCaptureMetadataOutput()
+			captureSession?.addOutput(captureMetadataOutput)
+			
+			// Set delegate and use the default dispatch queue to execute the call back
+			captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+			captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
+			
+			// Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
+			videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+			videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+			videoPreviewLayer?.frame = view.layer.bounds
+			view.layer.addSublayer(videoPreviewLayer!)
+			
+			// Start video capture.
+			captureSession?.startRunning()
+			
+			
+			// Move the message label and top bar to the front
+			view.bringSubview(toFront: messageLabel)
+			view.bringSubview(toFront: titleLabel)
+			view.bringSubview(toFront: gestureLabel)
+			view.bringSubview(toFront: addButton)
+			view.bringSubview(toFront: clearButton)
+			view.bringSubview(toFront: gestureView)
+			view.bringSubview(toFront: templateTextField)
+			
+			// Initialize QR Code Frame to highlight the QR code
+			qrCodeFrameView = UIView()
+			
+			if let qrCodeFrameView = qrCodeFrameView {
+				qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+				qrCodeFrameView.layer.borderWidth = 2
+				view.addSubview(qrCodeFrameView)
+				view.bringSubview(toFront: qrCodeFrameView)
+			}
+		}
+		
+		
+		
         
 	}
 
