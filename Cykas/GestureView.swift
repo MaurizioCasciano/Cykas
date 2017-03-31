@@ -163,3 +163,4 @@ class GestureView: UIView {
         strokes.removeAll(keepingCapacity: false)
     }
 }
+

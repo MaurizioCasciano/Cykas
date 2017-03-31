@@ -16,8 +16,8 @@
 		13DC5AD31E8BC7AF00EBC24F /* CykasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5AD21E8BC7AF00EBC24F /* CykasTests.swift */; };
 		13DC5ADE1E8BC7AF00EBC24F /* CykasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */; };
 		9D2E54321E8D053400406718 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E54311E8D053400406718 /* GestureView.swift */; };
-		9D3A13FB1E8D7D0A00031C4A /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A13FA1E8D7D0A00031C4A /* PennyPincher.framework */; };
-		9D3A13FC1E8D7D0A00031C4A /* PennyPincher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A13FA1E8D7D0A00031C4A /* PennyPincher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9DA297871E8E7E8400D44C73 /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA297861E8E7E8400D44C73 /* PennyPincher.framework */; };
+		9DA297881E8E7E8400D44C73 /* PennyPincher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA297861E8E7E8400D44C73 /* PennyPincher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9D3A13F91E8D79C700031C4A /* Embed Frameworks */ = {
+		9DA297891E8E7E8400D44C73 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9D3A13FC1E8D7D0A00031C4A /* PennyPincher.framework in Embed Frameworks */,
+				9DA297881E8E7E8400D44C73 /* PennyPincher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,7 +67,7 @@
 		13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CykasUITests.swift; sourceTree = "<group>"; };
 		13DC5ADF1E8BC7AF00EBC24F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D2E54311E8D053400406718 /* GestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
-		9D3A13FA1E8D7D0A00031C4A /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PennyPincher.framework; sourceTree = "<group>"; };
+		9DA297861E8E7E8400D44C73 /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PennyPincher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D3A13FB1E8D7D0A00031C4A /* PennyPincher.framework in Frameworks */,
+				9DA297871E8E7E8400D44C73 /* PennyPincher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 		13DC5AAE1E8BC7AF00EBC24F = {
 			isa = PBXGroup;
 			children = (
-				9D3A13FA1E8D7D0A00031C4A /* PennyPincher.framework */,
+				9DA297861E8E7E8400D44C73 /* PennyPincher.framework */,
 				13DC5AB91E8BC7AF00EBC24F /* Cykas */,
 				13DC5AD11E8BC7AF00EBC24F /* CykasTests */,
 				13DC5ADC1E8BC7AF00EBC24F /* CykasUITests */,
@@ -160,7 +160,7 @@
 				13DC5AB31E8BC7AF00EBC24F /* Sources */,
 				13DC5AB41E8BC7AF00EBC24F /* Frameworks */,
 				13DC5AB51E8BC7AF00EBC24F /* Resources */,
-				9D3A13F91E8D79C700031C4A /* Embed Frameworks */,
+				9DA297891E8E7E8400D44C73 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
