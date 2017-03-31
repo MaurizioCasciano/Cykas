@@ -10,6 +10,8 @@ import UIKit
 import AVFoundation
 import PennyPincher
 import LocalAuthentication
+import CryptoSwift
+
 class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOutputObjectsDelegate{
 
      private let pennyPincherGestureRecognizer = PennyPincherGestureRecognizer()

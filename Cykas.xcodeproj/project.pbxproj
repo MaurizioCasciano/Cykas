@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		137AB9391E8EBD5C007EBD85 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137AB9361E8EBD46007EBD85 /* CryptoSwift.framework */; };
+		137AB93A1E8EBD5C007EBD85 /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 137AB9361E8EBD46007EBD85 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5ABA1E8BC7AF00EBC24F /* AppDelegate.swift */; };
 		13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5ABC1E8BC7AF00EBC24F /* ViewController.swift */; };
 		13DC5AC01E8BC7AF00EBC24F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DC5ABE1E8BC7AF00EBC24F /* Main.storyboard */; };
@@ -21,6 +23,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		137AB9351E8EBD46007EBD85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 137AB9301E8EBD46007EBD85 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
+		137AB9371E8EBD46007EBD85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 137AB9301E8EBD46007EBD85 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = Tests;
+		};
+		137AB93B1E8EBD5C007EBD85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 137AB9301E8EBD46007EBD85 /* CryptoSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 754BE45419693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
 		13DC5ACF1E8BC7AF00EBC24F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 13DC5AAF1E8BC7AF00EBC24F /* Project object */;
@@ -45,6 +68,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9D757DAE1E8EA68100561BBB /* PennyPincher.framework in Embed Frameworks */,
+				137AB93A1E8EBD5C007EBD85 /* CryptoSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		137AB9301E8EBD46007EBD85 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = CryptoSwift/CryptoSwift.xcodeproj; sourceTree = "<group>"; };
 		13DC5AB71E8BC7AF00EBC24F /* Cykas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cykas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DC5ABA1E8BC7AF00EBC24F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13DC5ABC1E8BC7AF00EBC24F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D757DAD1E8EA68100561BBB /* PennyPincher.framework in Frameworks */,
+				137AB9391E8EBD5C007EBD85 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137AB9311E8EBD46007EBD85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				137AB9361E8EBD46007EBD85 /* CryptoSwift.framework */,
+				137AB9381E8EBD46007EBD85 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		13DC5AAE1E8BC7AF00EBC24F = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +139,7 @@
 				13DC5AD11E8BC7AF00EBC24F /* CykasTests */,
 				13DC5ADC1E8BC7AF00EBC24F /* CykasUITests */,
 				13DC5AB81E8BC7AF00EBC24F /* Products */,
+				137AB9301E8EBD46007EBD85 /* CryptoSwift.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +201,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				137AB93C1E8EBD5C007EBD85 /* PBXTargetDependency */,
 			);
 			name = Cykas;
 			productName = Cykas;
@@ -219,7 +256,7 @@
 				TargetAttributes = {
 					13DC5AB61E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BRD4WW9Y7C;
+						DevelopmentTeam = HXS684F792;
 						ProvisioningStyle = Automatic;
 					};
 					13DC5ACD1E8BC7AF00EBC24F = {
@@ -247,6 +284,12 @@
 			mainGroup = 13DC5AAE1E8BC7AF00EBC24F;
 			productRefGroup = 13DC5AB81E8BC7AF00EBC24F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 137AB9311E8EBD46007EBD85 /* Products */;
+					ProjectRef = 137AB9301E8EBD46007EBD85 /* CryptoSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13DC5AB61E8BC7AF00EBC24F /* Cykas */,
@@ -255,6 +298,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		137AB9361E8EBD46007EBD85 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 137AB9351E8EBD46007EBD85 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		137AB9381E8EBD46007EBD85 /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = 137AB9371E8EBD46007EBD85 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		13DC5AB51E8BC7AF00EBC24F /* Resources */ = {
@@ -314,6 +374,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		137AB93C1E8EBD5C007EBD85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			targetProxy = 137AB93B1E8EBD5C007EBD85 /* PBXContainerItemProxy */;
+		};
 		13DC5AD01E8BC7AF00EBC24F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 13DC5AB61E8BC7AF00EBC24F /* Cykas */;
@@ -442,15 +507,16 @@
 		13DC5AE31E8BC7AF00EBC24F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = HXS684F792;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
+				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -459,15 +525,16 @@
 		13DC5AE41E8BC7AF00EBC24F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = HXS684F792;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
+				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
