@@ -8,20 +8,23 @@
 
 import UIKit
 import AVFoundation
-
+import PennyPincher
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
 
-    
+     private let pennyPincherGestureRecognizer = PennyPincherGestureRecognizer()
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var gestureLabel: UILabel!
-    @IBOutlet var renderView: RenderView!
+    @IBOutlet var gestureView: GestureView!
+    @IBOutlet var addButton: UIButton!
+    
+    @IBOutlet var templateTextField: UITextField!
+    @IBOutlet var cleaerButton: UIButton!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    var rawPoints:[Int] = []
-    var recognizer:DBPathRecognizer?
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
@@ -66,7 +69,9 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
         view.bringSubview(toFront: messageLabel)
         view.bringSubview(toFront: titleLabel)
         view.bringSubview(toFront: gestureLabel)
-        
+        view.bringSubview(toFront: addButton)
+        view.bringSubview(toFront: cleaerButton)
+        view.bringSubview(toFront: gestureView)
         
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
@@ -86,83 +91,16 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
         //********************************************************************************************
         //********************************************************************************************
         //********************************************************************************************
+       
+        pennyPincherGestureRecognizer.enableMultipleStrokes = true
+        pennyPincherGestureRecognizer.allowedTimeBetweenMultipleStrokes = 0.2
+        pennyPincherGestureRecognizer.cancelsTouchesInView = false
+        pennyPincherGestureRecognizer.addTarget(self, action: #selector(didRecognize(_:)))
         
-        //define the number of direction of PathModel
-        let recognizer = DBPathRecognizer(sliceCount: 7, deltaMove: 16.0)
-        
-        //define specific formes to draw on PathModel
-        recognizer.addModel(PathModel(directions: [7,1,4,1,7,5,3], datas:"Bravoh" as AnyObject))
-        recognizer.addModel(PathModel(directions: [7, 1], datas:"A" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2,6,0,1,2,3,4,0,1,2,3,4], datas:"B" as AnyObject))
-        recognizer.addModel(PathModel(directions: [4,3,2,1,0], datas:"C" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2,6,7,0,1,2,3,4], datas:"D" as AnyObject))
-        recognizer.addModel(PathModel(directions: [4,3,2,1,0,4,3,2,1,0], datas:"E" as AnyObject))
-        recognizer.addModel(PathModel(directions: [4,2], datas:"F" as AnyObject))
-        recognizer.addModel(PathModel(directions: [4,3,2,1,0,7,6,5,0], datas:"G" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2,6,7,0,1,2], datas:"H" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2], datas:"I" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2,3,4], datas:"J" as AnyObject))
-        recognizer.addModel(PathModel(directions: [3,4,5,6,7,0,1], datas:"K" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2,0], datas:"L" as AnyObject))
-        recognizer.addModel(PathModel(directions: [6,1,7,2], datas:"M" as AnyObject))
-        recognizer.addModel(PathModel(directions: [6,1,6], datas:"N" as AnyObject))
-        recognizer.addModel(PathModel(directions: [4,3,2,1,0,7,6,5,4], datas:"O" as AnyObject))
-        recognizer.addModel(PathModel(directions: [6,7,0,1,2,3,4], datas:"P" as AnyObject))
-        recognizer.addModel(PathModel(directions: [4,3,2,1,0,7,6,5,4,0], datas:"Q" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2,6,7,0,1,2,3,4,1], datas:"R" as AnyObject))
-        recognizer.addModel(PathModel(directions: [4,3,2,1,0,1,2,3,4], datas:"S" as AnyObject))
-        recognizer.addModel(PathModel(directions: [0,2], datas:"T" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2,1,0,7,6], datas:"U" as AnyObject))
-        recognizer.addModel(PathModel(directions: [1,7,0], datas:"V" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2,7,1,6], datas:"W" as AnyObject))
-        recognizer.addModel(PathModel(directions: [1,0,7,6,5,4,3], datas:"X" as AnyObject))
-        recognizer.addModel(PathModel(directions: [2,1,0,7,6,2,3,4,5,6,7], datas:"Y" as AnyObject))
-        recognizer.addModel(PathModel(directions: [0,3,0], datas:"Z" as AnyObject))
-
-        
-        self.recognizer = recognizer
-        
+        gestureView.addGestureRecognizer(pennyPincherGestureRecognizer)
         
 	}
 
-    //takes the coordinates of the first touch
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        rawPoints = []
-        let touch = touches.first
-        let location = touch!.location(in: view)
-        rawPoints.append(Int(location.x))
-        rawPoints.append(Int(location.y))
-    }
-    
-    //takes all coordinates if touch moves and
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        let touch = touches.first
-        let location = touch!.location(in: view)
-        if(rawPoints[rawPoints.count-2] != Int(location.x) && rawPoints[rawPoints.count-1] != Int(location.y)) {
-            rawPoints.append(Int(location.x))
-            rawPoints.append(Int(location.y))
-        }
-
-    }
-    
-    //create the final path and makes action is letter is S
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        var path:Path = Path()
-        path.addPointFromRaw(rawPoints)
-        
-        let gesture:PathModel? = self.recognizer!.recognizePath(path)
-        
-        if gesture != nil {
-            let letters = gesture!.datas as? String
-            gestureLabel.text = letters
-        }
-        else
-        {
-            gestureLabel.text = ""
-        }
-    }
 
     
 	override func didReceiveMemoryWarning() {
@@ -193,6 +131,51 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
             }
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+    @IBAction func addTemplate(_ sender: Any) {
+        
+            //let text = templateTextField.text,
+            print(gestureView)
+            print(gestureView.points)
+            
+        if
+            let text = templateTextField.text,
+            let template = PennyPincher.createTemplate(text, points: gestureView.points) {
+            pennyPincherGestureRecognizer.templates.append(template)
+        }
+        
+        gestureView.clear()
+    }
+    func didRecognize(_ pennyPincherGestureRecognizer: PennyPincherGestureRecognizer) {
+        switch pennyPincherGestureRecognizer.state {
+        case .ended, .cancelled, .failed:
+            updateRecognizerResult()
+        default: break
+        }
+    }
+    
+    private func updateRecognizerResult() {
+        guard let (template, similarity) = pennyPincherGestureRecognizer.result else {
+            gestureLabel.text = "Could not recognize."
+            return
+        }
+        
+        let similarityString = String(format: "%.2f", similarity)
+        gestureLabel.text = "Template: \(template.id), Similarity: \(similarityString)"
+    }
+    
+    @IBAction func tapClear(_ sender: Any) {
+        gestureLabel.text = ""
+        gestureView.clear()
+    }
+
+
 
 
 }

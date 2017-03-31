@@ -15,8 +15,9 @@
 		13DC5AC81E8BC7AF00EBC24F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DC5AC61E8BC7AF00EBC24F /* LaunchScreen.storyboard */; };
 		13DC5AD31E8BC7AF00EBC24F /* CykasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5AD21E8BC7AF00EBC24F /* CykasTests.swift */; };
 		13DC5ADE1E8BC7AF00EBC24F /* CykasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */; };
-		9D6CEB391E8BFBF800DEB1D2 /* DBPathRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CEB381E8BFBF800DEB1D2 /* DBPathRecognizer.swift */; };
-		9D6CEB3B1E8BFDBC00DEB1D2 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CEB3A1E8BFDBC00DEB1D2 /* RenderView.swift */; };
+		9D2E54321E8D053400406718 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E54311E8D053400406718 /* GestureView.swift */; };
+		9D3A13FB1E8D7D0A00031C4A /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A13FA1E8D7D0A00031C4A /* PennyPincher.framework */; };
+		9D3A13FC1E8D7D0A00031C4A /* PennyPincher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A13FA1E8D7D0A00031C4A /* PennyPincher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9D3A13F91E8D79C700031C4A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9D3A13FC1E8D7D0A00031C4A /* PennyPincher.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		13DC5AB71E8BC7AF00EBC24F /* Cykas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cykas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DC5ABA1E8BC7AF00EBC24F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +66,8 @@
 		13DC5AD91E8BC7AF00EBC24F /* CykasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CykasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CykasUITests.swift; sourceTree = "<group>"; };
 		13DC5ADF1E8BC7AF00EBC24F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D6CEB381E8BFBF800DEB1D2 /* DBPathRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPathRecognizer.swift; sourceTree = "<group>"; };
-		9D6CEB3A1E8BFDBC00DEB1D2 /* RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
+		9D2E54311E8D053400406718 /* GestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
+		9D3A13FA1E8D7D0A00031C4A /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PennyPincher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3A13FB1E8D7D0A00031C4A /* PennyPincher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +99,7 @@
 		13DC5AAE1E8BC7AF00EBC24F = {
 			isa = PBXGroup;
 			children = (
+				9D3A13FA1E8D7D0A00031C4A /* PennyPincher.framework */,
 				13DC5AB91E8BC7AF00EBC24F /* Cykas */,
 				13DC5AD11E8BC7AF00EBC24F /* CykasTests */,
 				13DC5ADC1E8BC7AF00EBC24F /* CykasUITests */,
@@ -110,8 +127,7 @@
 				13DC5AC61E8BC7AF00EBC24F /* LaunchScreen.storyboard */,
 				13DC5AC91E8BC7AF00EBC24F /* Info.plist */,
 				13DC5AC11E8BC7AF00EBC24F /* Cykas.xcdatamodeld */,
-				9D6CEB381E8BFBF800DEB1D2 /* DBPathRecognizer.swift */,
-				9D6CEB3A1E8BFDBC00DEB1D2 /* RenderView.swift */,
+				9D2E54311E8D053400406718 /* GestureView.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -144,6 +160,7 @@
 				13DC5AB31E8BC7AF00EBC24F /* Sources */,
 				13DC5AB41E8BC7AF00EBC24F /* Frameworks */,
 				13DC5AB51E8BC7AF00EBC24F /* Resources */,
+				9D3A13F91E8D79C700031C4A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,10 +288,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D6CEB3B1E8BFDBC00DEB1D2 /* RenderView.swift in Sources */,
-				9D6CEB391E8BFBF800DEB1D2 /* DBPathRecognizer.swift in Sources */,
 				13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */,
 				13DC5AC31E8BC7AF00EBC24F /* Cykas.xcdatamodeld in Sources */,
+				9D2E54321E8D053400406718 /* GestureView.swift in Sources */,
 				13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +444,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
@@ -441,6 +461,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;

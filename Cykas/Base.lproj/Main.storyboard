@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,24 +43,52 @@
                                 <color key="textColor" red="0.97603131807998145" green="0.9969994867838885" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ks-Y3-osx">
+                                <rect key="frame" x="16" y="559" width="89" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTemplate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xyP-Q4-45h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMy-gG-hIK">
+                                <rect key="frame" x="287" y="567" width="72" height="53"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="tapClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ZK-3l-htR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DTj-tG-KDV" userLabel="templateTextField">
+                                <rect key="frame" x="262" y="120" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5k0-kZ-gl6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Up-0l-Xaa"/>
+                            <constraint firstItem="DTj-tG-KDV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="246" id="2FY-4f-pfd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5k0-kZ-gl6" secondAttribute="trailing" id="5EN-V9-sPY"/>
                             <constraint firstItem="sQJ-IR-xdq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BzF-Gs-7fd"/>
+                            <constraint firstItem="fMy-gG-hIK" firstAttribute="top" secondItem="DTj-tG-KDV" secondAttribute="bottom" constant="417" id="L3m-vz-f8f"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5k0-kZ-gl6" secondAttribute="bottom" constant="18" id="VIx-7F-Pb7"/>
+                            <constraint firstItem="DTj-tG-KDV" firstAttribute="top" secondItem="sQJ-IR-xdq" secondAttribute="bottom" constant="8" id="Xni-2t-5xc"/>
                             <constraint firstItem="E4T-Za-fON" firstAttribute="trailing" secondItem="sQJ-IR-xdq" secondAttribute="trailing" id="cJC-KZ-wd6"/>
                             <constraint firstItem="sQJ-IR-xdq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="145" id="ccN-20-nhe"/>
                             <constraint firstItem="sQJ-IR-xdq" firstAttribute="top" secondItem="E4T-Za-fON" secondAttribute="bottom" constant="8" id="dkD-ck-jPi"/>
                             <constraint firstItem="5k0-kZ-gl6" firstAttribute="top" secondItem="sQJ-IR-xdq" secondAttribute="bottom" constant="516.5" id="fAL-Ai-ATL"/>
+                            <constraint firstItem="DTj-tG-KDV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iWj-8v-QPr"/>
                             <constraint firstItem="E4T-Za-fON" firstAttribute="leading" secondItem="5k0-kZ-gl6" secondAttribute="leading" id="iia-dz-uET"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="5ks-Y3-osx" id="9eb-9L-W2K"/>
+                        <outlet property="cleaerButton" destination="fMy-gG-hIK" id="u6y-xb-A26"/>
                         <outlet property="gestureLabel" destination="sQJ-IR-xdq" id="iwe-HA-yLT"/>
+                        <outlet property="gestureView" destination="8bC-Xf-vdC" id="ld5-ZT-LJf"/>
                         <outlet property="messageLabel" destination="5k0-kZ-gl6" id="mG7-Me-6PQ"/>
-                        <outlet property="renderView" destination="8bC-Xf-vdC" id="ssZ-6t-rTw"/>
+                        <outlet property="templateTextField" destination="DTj-tG-KDV" id="7ec-16-TKB"/>
                         <outlet property="titleLabel" destination="E4T-Za-fON" id="68o-AF-YzJ"/>
                     </connections>
                 </viewController>
