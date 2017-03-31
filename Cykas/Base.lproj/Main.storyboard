@@ -94,6 +94,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="5ks-Y3-osx" id="9eb-9L-W2K"/>
+                        <outlet property="clearButton" destination="fMy-gG-hIK" id="ypZ-fx-NC7"/>
                         <outlet property="gestureLabel" destination="sQJ-IR-xdq" id="iwe-HA-yLT"/>
                         <outlet property="gestureView" destination="8bC-Xf-vdC" id="MFP-wp-7S5"/>
                         <outlet property="messageLabel" destination="5k0-kZ-gl6" id="mG7-Me-6PQ"/>
