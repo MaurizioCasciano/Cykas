@@ -31,7 +31,8 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-
+    
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
