@@ -11,10 +11,11 @@ import AVFoundation
 import PennyPincher
 import LocalAuthentication
 import CryptoSwift
+import CoreData
 
 class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOutputObjectsDelegate{
 
-     private let pennyPincherGestureRecognizer = PennyPincherGestureRecognizer()
+    private let pennyPincherGestureRecognizer = PennyPincherGestureRecognizer()
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var gestureLabel: UILabel!
@@ -24,18 +25,30 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     @IBOutlet var addButton: UIButton!
     
     @IBOutlet var templateTextField: UITextField!
-  
+    var template:PennyPincherTemplate!
 	
 	var QRCODEONLY = true
 	
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-
+    
+    var gesture = [TemplateGesture]()
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        gesture = PersistenceManager.fetchData()
+        if (gesture.isEmpty == false){
+            gestureLabel.text = "Inserisci la gesture inserita in precedenza"
+            var y = [CGPoint]()
+            for pointgesture in gesture{
+                y.append(CGPointFromString(pointgesture.point!))
+            }
+            template = PennyPincher.createTemplate("pass", points: y)!
+            pennyPincherGestureRecognizer.templates.append(template)
+        }else{
+            gestureLabel.text = "Inserisci la nuova gesture e premere add"
+        }
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
-		
 		//Now start code for secrets
 		//********************************************************************************************
 		//********************************************************************************************
@@ -153,11 +166,18 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     }
     
     @IBAction func didTapAddTemplate(_ sender: Any) {
-        if
-            let template = PennyPincher.createTemplate("pass", points: gestureView.points) {
-            pennyPincherGestureRecognizer.templates.append(template)
+        if(gesture.isEmpty == true)
+        {
+            gestureLabel.text = "Inserisci la nuova Gesture"
+            if let template = PennyPincher.createTemplate("pass", points: gestureView.points) {
+                pennyPincherGestureRecognizer.templates.append(template)
+            }
+            for point in gestureView.points{
+                gesture.append(PersistenceManager.newItem(point))
+            }
+            print(gestureView.points.description.sha1())
+            gestureView.clear()
         }
-        gestureView.clear()
     }
     
     func didRecognize(_ pennyPincherGestureRecognizer: PennyPincherGestureRecognizer) {
@@ -184,9 +204,14 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     }
     
 
-    
     @IBAction func didTapClear(_ sender: Any) {
-        gestureLabel.text = ""
+        gestureLabel.text = "Inserire la nuova gesture e premere add"
+        for point in gesture{
+            PersistenceManager.deleteItem(item: point)
+        }
+        PersistenceManager.saveContext()
+        gesture = PersistenceManager.fetchData()
+        pennyPincherGestureRecognizer.templates.removeAll()
         gestureView.clear()
     }
 

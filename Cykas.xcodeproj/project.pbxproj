@@ -25,6 +25,9 @@
 		9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */; };
 		9DF778501E8EC2DB00200CDC /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */; };
 		9DF778511E8EC2DB00200CDC /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */; };
+		C36B95561E92348D000F432B /* TemplateGesture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */; };
+		C36B955A1E9237A7000F432B /* PersistenceManagerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95591E9237A7000F432B /* PersistenceManagerTemplate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		9D9F978B1E914F830021E49E /* RNCryptor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RNCryptor.framework; sourceTree = "<group>"; };
 		9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretInitViewController.swift; sourceTree = "<group>"; };
 		9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
+		C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C36B95591E9237A7000F432B /* PersistenceManagerTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManagerTemplate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				9D9F978B1E914F830021E49E /* RNCryptor.framework */,
+				C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */,
+				C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */,
 				9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */,
 				9D757DAC1E8EA68100561BBB /* PennyPincher.framework */,
 				13DC5AB91E8BC7AF00EBC24F /* Cykas */,
@@ -142,6 +150,7 @@
 				13DC5ABC1E8BC7AF00EBC24F /* ViewController.swift */,
 				13DC5ABE1E8BC7AF00EBC24F /* Main.storyboard */,
 				13DC5AC41E8BC7AF00EBC24F /* Assets.xcassets */,
+				C36B95591E9237A7000F432B /* PersistenceManagerTemplate.swift */,
 				13DC5AC61E8BC7AF00EBC24F /* LaunchScreen.storyboard */,
 				13DC5AC91E8BC7AF00EBC24F /* Info.plist */,
 				13DC5AC11E8BC7AF00EBC24F /* Cykas.xcdatamodeld */,
@@ -236,22 +245,22 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Maurizio Casciano";
+				ORGANIZATIONNAME = ALBA;
 				TargetAttributes = {
 					13DC5AB61E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BRD4WW9Y7C;
+						DevelopmentTeam = 7HD9H4B8M3;
 						ProvisioningStyle = Automatic;
 					};
 					13DC5ACD1E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = HXS684F792;
+						DevelopmentTeam = 7HD9H4B8M3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 13DC5AB61E8BC7AF00EBC24F;
 					};
 					13DC5AD81E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = HXS684F792;
+						DevelopmentTeam = 7HD9H4B8M3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 13DC5AB61E8BC7AF00EBC24F;
 					};
@@ -309,10 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36B955A1E9237A7000F432B /* PersistenceManagerTemplate.swift in Sources */,
 				13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */,
 				9D7A3F131E924498000603E1 /* progressHUD.swift in Sources */,
 				9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */,
 				13DC5AC31E8BC7AF00EBC24F /* Cykas.xcdatamodeld in Sources */,
+				C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */,
+				C36B95561E92348D000F432B /* TemplateGesture+CoreDataProperties.swift in Sources */,
 				9D2E54321E8D053400406718 /* GestureView.swift in Sources */,
 				13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */,
 				9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */,
@@ -467,14 +479,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = 7HD9H4B8M3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
+				PRODUCT_BUNDLE_IDENTIFIER = ALBA.Cykas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -484,14 +496,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = 7HD9H4B8M3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
+				PRODUCT_BUNDLE_IDENTIFIER = ALBA.Cykas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -502,7 +514,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = HXS684F792;
+				DEVELOPMENT_TEAM = 7HD9H4B8M3;
 				INFOPLIST_FILE = CykasTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio.CykasTests;
@@ -517,7 +529,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = HXS684F792;
+				DEVELOPMENT_TEAM = 7HD9H4B8M3;
 				INFOPLIST_FILE = CykasTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio.CykasTests;
@@ -531,7 +543,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = HXS684F792;
+				DEVELOPMENT_TEAM = 7HD9H4B8M3;
 				INFOPLIST_FILE = CykasUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio.CykasUITests;
@@ -545,7 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = HXS684F792;
+				DEVELOPMENT_TEAM = 7HD9H4B8M3;
 				INFOPLIST_FILE = CykasUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio.CykasUITests;
