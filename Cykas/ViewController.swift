@@ -154,11 +154,9 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     
     @IBAction func didTapAddTemplate(_ sender: Any) {
         if
-            
             let template = PennyPincher.createTemplate("pass", points: gestureView.points) {
             pennyPincherGestureRecognizer.templates.append(template)
         }
-        
         gestureView.clear()
     }
     
@@ -231,8 +229,10 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
                             }
                             
                         } else {
-                            self.notifyUser("Authentication Successful",
-                                            err: "You now have full access")
+                            self.performSegue(withIdentifier: "secretSegue", sender: nil)
+                            self.notifyUser("Authentication Successful",err: "You now have full access")
+                            
+                            
                         }
                     }
             })

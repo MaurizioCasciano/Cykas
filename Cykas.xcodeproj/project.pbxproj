@@ -18,6 +18,11 @@
 		9D2E54321E8D053400406718 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E54311E8D053400406718 /* GestureView.swift */; };
 		9D757DAD1E8EA68100561BBB /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D757DAC1E8EA68100561BBB /* PennyPincher.framework */; };
 		9D757DAE1E8EA68100561BBB /* PennyPincher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D757DAC1E8EA68100561BBB /* PennyPincher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A3F101E923F05000603E1 /* Encrypter.swift */; };
+		9D7A3F131E924498000603E1 /* progressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A3F121E924498000603E1 /* progressHUD.swift */; };
+		9D9F978C1E914F830021E49E /* RNCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9F978B1E914F830021E49E /* RNCryptor.framework */; };
+		9D9F978D1E914F830021E49E /* RNCryptor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9F978B1E914F830021E49E /* RNCryptor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */; };
 		9DF778501E8EC2DB00200CDC /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */; };
 		9DF778511E8EC2DB00200CDC /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -47,6 +52,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9D757DAE1E8EA68100561BBB /* PennyPincher.framework in Embed Frameworks */,
+				9D9F978D1E914F830021E49E /* RNCryptor.framework in Embed Frameworks */,
 				9DF778511E8EC2DB00200CDC /* CryptoSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -71,6 +77,10 @@
 		13DC5ADF1E8BC7AF00EBC24F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D2E54311E8D053400406718 /* GestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
 		9D757DAC1E8EA68100561BBB /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PennyPincher.framework; sourceTree = "<group>"; };
+		9D7A3F101E923F05000603E1 /* Encrypter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encrypter.swift; sourceTree = "<group>"; };
+		9D7A3F121E924498000603E1 /* progressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = progressHUD.swift; sourceTree = "<group>"; };
+		9D9F978B1E914F830021E49E /* RNCryptor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RNCryptor.framework; sourceTree = "<group>"; };
+		9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretInitViewController.swift; sourceTree = "<group>"; };
 		9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D757DAD1E8EA68100561BBB /* PennyPincher.framework in Frameworks */,
+				9D9F978C1E914F830021E49E /* RNCryptor.framework in Frameworks */,
 				9DF778501E8EC2DB00200CDC /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +115,7 @@
 		13DC5AAE1E8BC7AF00EBC24F = {
 			isa = PBXGroup;
 			children = (
+				9D9F978B1E914F830021E49E /* RNCryptor.framework */,
 				9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */,
 				9D757DAC1E8EA68100561BBB /* PennyPincher.framework */,
 				13DC5AB91E8BC7AF00EBC24F /* Cykas */,
@@ -134,6 +146,9 @@
 				13DC5AC91E8BC7AF00EBC24F /* Info.plist */,
 				13DC5AC11E8BC7AF00EBC24F /* Cykas.xcdatamodeld */,
 				9D2E54311E8D053400406718 /* GestureView.swift */,
+				9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */,
+				9D7A3F101E923F05000603E1 /* Encrypter.swift */,
+				9D7A3F121E924498000603E1 /* progressHUD.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -295,9 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */,
+				9D7A3F131E924498000603E1 /* progressHUD.swift in Sources */,
+				9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */,
 				13DC5AC31E8BC7AF00EBC24F /* Cykas.xcdatamodeld in Sources */,
 				9D2E54321E8D053400406718 /* GestureView.swift in Sources */,
 				13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */,
+				9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

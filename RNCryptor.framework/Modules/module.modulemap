@@ -1,0 +1,10 @@
+framework module RNCryptor {
+  umbrella header "RNCryptor.h"
+
+  export *
+  module * { export * }
+}
+
+module RNCryptor.Swift {
+    header "RNCryptor-Swift.h"
+}
