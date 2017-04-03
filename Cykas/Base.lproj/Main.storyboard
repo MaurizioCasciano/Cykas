@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oyc-AJ-qhz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E6P-Kp-zYf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,81 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--InitView-->
-        <scene sceneID="sGn-e8-Pbe">
-            <objects>
-                <viewController storyboardIdentifier="InitView" title="InitView" id="gRm-Ey-8qQ" customClass="InitViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yHm-XP-HOV"/>
-                        <viewControllerLayoutGuide type="bottom" id="RZA-Zy-fH3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tJ8-0Y-yWL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="udE-vR-n1r"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="QRView" id="3jE-Kc-vII"/>
-                        <segue destination="G03-Ee-xV5" kind="show" identifier="TutorialView" id="WVq-nM-TKP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gkl-Iu-nJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="410" y="134"/>
-        </scene>
-        <!--Inserisci Gesture-->
-        <scene sceneID="7Ds-pi-lam">
-            <objects>
-                <viewController title="Inserisci Gesture" id="G03-Ee-xV5" customClass="TutorialViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5o9-Z1-Ghs"/>
-                        <viewControllerLayoutGuide type="bottom" id="AeM-3p-BcS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3ps-g3-X2D" customClass="GestureView" customModule="Cykas" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX1-jx-7cO">
-                                <rect key="frame" x="24" y="587" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Gesture"/>
-                                <connections>
-                                    <action selector="didTapAddTemplate:" destination="G03-Ee-xV5" eventType="touchUpInside" id="67o-d9-KB2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2d-rC-RuO">
-                                <rect key="frame" x="24" y="659" width="327" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adO-Yr-Aoq">
-                                <rect key="frame" x="303" y="587" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancel:" destination="G03-Ee-xV5" eventType="touchUpInside" id="Mq0-vj-vPl"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="R2d-rC-RuO" secondAttribute="trailing" constant="8" id="2YN-47-rv6"/>
-                            <constraint firstItem="AeM-3p-BcS" firstAttribute="top" secondItem="R2d-rC-RuO" secondAttribute="bottom" constant="8" id="9Y8-xX-gnq"/>
-                            <constraint firstItem="R2d-rC-RuO" firstAttribute="leading" secondItem="3ps-g3-X2D" secondAttribute="leadingMargin" constant="8" id="dEe-rD-4U9"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="ErrorLabel" destination="R2d-rC-RuO" id="iFx-2P-dE2"/>
-                        <outlet property="gestureView" destination="3ps-g3-X2D" id="TvI-Ql-2ic"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="okGesture" id="pQm-TZ-zeR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rQX-th-r40" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1055" y="-788"/>
-        </scene>
         <!--QRView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -344,11 +269,109 @@
             </objects>
             <point key="canvasLocation" x="-322" y="-204"/>
         </scene>
+        <!--InitView-->
+        <scene sceneID="pZN-1Y-DeW">
+            <objects>
+                <viewController storyboardIdentifier="InitView" title="InitView" id="8hl-TZ-9Ik" customClass="InitViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J0Y-Of-klj"/>
+                        <viewControllerLayoutGuide type="bottom" id="utx-gj-n2c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K5o-Qs-sdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Xa-Zr-3YB"/>
+                    <connections>
+                        <segue destination="L3a-i5-5Kv" kind="show" identifier="TutorialView" id="lpc-9a-Kop">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="QRView" id="Dn4-2O-bFI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSH-1j-ovf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3172" y="-341"/>
+        </scene>
+        <!--Inserisci Gesture-->
+        <scene sceneID="xkz-Ae-0jA">
+            <objects>
+                <viewController title="Inserisci Gesture" id="L3a-i5-5Kv" customClass="TutorialViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tt3-5b-Dog"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dzr-XP-JOK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RvV-6K-IVq" customClass="GestureView" customModule="Cykas" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivy-Ev-m2D">
+                                <rect key="frame" x="24" y="587" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Gesture"/>
+                                <connections>
+                                    <action selector="didTapAddTemplate:" destination="L3a-i5-5Kv" eventType="touchUpInside" id="EKa-Ia-tCs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHP-bk-Gie">
+                                <rect key="frame" x="24" y="659" width="327" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1H-gZ-WGG">
+                                <rect key="frame" x="303" y="587" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="L3a-i5-5Kv" eventType="touchUpInside" id="YOF-b3-HdX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HHP-bk-Gie" firstAttribute="leading" secondItem="RvV-6K-IVq" secondAttribute="leadingMargin" constant="8" id="FIE-ui-h1h"/>
+                            <constraint firstItem="Dzr-XP-JOK" firstAttribute="top" secondItem="HHP-bk-Gie" secondAttribute="bottom" constant="8" id="TR7-5D-8nK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HHP-bk-Gie" secondAttribute="trailing" constant="8" id="iLp-9N-jy7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ErrorLabel" destination="HHP-bk-Gie" id="RSk-w5-kcP"/>
+                        <outlet property="gestureView" destination="RvV-6K-IVq" id="DDw-zz-m5D"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="okGesture" id="mkf-qj-pMQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0O-6D-iKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2383" y="-1352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6yE-2W-oq9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E6P-Kp-zYf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sK6-bZ-vjk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8hl-TZ-9Ik" kind="relationship" relationship="rootViewController" id="MUn-2o-xgk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OrT-BI-G1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4135" y="-341"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Archive Icon" width="16" height="16"/>
-        <image name="Camera Icon" width="16" height="16"/>
-        <image name="Create Icon" width="16" height="16"/>
-        <image name="settings" width="16" height="16"/>
+        <image name="Archive Icon" width="29" height="26"/>
+        <image name="Camera Icon" width="36" height="28"/>
+        <image name="Create Icon" width="19" height="29"/>
+        <image name="settings" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mkf-qj-pMQ"/>
+    </inferredMetricsTieBreakers>
 </document>
