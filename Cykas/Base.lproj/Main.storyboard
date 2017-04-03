@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oyc-AJ-qhz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,85 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--InitView-->
+        <scene sceneID="sGn-e8-Pbe">
+            <objects>
+                <viewController storyboardIdentifier="InitView" title="InitView" id="gRm-Ey-8qQ" customClass="InitViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yHm-XP-HOV"/>
+                        <viewControllerLayoutGuide type="bottom" id="RZA-Zy-fH3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tJ8-0Y-yWL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="udE-vR-n1r"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="QRView" id="3jE-Kc-vII"/>
+                        <segue destination="G03-Ee-xV5" kind="show" identifier="TutorialView" id="WVq-nM-TKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkl-Iu-nJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="134"/>
+        </scene>
+        <!--Inserisci Gesture-->
+        <scene sceneID="7Ds-pi-lam">
+            <objects>
+                <viewController title="Inserisci Gesture" id="G03-Ee-xV5" customClass="TutorialViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5o9-Z1-Ghs"/>
+                        <viewControllerLayoutGuide type="bottom" id="AeM-3p-BcS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3ps-g3-X2D" customClass="GestureView" customModule="Cykas" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX1-jx-7cO">
+                                <rect key="frame" x="24" y="587" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Gesture"/>
+                                <connections>
+                                    <action selector="didTapAddTemplate:" destination="G03-Ee-xV5" eventType="touchUpInside" id="67o-d9-KB2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2d-rC-RuO">
+                                <rect key="frame" x="24" y="659" width="327" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adO-Yr-Aoq">
+                                <rect key="frame" x="303" y="587" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="G03-Ee-xV5" eventType="touchUpInside" id="Mq0-vj-vPl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="R2d-rC-RuO" secondAttribute="trailing" constant="8" id="2YN-47-rv6"/>
+                            <constraint firstItem="AeM-3p-BcS" firstAttribute="top" secondItem="R2d-rC-RuO" secondAttribute="bottom" constant="8" id="9Y8-xX-gnq"/>
+                            <constraint firstItem="R2d-rC-RuO" firstAttribute="leading" secondItem="3ps-g3-X2D" secondAttribute="leadingMargin" constant="8" id="dEe-rD-4U9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ErrorLabel" destination="R2d-rC-RuO" id="iFx-2P-dE2"/>
+                        <outlet property="gestureView" destination="3ps-g3-X2D" id="TvI-Ql-2ic"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="okGesture" id="pQm-TZ-zeR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQX-th-r40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="-788"/>
+        </scene>
+        <!--QRView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRView" title="QRView" id="BYZ-38-t0r" customClass="ViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -43,17 +118,6 @@
                                 <color key="textColor" red="0.97603131807998145" green="0.9969994867838885" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ks-Y3-osx">
-                                <rect key="frame" x="16" y="559" width="89" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="AOO-Bs-HXK"/>
-                                    <constraint firstAttribute="height" constant="61" id="iaX-aU-13y"/>
-                                </constraints>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="didTapAddTemplate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8vn-mV-DvK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMy-gG-hIK" userLabel="Clear Button">
                                 <rect key="frame" x="287" y="567" width="72" height="53"/>
                                 <constraints>
@@ -87,14 +151,11 @@
                             <constraint firstItem="sQJ-IR-xdq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eG5-7M-7FS"/>
                             <constraint firstItem="5k0-kZ-gl6" firstAttribute="top" secondItem="sQJ-IR-xdq" secondAttribute="bottom" constant="516.5" id="fAL-Ai-ATL"/>
                             <constraint firstItem="sQJ-IR-xdq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fqw-5o-LHu"/>
-                            <constraint firstItem="5ks-Y3-osx" firstAttribute="leading" secondItem="5k0-kZ-gl6" secondAttribute="leading" id="ht1-Th-AvM"/>
                             <constraint firstItem="DTj-tG-KDV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iWj-8v-QPr"/>
                             <constraint firstItem="E4T-Za-fON" firstAttribute="leading" secondItem="5k0-kZ-gl6" secondAttribute="leading" id="iia-dz-uET"/>
-                            <constraint firstItem="fMy-gG-hIK" firstAttribute="bottom" secondItem="5ks-Y3-osx" secondAttribute="bottom" id="rS9-JX-Ckp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="5ks-Y3-osx" id="9eb-9L-W2K"/>
                         <outlet property="clearButton" destination="fMy-gG-hIK" id="ypZ-fx-NC7"/>
                         <outlet property="gestureLabel" destination="sQJ-IR-xdq" id="iwe-HA-yLT"/>
                         <outlet property="gestureView" destination="8bC-Xf-vdC" id="MFP-wp-7S5"/>
