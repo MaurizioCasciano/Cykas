@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
    
     @IBOutlet var clearButton: UIButton!
     @IBOutlet var gestureView: GestureView!
-    @IBOutlet var addButton: UIButton!
     
     @IBOutlet var templateTextField: UITextField!
     var template:PennyPincherTemplate!
@@ -37,18 +36,13 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
 	override func viewDidLoad() {
 		super.viewDidLoad()
         gesture = PersistenceManager.fetchData()
-        if (gesture.isEmpty == false){
-            gestureLabel.text = "Inserisci la gesture inserita in precedenza"
-            var y = [CGPoint]()
-            for pointgesture in gesture{
-                y.append(CGPointFromString(pointgesture.point!))
-            }
-            template = PennyPincher.createTemplate("pass", points: y)!
-            pennyPincherGestureRecognizer.templates.append(template)
-        }else{
-            gestureLabel.text = "Inserisci la nuova gesture e premere add"
+        var y = [CGPoint]()
+        for pointgesture in gesture{
+            y.append(CGPointFromString(pointgesture.point!))
         }
-        // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
+        template = PennyPincher.createTemplate("pass", points: y)!
+        pennyPincherGestureRecognizer.templates.append(template)
+                // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
 		//Now start code for secrets
 		//********************************************************************************************
 		//********************************************************************************************
@@ -107,7 +101,6 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
 			view.bringSubview(toFront: messageLabel)
 			view.bringSubview(toFront: titleLabel)
 			view.bringSubview(toFront: gestureLabel)
-			view.bringSubview(toFront: addButton)
 			view.bringSubview(toFront: clearButton)
 			view.bringSubview(toFront: gestureView)
 			view.bringSubview(toFront: templateTextField)
@@ -165,21 +158,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         return true
     }
     
-    @IBAction func didTapAddTemplate(_ sender: Any) {
-        if(gesture.isEmpty == true)
-        {
-            gestureLabel.text = "Inserisci la nuova Gesture"
-            if let template = PennyPincher.createTemplate("pass", points: gestureView.points) {
-                pennyPincherGestureRecognizer.templates.append(template)
-            }
-            for point in gestureView.points{
-                gesture.append(PersistenceManager.newItem(point))
-            }
-            print(gestureView.points.description.sha1())
-            gestureView.clear()
-        }
-    }
-    
+        
     func didRecognize(_ pennyPincherGestureRecognizer: PennyPincherGestureRecognizer) {
         switch pennyPincherGestureRecognizer.state {
         case .ended, .cancelled, .failed:
