@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="410" y="134"/>
         </scene>
-        <!--Tutorial View Controller-->
+        <!--Inserisci Gesture-->
         <scene sceneID="7Ds-pi-lam">
             <objects>
-                <viewController id="G03-Ee-xV5" customClass="TutorialViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Inserisci Gesture" id="G03-Ee-xV5" customClass="TutorialViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5o9-Z1-Ghs"/>
                         <viewControllerLayoutGuide type="bottom" id="AeM-3p-BcS"/>
@@ -45,31 +45,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inserisci Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-ec-DkA">
-                                <rect key="frame" x="123" y="92" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX1-jx-7cO">
-                                <rect key="frame" x="144" y="606" width="86" height="30"/>
+                                <rect key="frame" x="24" y="587" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Gesture"/>
                                 <connections>
                                     <action selector="didTapAddTemplate:" destination="G03-Ee-xV5" eventType="touchUpInside" id="67o-d9-KB2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2d-rC-RuO">
+                                <rect key="frame" x="24" y="659" width="327" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adO-Yr-Aoq">
+                                <rect key="frame" x="303" y="587" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="G03-Ee-xV5" eventType="touchUpInside" id="Mq0-vj-vPl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="R2d-rC-RuO" secondAttribute="trailing" constant="8" id="2YN-47-rv6"/>
+                            <constraint firstItem="AeM-3p-BcS" firstAttribute="top" secondItem="R2d-rC-RuO" secondAttribute="bottom" constant="8" id="9Y8-xX-gnq"/>
+                            <constraint firstItem="R2d-rC-RuO" firstAttribute="leading" secondItem="3ps-g3-X2D" secondAttribute="leadingMargin" constant="8" id="dEe-rD-4U9"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="ErrorLabel" destination="R2d-rC-RuO" id="iFx-2P-dE2"/>
                         <outlet property="gestureView" destination="3ps-g3-X2D" id="TvI-Ql-2ic"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="okGesture" id="pQm-TZ-zeR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQX-th-r40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261.5999999999999" y="-560.86956521739137"/>
+            <point key="canvasLocation" x="1055" y="-788"/>
         </scene>
         <!--QRView-->
         <scene sceneID="tne-QT-ifu">
@@ -192,4 +206,7 @@
             <point key="canvasLocation" x="-426" y="134"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pQm-TZ-zeR"/>
+    </inferredMetricsTieBreakers>
 </document>
