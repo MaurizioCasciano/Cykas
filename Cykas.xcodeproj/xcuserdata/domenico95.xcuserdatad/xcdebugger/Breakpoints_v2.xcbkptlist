@@ -22,16 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Cykas/ViewController.swift"
-            timestampString = "512662780.195662"
+            timestampString = "512818425.281248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "AuthenticateWithTouchID()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
