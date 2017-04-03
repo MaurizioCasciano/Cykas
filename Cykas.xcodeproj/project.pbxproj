@@ -25,9 +25,11 @@
 		9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */; };
 		9DF778501E8EC2DB00200CDC /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */; };
 		9DF778511E8EC2DB00200CDC /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C32A00C71E924C380020FB7A /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A00C61E924C380020FB7A /* InitViewController.swift */; };
+		C32A00C91E924FD10020FB7A /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A00C81E924FD10020FB7A /* TutorialViewController.swift */; };
 		C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */; };
 		C36B95561E92348D000F432B /* TemplateGesture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */; };
-		C36B955A1E9237A7000F432B /* PersistenceManagerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95591E9237A7000F432B /* PersistenceManagerTemplate.swift */; };
+		C36B955A1E9237A7000F432B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95591E9237A7000F432B /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,9 +87,11 @@
 		9D9F978B1E914F830021E49E /* RNCryptor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RNCryptor.framework; sourceTree = "<group>"; };
 		9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretInitViewController.swift; sourceTree = "<group>"; };
 		9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
+		C32A00C61E924C380020FB7A /* InitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
+		C32A00C81E924FD10020FB7A /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C36B95591E9237A7000F432B /* PersistenceManagerTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManagerTemplate.swift; sourceTree = "<group>"; };
+		C36B95591E9237A7000F432B /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +154,7 @@
 				13DC5ABC1E8BC7AF00EBC24F /* ViewController.swift */,
 				13DC5ABE1E8BC7AF00EBC24F /* Main.storyboard */,
 				13DC5AC41E8BC7AF00EBC24F /* Assets.xcassets */,
-				C36B95591E9237A7000F432B /* PersistenceManagerTemplate.swift */,
+				C36B95591E9237A7000F432B /* PersistenceManager.swift */,
 				13DC5AC61E8BC7AF00EBC24F /* LaunchScreen.storyboard */,
 				13DC5AC91E8BC7AF00EBC24F /* Info.plist */,
 				13DC5AC11E8BC7AF00EBC24F /* Cykas.xcdatamodeld */,
@@ -158,6 +162,8 @@
 				9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */,
 				9D7A3F101E923F05000603E1 /* Encrypter.swift */,
 				9D7A3F121E924498000603E1 /* progressHUD.swift */,
+				C32A00C61E924C380020FB7A /* InitViewController.swift */,
+				C32A00C81E924FD10020FB7A /* TutorialViewController.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -318,15 +324,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36B955A1E9237A7000F432B /* PersistenceManagerTemplate.swift in Sources */,
+				C36B955A1E9237A7000F432B /* PersistenceManager.swift in Sources */,
 				13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */,
 				9D7A3F131E924498000603E1 /* progressHUD.swift in Sources */,
 				9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */,
 				13DC5AC31E8BC7AF00EBC24F /* Cykas.xcdatamodeld in Sources */,
+				C32A00C71E924C380020FB7A /* InitViewController.swift in Sources */,
 				C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */,
 				C36B95561E92348D000F432B /* TemplateGesture+CoreDataProperties.swift in Sources */,
 				9D2E54321E8D053400406718 /* GestureView.swift in Sources */,
 				13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */,
+				C32A00C91E924FD10020FB7A /* TutorialViewController.swift in Sources */,
 				9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
