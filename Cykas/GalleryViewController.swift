@@ -8,14 +8,15 @@
 
 import UIKit
 import Photos
+import MobileCoreServices
 
 class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
 	UICollectionViewDelegate,
 UICollectionViewDataSource {
-    
+	
 	@IBOutlet var collectionView: UICollectionView!
 	var images: [UIImage] = [UIImage]()
-
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -67,33 +68,39 @@ UICollectionViewDataSource {
 		
 		self.present(addActionSheet, animated: true, completion: nil)
 	}
-
+	
 	/**
 	*User picked a photo
 	*/
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-		let image: UIImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+		
+		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
 		
 		self.images.append(image)
 		
 		self.collectionView.reloadData()
 		picker.dismiss(animated: true, completion: nil)
 		
-		let imageURL = info[UIImagePickerControllerReferenceURL] as! URL
-		let imageURLs = [imageURL]
 		
-		//Let's delete it now
-		PHPhotoLibrary.shared().performChanges(
-			//CHANGE-BLOCk
-			{
-				let imageAssetToDelete = PHAsset.fetchAssets(withALAssetURLs: imageURLs, options: nil)
-				
-				PHAssetChangeRequest.deleteAssets(imageAssetToDelete)
-		},
-			completionHandler: {
-				(success, error)in
-				NSLog("Finished deleting asset. @", success ? "Success" : "Error")
-		})
+		
+		
+		
+		if picker.sourceType == .photoLibrary{
+			//Let's delete it now
+			PHPhotoLibrary.shared().performChanges(
+				//CHANGE-BLOCk
+				{
+					let imageURL = info[UIImagePickerControllerReferenceURL] as! URL
+					let imageURLs = [imageURL]
+					let imageAssetToDelete = PHAsset.fetchAssets(withALAssetURLs: imageURLs, options: nil)
+					
+					PHAssetChangeRequest.deleteAssets(imageAssetToDelete)
+				},
+				completionHandler: {
+					(success, error)in
+					NSLog("Finished deleting asset. @", success ? "Success" : "Error")
+			})
+		}
 	}
 	
 	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

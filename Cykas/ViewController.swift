@@ -43,15 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         template = PennyPincher.createTemplate("pass", points: y)!
         pennyPincherGestureRecognizer.templates.append(template)
                 // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
-		//Now start code for secrets
-		//********************************************************************************************
-		//********************************************************************************************
-		//********************************************************************************************
-		//********************************************************************************************
-		//********************************************************************************************
-		//********************************************************************************************
-		//********************************************************************************************
-		
+
 		pennyPincherGestureRecognizer.enableMultipleStrokes = true
 		pennyPincherGestureRecognizer.allowedTimeBetweenMultipleStrokes = 0.2
 		pennyPincherGestureRecognizer.cancelsTouchesInView = false
@@ -233,9 +225,8 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
                             }
                             
                         } else {
+                           // self.notifyUser("Authentication Successful",err: "You now have full access")
                             self.performSegue(withIdentifier: "secretSegue", sender: nil)
-                            self.notifyUser("Authentication Successful",err: "You now have full access")
-                            
                             
                         }
                     }
