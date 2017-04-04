@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		137F7E011E92F00E00A1AB9E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F7E001E92F00E00A1AB9E /* ImageViewController.swift */; };
+		137F7E031E92F2D700A1AB9E /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F7E021E92F2D700A1AB9E /* GalleryViewController.swift */; };
+		137F7E051E92F79D00A1AB9E /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F7E041E92F79D00A1AB9E /* GalleryCollectionViewCell.swift */; };
 		13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5ABA1E8BC7AF00EBC24F /* AppDelegate.swift */; };
 		13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5ABC1E8BC7AF00EBC24F /* ViewController.swift */; };
 		13DC5AC01E8BC7AF00EBC24F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DC5ABE1E8BC7AF00EBC24F /* Main.storyboard */; };
@@ -67,6 +70,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		137F7E001E92F00E00A1AB9E /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		137F7E021E92F2D700A1AB9E /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		137F7E041E92F79D00A1AB9E /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		13DC5AB71E8BC7AF00EBC24F /* Cykas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cykas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DC5ABA1E8BC7AF00EBC24F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13DC5ABC1E8BC7AF00EBC24F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +173,9 @@
 				9D9F34981E92617D00EE3F94 /* NoteViewController.swift */,
 				9D9F349A1E9261B600EE3F94 /* CameraViewController.swift */,
 				9D9F349C1E9261E600EE3F94 /* SettingViewController.swift */,
+				137F7E001E92F00E00A1AB9E /* ImageViewController.swift */,
+				137F7E021E92F2D700A1AB9E /* GalleryViewController.swift */,
+				137F7E041E92F79D00A1AB9E /* GalleryCollectionViewCell.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -328,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C36B955A1E9237A7000F432B /* PersistenceManagerTemplate.swift in Sources */,
+				137F7E051E92F79D00A1AB9E /* GalleryCollectionViewCell.swift in Sources */,
 				9D9F349B1E9261B600EE3F94 /* CameraViewController.swift in Sources */,
 				13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */,
 				9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */,
@@ -337,7 +347,9 @@
 				C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */,
 				C36B95561E92348D000F432B /* TemplateGesture+CoreDataProperties.swift in Sources */,
 				9D2E54321E8D053400406718 /* GestureView.swift in Sources */,
+				137F7E011E92F00E00A1AB9E /* ImageViewController.swift in Sources */,
 				9D9F349D1E9261E600EE3F94 /* SettingViewController.swift in Sources */,
+				137F7E031E92F2D700A1AB9E /* GalleryViewController.swift in Sources */,
 				13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */,
 				9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */,
 			);
