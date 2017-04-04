@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -249,7 +250,7 @@
         <!--Camera-->
         <scene sceneID="Ujj-w9-JK9">
             <objects>
-                <viewController id="I0p-3U-IvF" sceneMemberID="viewController">
+                <viewController id="I0p-3U-IvF" customClass="CameraViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z59-p0-rXa"/>
                         <viewControllerLayoutGuide type="bottom" id="duL-tJ-aQH"/>
@@ -257,13 +258,42 @@
                     <view key="view" contentMode="scaleToFill" id="vHX-ce-wgx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImgOverlay" translatesAutoresizingMaskIntoConstraints="NO" id="ACs-1b-NMb">
+                                <rect key="frame" x="73" y="269" width="228" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ACs-1b-NMb" secondAttribute="height" multiplier="57:32" id="2rx-rd-q5k"/>
+                                    <constraint firstAttribute="height" constant="128" id="3zp-JN-qCa"/>
+                                    <constraint firstAttribute="width" constant="228" id="nR7-wU-laK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd7-8R-FPD">
+                                <rect key="frame" x="137" y="510" width="100" height="100"/>
+                                <state key="normal" title="Button" image="ImgCameraCaptureBtn"/>
+                                <connections>
+                                    <action selector="actionCameraCapture:" destination="I0p-3U-IvF" eventType="touchUpInside" id="OeP-Ni-y5P"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dd7-8R-FPD" firstAttribute="leading" secondItem="vHX-ce-wgx" secondAttribute="leadingMargin" constant="121" id="Mdl-VV-jjv"/>
+                            <constraint firstItem="dd7-8R-FPD" firstAttribute="top" secondItem="ACs-1b-NMb" secondAttribute="bottom" constant="113" id="Q6Y-n1-x3o"/>
+                            <constraint firstItem="ACs-1b-NMb" firstAttribute="centerY" secondItem="vHX-ce-wgx" secondAttribute="centerY" id="ZGj-J4-Xrq"/>
+                            <constraint firstItem="duL-tJ-aQH" firstAttribute="top" secondItem="dd7-8R-FPD" secondAttribute="bottom" constant="8" id="dBX-wh-eNb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dd7-8R-FPD" secondAttribute="trailing" constant="122" id="nli-57-V3E"/>
+                            <constraint firstItem="ACs-1b-NMb" firstAttribute="centerX" secondItem="vHX-ce-wgx" secondAttribute="centerX" id="xYc-61-AxN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="Camera Icon" selectedImage="Camera Icon" id="9O2-Cm-V3g"/>
+                    <connections>
+                        <outlet property="btnCapture" destination="dd7-8R-FPD" id="sMb-si-NLv"/>
+                        <outlet property="imgOverlay" destination="ACs-1b-NMb" id="Zic-eX-9di"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHb-hV-qXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="672"/>
+            <point key="canvasLocation" x="-727.20000000000005" y="671.51424287856082"/>
         </scene>
         <!--Setting-->
         <scene sceneID="Xjc-Hs-C1N">
@@ -445,6 +475,8 @@
         <image name="Archive Icon" width="29" height="26"/>
         <image name="Camera Icon" width="36" height="28"/>
         <image name="Create Icon" width="19" height="29"/>
+        <image name="ImgCameraCaptureBtn" width="250" height="250"/>
+        <image name="ImgOverlay" width="114" height="64"/>
         <image name="settings" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
