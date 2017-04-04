@@ -23,7 +23,6 @@
 		9D757DAE1E8EA68100561BBB /* PennyPincher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D757DAC1E8EA68100561BBB /* PennyPincher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A3F101E923F05000603E1 /* Encrypter.swift */; };
 		9D9F34971E92614E00EE3F94 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F34961E92614E00EE3F94 /* ArchiveViewController.swift */; };
-		9D9F34991E92617D00EE3F94 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F34981E92617D00EE3F94 /* NoteViewController.swift */; };
 		9D9F349B1E9261B600EE3F94 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F349A1E9261B600EE3F94 /* CameraViewController.swift */; };
 		9D9F349D1E9261E600EE3F94 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F349C1E9261E600EE3F94 /* SettingViewController.swift */; };
 		9D9F978C1E914F830021E49E /* RNCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9F978B1E914F830021E49E /* RNCryptor.framework */; };
@@ -36,6 +35,10 @@
 		C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */; };
 		C36B95561E92348D000F432B /* TemplateGesture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */; };
 		C36B955A1E9237A7000F432B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95591E9237A7000F432B /* PersistenceManager.swift */; };
+		D868D2A61E93E76300DEFEE9 /* NotePersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A51E93E76300DEFEE9 /* NotePersistent.swift */; };
+		D868D2AA1E93E86900DEFEE9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */; };
+		D868D2AB1E93E86900DEFEE9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A81E93E86900DEFEE9 /* ItemCell.swift */; };
+		D868D2AC1E93E86900DEFEE9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +96,6 @@
 		9D757DAC1E8EA68100561BBB /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PennyPincher.framework; sourceTree = "<group>"; };
 		9D7A3F101E923F05000603E1 /* Encrypter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encrypter.swift; sourceTree = "<group>"; };
 		9D9F34961E92614E00EE3F94 /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
-		9D9F34981E92617D00EE3F94 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		9D9F349A1E9261B600EE3F94 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		9D9F349C1E9261E600EE3F94 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9D9F978B1E914F830021E49E /* RNCryptor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RNCryptor.framework; sourceTree = "<group>"; };
@@ -104,6 +106,10 @@
 		C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C36B95591E9237A7000F432B /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		D868D2A51E93E76300DEFEE9 /* NotePersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotePersistent.swift; sourceTree = "<group>"; };
+		D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		D868D2A81E93E86900DEFEE9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,12 +177,15 @@
 				13DC5AC91E8BC7AF00EBC24F /* Info.plist */,
 				13DC5AC11E8BC7AF00EBC24F /* Cykas.xcdatamodeld */,
 				9D2E54311E8D053400406718 /* GestureView.swift */,
+				D868D2A51E93E76300DEFEE9 /* NotePersistent.swift */,
 				9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */,
 				9D7A3F101E923F05000603E1 /* Encrypter.swift */,
+				D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */,
+				D868D2A81E93E86900DEFEE9 /* ItemCell.swift */,
+				D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */,
 				C32A00C61E924C380020FB7A /* InitViewController.swift */,
 				C32A00C81E924FD10020FB7A /* TutorialViewController.swift */,
 				9D9F34961E92614E00EE3F94 /* ArchiveViewController.swift */,
-				9D9F34981E92617D00EE3F94 /* NoteViewController.swift */,
 				9D9F349A1E9261B600EE3F94 /* CameraViewController.swift */,
 				9D9F349C1E9261E600EE3F94 /* SettingViewController.swift */,
 				137F7E001E92F00E00A1AB9E /* ImageViewController.swift */,
@@ -273,7 +282,6 @@
 				TargetAttributes = {
 					13DC5AB61E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BRD4WW9Y7C;
 						ProvisioningStyle = Automatic;
 					};
 					13DC5ACD1E8BC7AF00EBC24F = {
@@ -346,8 +354,10 @@
 				C36B955A1E9237A7000F432B /* PersistenceManager.swift in Sources */,
 				9D9F349B1E9261B600EE3F94 /* CameraViewController.swift in Sources */,
 				13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */,
+				D868D2AB1E93E86900DEFEE9 /* ItemCell.swift in Sources */,
+				D868D2A61E93E76300DEFEE9 /* NotePersistent.swift in Sources */,
+				D868D2AC1E93E86900DEFEE9 /* DetailViewController.swift in Sources */,
 				9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */,
-				9D9F34991E92617D00EE3F94 /* NoteViewController.swift in Sources */,
 				9D9F34971E92614E00EE3F94 /* ArchiveViewController.swift in Sources */,
 				13DC5AC31E8BC7AF00EBC24F /* Cykas.xcdatamodeld in Sources */,
 				C32A00C71E924C380020FB7A /* InitViewController.swift in Sources */,
@@ -358,6 +368,7 @@
 				9D9F349D1E9261E600EE3F94 /* SettingViewController.swift in Sources */,
 				137F7E031E92F2D700A1AB9E /* GalleryViewController.swift in Sources */,
 				13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */,
+				D868D2AA1E93E86900DEFEE9 /* ItemsViewController.swift in Sources */,
 				C32A00C91E924FD10020FB7A /* TutorialViewController.swift in Sources */,
 				9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */,
 			);
@@ -511,7 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -528,7 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
