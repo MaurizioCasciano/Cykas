@@ -18,7 +18,7 @@ class ItemsViewController: UITableViewController {
             items =  NotePersistenceManager.fetchData()
             self.navigationItem.leftBarButtonItem = self.editButtonItem
         }
-        
+    
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
         }
@@ -45,6 +45,7 @@ class ItemsViewController: UITableViewController {
         
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
+            items = NotePersistenceManager.fetchData()
             tableView.reloadData()
         }
         
