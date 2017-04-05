@@ -6,12 +6,13 @@
 //  Copyright © 2017 ALBA. All rights reserved.
 //
 import UIKit
-
+import CoreData
 class SettingViewController: UIViewController {
     
+    var items = [Notes]()
+    var images: [Media] = [Media]()
+    
     @IBAction func DeleteFiles(_ sender: UIButton) {
-        
-        
         
         let addActionSheet = UIAlertController.init(
             title: "Elimina Files",
@@ -30,19 +31,15 @@ class SettingViewController: UIViewController {
         self.present(addActionSheet, animated: true, completion: nil)
         
     }
-    
-    
     func DeleteAllFiles(){
-        print("bisogna eliminare tutto");
+        NotePersistenceManager.deleteAllItem()
+        MediaPersistenceManager.deleteAllItem()
+        exit(0)
     }
-    
-    
-    
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        items =  NotePersistenceManager.fetchData()
+        images = MediaPersistenceManager.fetchData()
         // Do any additional setup after loading the view.
     }
     

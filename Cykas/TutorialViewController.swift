@@ -72,7 +72,7 @@ class TutorialViewController: UIViewController {
              gestureView.clear()
             
             let alertController = UIAlertController(title: title, message: "Second gesture do not match, insert again or press cancel to redo you initial gesture", preferredStyle: .alert)
-            let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let OKAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
             let CancelAction = UIAlertAction(title: "Cancel", style: .cancel,handler:{ (action: UIAlertAction!) in
                 let gesture = PersistenceManager.fetchData()
                 for point in gesture{
