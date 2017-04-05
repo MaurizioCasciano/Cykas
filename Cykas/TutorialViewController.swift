@@ -15,16 +15,17 @@ class TutorialViewController: UIViewController {
     var i = 0
     @IBOutlet var gestureView: GestureView!
     
+    @IBOutlet var navBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.alert(message: "Now you must insert a gesture, we use it as password. If you lost it , you will lost all file", title: "BE ALERT!")
+        self.alert(message: "Now you should insert a gesture, we use it as password for your secret archive. You should insert a continuos gesture, try to not lift your finger", title: "BE ALERT!")
         pennyPincherGestureRecognizer.enableMultipleStrokes = true
         pennyPincherGestureRecognizer.allowedTimeBetweenMultipleStrokes = 0.2
         pennyPincherGestureRecognizer.cancelsTouchesInView = false
         pennyPincherGestureRecognizer.addTarget(self, action: #selector(didRecognize(_:)))
         
         gestureView.addGestureRecognizer(pennyPincherGestureRecognizer)
-        ErrorLabel.text = "Inserisci la Gesture da utilizzare come protezione"
+        navBar.topItem?.title = "Insert gesture "
         // Do any additional setup after loading the view.
     }
 
@@ -38,6 +39,21 @@ class TutorialViewController: UIViewController {
             print("Riconosciuto")
             if(i != 0){
                 updateRecognizerResult()
+            }else{
+                if(i==0){
+                    if let template = PennyPincher.createTemplate("pass", points: gestureView.points) {
+                        pennyPincherGestureRecognizer.templates.append(template)
+                    }
+                    for point in gestureView.points{
+                        PersistenceManager.newItem(point)
+                    }
+                    self.alert(message: "Insert gesture again, for ensure that you draw it correct", title: "Good!")
+                    navBar.topItem?.title = "Insert again"
+                    i+=1;
+                    print(gestureView.points.description.sha1())
+                    gestureView.clear()
+                }
+
             }
         default: break
         }
@@ -49,40 +65,36 @@ class TutorialViewController: UIViewController {
         }
         let similarityString = String(format: "%.2f", similarity)
         if(Double(similarityString)!>10.0){
-            self.performSegue(withIdentifier: "okGesture", sender: nil)
+             self.performSegue(withIdentifier: "okGesture", sender: nil)
+            self.alert(message: "Gesture recorded", title: "Excellent!")
+           
         }else{
              gestureView.clear()
-            ErrorLabel.text = "Inserire dinuovo la gesture o premi cancel per reinserire la gesture iniziale"
+            
+            let alertController = UIAlertController(title: title, message: "Second gesture do not match, insert again or press cancel to redo you initial gesture", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let CancelAction = UIAlertAction(title: "Cancel", style: .cancel,handler:{ (action: UIAlertAction!) in
+                let gesture = PersistenceManager.fetchData()
+                for point in gesture{
+                    PersistenceManager.deleteItem(item: point)
+                }
+                PersistenceManager.saveContext()
+                self.i = 0
+                self.navBar.topItem?.title = "Please insert gesture"
+                self.gestureView.clear()
+            })
+            
+            alertController.addAction(OKAction)
+            alertController.addAction(CancelAction)
+            self.present(alertController, animated: true, completion: nil)
+            //ErrorLabel.text = "Inserire dinuovo la gesture o premi cancel per reinserire la gesture iniziale"
         }
+        
     }
-    @IBOutlet weak var ErrorLabel: UILabel!
-    @IBAction func cancel(_ sender:UIButton)
-    {
-        let gesture = PersistenceManager.fetchData()
-        for point in gesture{
-            PersistenceManager.deleteItem(item: point)
-        }
-        PersistenceManager.saveContext()
-        i = 0
-        ErrorLabel.text = "Inserire dinuovo la gesture iniziale"
-        gestureView.clear()
-    }
+
     
     
-    @IBAction func didTapAddTemplate(_ sender: UIButton) {
-        if(i==0){
-            if let template = PennyPincher.createTemplate("pass", points: gestureView.points) {
-                pennyPincherGestureRecognizer.templates.append(template)
-            }
-            for point in gestureView.points{
-                PersistenceManager.newItem(point)
-            }
-            ErrorLabel.text = "Inserire dinuovo la gesture"
-            i+=1;
-            print(gestureView.points.description.sha1())
-            gestureView.clear()
-        }
-    }
+
 
     /*
     // MARK: - Navigation

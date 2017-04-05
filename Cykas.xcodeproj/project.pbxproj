@@ -19,7 +19,7 @@
 		13DC5AD31E8BC7AF00EBC24F /* CykasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5AD21E8BC7AF00EBC24F /* CykasTests.swift */; };
 		13DC5ADE1E8BC7AF00EBC24F /* CykasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */; };
 		9D2E54321E8D053400406718 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E54311E8D053400406718 /* GestureView.swift */; };
-		9D7483FE1E95210E0058E6B0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7483FD1E95210E0058E6B0 /* File.swift */; };
+		9D7483FE1E95210E0058E6B0 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7483FD1E95210E0058E6B0 /* ViewExtension.swift */; };
 		9D757DAD1E8EA68100561BBB /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D757DAC1E8EA68100561BBB /* PennyPincher.framework */; };
 		9D757DAE1E8EA68100561BBB /* PennyPincher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D757DAC1E8EA68100561BBB /* PennyPincher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A3F101E923F05000603E1 /* Encrypter.swift */; };
@@ -76,8 +76,6 @@
 		C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */; };
 		C36B95561E92348D000F432B /* TemplateGesture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */; };
 		C36B955A1E9237A7000F432B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95591E9237A7000F432B /* PersistenceManager.swift */; };
-		C3AD47051E94DA8A00F07033 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD47031E94DA8A00F07033 /* Notes+CoreDataClass.swift */; };
-		C3AD47061E94DA8A00F07033 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD47041E94DA8A00F07033 /* Notes+CoreDataProperties.swift */; };
 		C3AD47081E94DAF500F07033 /* MediaPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD47071E94DAF500F07033 /* MediaPersistenceManager.swift */; };
 		C3AD470B1E94DB4100F07033 /* Media+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD47091E94DB4100F07033 /* Media+CoreDataClass.swift */; };
 		C3AD470C1E94DB4100F07033 /* Media+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD470A1E94DB4100F07033 /* Media+CoreDataProperties.swift */; };
@@ -143,7 +141,7 @@
 		13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CykasUITests.swift; sourceTree = "<group>"; };
 		13DC5ADF1E8BC7AF00EBC24F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D2E54311E8D053400406718 /* GestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
-		9D7483FD1E95210E0058E6B0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		9D7483FD1E95210E0058E6B0 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		9D757DAC1E8EA68100561BBB /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PennyPincher.framework; sourceTree = "<group>"; };
 		9D7A3F101E923F05000603E1 /* Encrypter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encrypter.swift; sourceTree = "<group>"; };
 		9D9294D31E951A8F003211CF /* File1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = File1.gif; sourceTree = "<group>"; };
@@ -197,8 +195,6 @@
 		C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C36B95591E9237A7000F432B /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
-		C3AD47031E94DA8A00F07033 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C3AD47041E94DA8A00F07033 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C3AD47071E94DAF500F07033 /* MediaPersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPersistenceManager.swift; sourceTree = "<group>"; };
 		C3AD47091E94DB4100F07033 /* Media+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C3AD470A1E94DB4100F07033 /* Media+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -299,7 +295,7 @@
 				C3AD47071E94DAF500F07033 /* MediaPersistenceManager.swift */,
 				FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */,
 				FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */,
-				9D7483FD1E95210E0058E6B0 /* File.swift */,
+				9D7483FD1E95210E0058E6B0 /* ViewExtension.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -573,7 +569,7 @@
 				C3AD470C1E94DB4100F07033 /* Media+CoreDataProperties.swift in Sources */,
 				FA3DC3A81E94FD94001A060A /* ChangeGestureViewController.swift in Sources */,
 				D868D2AA1E93E86900DEFEE9 /* ItemsViewController.swift in Sources */,
-				9D7483FE1E95210E0058E6B0 /* File.swift in Sources */,
+				9D7483FE1E95210E0058E6B0 /* ViewExtension.swift in Sources */,
 				C32A00C91E924FD10020FB7A /* TutorialViewController.swift in Sources */,
 				9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */,
 			);
