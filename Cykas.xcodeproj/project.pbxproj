@@ -71,6 +71,7 @@
 		9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */; };
 		9DF778501E8EC2DB00200CDC /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */; };
 		9DF778511E8EC2DB00200CDC /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C329503C1E95294000DDFAA6 /* CryptoString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C329503B1E95294000DDFAA6 /* CryptoString.swift */; };
 		C32A00C71E924C380020FB7A /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A00C61E924C380020FB7A /* InitViewController.swift */; };
 		C32A00C91E924FD10020FB7A /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A00C81E924FD10020FB7A /* TutorialViewController.swift */; };
 		C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */; };
@@ -190,6 +191,7 @@
 		9D9F978B1E914F830021E49E /* RNCryptor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RNCryptor.framework; sourceTree = "<group>"; };
 		9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretInitViewController.swift; sourceTree = "<group>"; };
 		9DF7784F1E8EC2DB00200CDC /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = "<group>"; };
+		C329503B1E95294000DDFAA6 /* CryptoString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoString.swift; sourceTree = "<group>"; };
 		C32A00C61E924C380020FB7A /* InitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 		C32A00C81E924FD10020FB7A /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -296,6 +298,8 @@
 				FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */,
 				FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */,
 				9D7483FD1E95210E0058E6B0 /* ViewExtension.swift */,
+				9D7483FD1E95210E0058E6B0 /* File.swift */,
+				C329503B1E95294000DDFAA6 /* CryptoString.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -434,7 +438,7 @@
 				TargetAttributes = {
 					13DC5AB61E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BRD4WW9Y7C;
+						DevelopmentTeam = 7HD9H4B8M3;
 						ProvisioningStyle = Automatic;
 					};
 					13DC5ACD1E8BC7AF00EBC24F = {
@@ -558,6 +562,7 @@
 				9D9F34971E92614E00EE3F94 /* ArchiveViewController.swift in Sources */,
 				D87289411E94EFF600F35F9D /* Notes+CoreDataClass.swift in Sources */,
 				13DC5AC31E8BC7AF00EBC24F /* Cykas.xcdatamodeld in Sources */,
+				C329503C1E95294000DDFAA6 /* CryptoString.swift in Sources */,
 				C32A00C71E924C380020FB7A /* InitViewController.swift in Sources */,
 				C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */,
 				C36B95561E92348D000F432B /* TemplateGesture+CoreDataProperties.swift in Sources */,
@@ -723,14 +728,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = 7HD9H4B8M3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
+				PRODUCT_BUNDLE_IDENTIFIER = ALBA.Cykas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -740,14 +745,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = 7HD9H4B8M3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
+				PRODUCT_BUNDLE_IDENTIFIER = ALBA.Cykas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

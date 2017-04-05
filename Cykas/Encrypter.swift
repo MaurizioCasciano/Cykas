@@ -24,6 +24,4 @@ class Encrypter {
         }
         return originalData
     }
-    
-
 }
