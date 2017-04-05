@@ -164,7 +164,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         
         let similarityString = String(format: "%.2f", similarity)
         gestureLabel.text = "Template: \(template.id), Similarity: \(similarityString)"
-        if(Double(similarityString)!>10.0){
+        if(Double(similarityString)!>8.0){
             AuthenticateWithTouchID()
         }
     }
@@ -237,11 +237,11 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
             case LAError.Code.passcodeNotSet.rawValue:
                 notifyUser("A passcode has not been set",
                            err: error?.localizedDescription)
-                
+
             default:
                 notifyUser("TouchID not available",
                            err: error?.localizedDescription)
-                
+
             }
         }
     }

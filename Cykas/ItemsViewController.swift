@@ -35,7 +35,9 @@ class ItemsViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellItem", for: indexPath) as! ItemCell
             let item = items[indexPath.row]
             let CS = CryptoString()
-            cell.nameLabel.text = String(data:Encrypter.decrypt(data: item.name! as Data, password:CS.cryptoString!)  as Data, encoding: .utf8)
+            let name = String(data:Encrypter.decrypt(data: item.name! as Data, password:CS.cryptoString!)  as Data, encoding: .utf8)
+            print(name!)
+            cell.nameLabel.text = name
             cell.contentLabel.text = String(data:Encrypter.decrypt(data: item.content! as Data, password: CS.cryptoString!)  as Data, encoding: .utf8)
             cell.valueLabel.text = String(data:Encrypter.decrypt(data: item.data! as Data, password: CS.cryptoString!)  as Data, encoding: .utf8)
             return cell
