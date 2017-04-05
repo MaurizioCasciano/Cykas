@@ -737,11 +737,11 @@
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="672.41379310344837"/>
         </scene>
-        <!--Item-->
+        <!--Notes-->
         <scene sceneID="9ts-i0-Ugw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wnk-KX-G3y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="Create Icon" id="Ytc-M7-3y3"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="Create Icon" id="Ytc-M7-3y3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Su-i3-bFm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
