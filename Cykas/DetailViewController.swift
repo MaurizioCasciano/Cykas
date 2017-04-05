@@ -29,20 +29,25 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        nameField.text = item.name
-        contentField.text = item.content
-        dateLabel.text = dateFormatter.string(from: item.data! as Date)
+        nameField.text = String(data:Encrypter.decrypt(data: item.name! as Data, password: PersistenceManager.fetchData().description.sha256())  as Data, encoding: .utf8)
+        contentField.text = String(data:Encrypter.decrypt(data: item.content! as Data, password: PersistenceManager.fetchData().description.sha256())  as Data, encoding: .utf8)
+        dateLabel.text = String(data:Encrypter.decrypt(data: item.data! as Data, password: PersistenceManager.fetchData().description.sha256())  as Data, encoding: .utf8)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        item.name=nameField.text
-        item.content=contentField.text
-        item.data = dateFormatter.date(from: dateLabel.text!)! as NSDate
+        let name=nameField.text
+        let content=contentField.text
+        let date=dateLabel.text
+        let namedata = name?.data(using: .utf8) as NSData?
+        let contentdata = content?.data(using: .utf8) as NSData?
+        let datadata = date?.data(using: .utf8) as NSData?
+        item.name = Encrypter.encrypt(data: namedata! as Data, password: PersistenceManager.fetchData().description.sha256()) as NSData
+        item.content = Encrypter.encrypt(data: contentdata! as Data, password: PersistenceManager.fetchData().description.sha256()) as NSData
+        item.data = Encrypter.encrypt(data: datadata! as Data, password: PersistenceManager.fetchData().description.sha256()) as NSData
         NotePersistenceManager.saveContext()
         // Clear first responder
         view.endEditing(true)
-        
         // "Save" changes to item
         
         
