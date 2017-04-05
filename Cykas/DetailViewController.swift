@@ -11,6 +11,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet var dateLabel: UILabel!
     
     var item: Notes!
+    let CS = CryptoString()
     
     @IBAction func Clear(_ sender: UIBarButtonItem) {
         nameField.text = ""
@@ -29,9 +30,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        nameField.text = String(data:Encrypter.decrypt(data: item.name! as Data, password: PersistenceManager.fetchData().description.sha256())  as Data, encoding: .utf8)
-        contentField.text = String(data:Encrypter.decrypt(data: item.content! as Data, password: PersistenceManager.fetchData().description.sha256())  as Data, encoding: .utf8)
-        dateLabel.text = String(data:Encrypter.decrypt(data: item.data! as Data, password: PersistenceManager.fetchData().description.sha256())  as Data, encoding: .utf8)
+        nameField.text = String(data:Encrypter.decrypt(data: item.name! as Data, password: CS.cryptoString!)  as Data, encoding: .utf8)
+        contentField.text = String(data:Encrypter.decrypt(data: item.content! as Data, password: CS.cryptoString!)  as Data, encoding: .utf8)
+        dateLabel.text = String(data:Encrypter.decrypt(data: item.data! as Data, password: CS.cryptoString!)  as Data, encoding: .utf8)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,9 +43,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         let namedata = name?.data(using: .utf8) as NSData?
         let contentdata = content?.data(using: .utf8) as NSData?
         let datadata = date?.data(using: .utf8) as NSData?
-        item.name = Encrypter.encrypt(data: namedata! as Data, password: PersistenceManager.fetchData().description.sha256()) as NSData
-        item.content = Encrypter.encrypt(data: contentdata! as Data, password: PersistenceManager.fetchData().description.sha256()) as NSData
-        item.data = Encrypter.encrypt(data: datadata! as Data, password: PersistenceManager.fetchData().description.sha256()) as NSData
+        item.name = Encrypter.encrypt(data: namedata! as Data, password: CS.cryptoString!) as NSData
+        item.content = Encrypter.encrypt(data: contentdata! as Data, password: CS.cryptoString!) as NSData
+        item.data = Encrypter.encrypt(data: datadata! as Data, password: CS.cryptoString!) as NSData
         NotePersistenceManager.saveContext()
         // Clear first responder
         view.endEditing(true)

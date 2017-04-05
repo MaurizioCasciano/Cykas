@@ -78,10 +78,9 @@ UICollectionViewDataSource {
 		images.append(MediaPersistenceManager.newItem(image))
 		self.collectionView.reloadData()
 		picker.dismiss(animated: true, completion: nil)
-                if picker.sourceType == .photoLibrary{
+            if picker.sourceType == .photoLibrary{
 			//Let's delete it now
-			PHPhotoLibrary.shared().performChanges(
-				//CHANGE-BLOCk
+			PHPhotoLibrary.shared().performChanges( 
 				{
                     let imageURL = info[UIImagePickerControllerReferenceURL] as! URL
 					let imageURLs = [imageURL]
@@ -113,7 +112,8 @@ UICollectionViewDataSource {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GalleryCollectionViewCell
 		cell.layer.borderColor = UIColor.blue.cgColor
 		cell.layer.borderWidth = 1
-        let data:Data = Encrypter.decrypt(data: images[indexPath.row].binaryDate! as Data, password: PersistenceManager.fetchData().description.sha256())
+        let CS = CryptoString()
+        let data:Data = Encrypter.decrypt(data: images[indexPath.row].binaryDate! as Data, password:CS.cryptoString!)
         print ("Decripto quando Vedo le immagini: \(PersistenceManager.fetchData().description.sha256())")
 		cell.imageView.image = UIImage(data:data)
 		return cell
@@ -123,7 +123,8 @@ UICollectionViewDataSource {
 		if segue.identifier == "showPhoto"{
 			if let selectedIndexPath =
 				collectionView.indexPathsForSelectedItems?.first {
-                let data:Data = Encrypter.decrypt(data: images[selectedIndexPath.row].binaryDate! as Data, password: PersistenceManager.fetchData().description.sha256())
+                let CS = CryptoString()
+                let data:Data = Encrypter.decrypt(data: images[selectedIndexPath.row].binaryDate! as Data,password:CS.cryptoString!)
                 let img  = UIImage(data:data)!
                 let imageVC = segue.destination as! ImageViewController
 				imageVC.uiImage = img 
