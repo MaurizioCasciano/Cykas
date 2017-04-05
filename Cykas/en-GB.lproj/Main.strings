@@ -1,90 +1,90 @@
 
 /* Class = "UITabBarItem"; title = "Exit"; ObjectID = "2AT-2f-EYL"; */
-"2AT-2f-EYL.title" = "Esci";
+"2AT-2f-EYL.title" = "Exit";
 
 /* Class = "UIBarButtonItem"; title = "< Back"; ObjectID = "4h7-ZW-hFj"; */
-"4h7-ZW-hFj.title" = "< Indietro";
+"4h7-ZW-hFj.title" = "< Back";
 
 /* Class = "UILabel"; text = "         "; ObjectID = "5k0-kZ-gl6"; */
 "5k0-kZ-gl6.text" = "         ";
 
 /* Class = "UITableViewController"; title = "Notes"; ObjectID = "6Ff-WW-Bmf"; */
-"6Ff-WW-Bmf.title" = "Note";
+"6Ff-WW-Bmf.title" = "Notes";
 
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "6JE-KC-t00"; */
-"6JE-KC-t00.title" = "Impostazioni";
+"6JE-KC-t00.title" = "Settings";
 
 /* Class = "UILabel"; text = "0%"; ObjectID = "8hZ-1K-9GS"; */
 "8hZ-1K-9GS.text" = "0%";
 
 /* Class = "UIViewController"; title = "InitView"; ObjectID = "8hl-TZ-9Ik"; */
-"8hl-TZ-9Ik.title" = "View Iniziale";
+"8hl-TZ-9Ik.title" = "InitView";
 
 /* Class = "UILabel"; text = "Elimina Tutto"; ObjectID = "BHx-f3-E2w"; */
-"BHx-f3-E2w.text" = "Elimina Tutto";
+"BHx-f3-E2w.text" = "Delete All";
 
 /* Class = "UIViewController"; title = "QRView"; ObjectID = "BYZ-38-t0r"; */
 "BYZ-38-t0r.title" = "QRView";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "D6x-5I-7SI"; */
-"D6x-5I-7SI.text" = "Etichetta";
+"D6x-5I-7SI.text" = "Label";
 
 /* Class = "UILabel"; text = "QRCode Reader"; ObjectID = "E4T-Za-fON"; */
-"E4T-Za-fON.text" = "Lettore QRCode";
+"E4T-Za-fON.text" = "QRCode Reader";
 
 /* Class = "UITabBarItem"; title = "Archive"; ObjectID = "Itr-Fb-xEQ"; */
-"Itr-Fb-xEQ.title" = "Media";
+"Itr-Fb-xEQ.title" = "Archive";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JDb-ca-yyz"; */
-"JDb-ca-yyz.normalTitle" = "Pulsante";
+"JDb-ca-yyz.normalTitle" = "Button";
 
 /* Class = "UIViewController"; title = "Inserisci Gesture"; ObjectID = "L3a-i5-5Kv"; */
-"L3a-i5-5Kv.title" = "Inserisci Gesture";
+"L3a-i5-5Kv.title" = "Insert Gesture";
 
 /* Class = "UILabel"; text = "Cambiare gesture"; ObjectID = "Nq9-ej-h7W"; */
-"Nq9-ej-h7W.text" = "Cambiare gesture";
+"Nq9-ej-h7W.text" = "Change Gesture";
 
 /* Class = "UILabel"; text = "QRCode Reader"; ObjectID = "Pbd-2m-j3K"; */
-"Pbd-2m-j3K.text" = "Lettore QRCode";
+"Pbd-2m-j3K.text" = "QRCode Reader";
 
 /* Class = "UINavigationItem"; title = "Title"; ObjectID = "VK0-qs-sqe"; */
-"VK0-qs-sqe.title" = "Titolo";
+"VK0-qs-sqe.title" = "Title";
 
 /* Class = "UINavigationItem"; title = "Archive"; ObjectID = "W13-4p-rzP"; */
-"W13-4p-rzP.title" = "Media";
+"W13-4p-rzP.title" = "Archive";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Wnh-AB-7ec"; */
-"Wnh-AB-7ec.text" = "Etichetta";
+"Wnh-AB-7ec.text" = "Label";
 
 /* Class = "UILabel"; text = "Date Created"; ObjectID = "Yoe-wK-8ms"; */
-"Yoe-wK-8ms.text" = "Data di creazione";
+"Yoe-wK-8ms.text" = "Date Created";
 
 /* Class = "UITabBarItem"; title = "Item"; ObjectID = "Ytc-M7-3y3"; */
-"Ytc-M7-3y3.title" = "Elemento";
+"Ytc-M7-3y3.title" = "Item";
 
 /* Class = "UILabel"; text = "Cambia Gesture"; ObjectID = "fA7-nk-NJa"; */
-"fA7-nk-NJa.text" = "Cambia Gesture";
+"fA7-nk-NJa.text" = "Change Gesture";
 
 /* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "fMy-gG-hIK"; */
-"fMy-gG-hIK.normalTitle" = "Cancella";
+"fMy-gG-hIK.normalTitle" = "Clear";
 
 /* Class = "UINavigationItem"; title = "Notes"; ObjectID = "hM8-2u-mfO"; */
-"hM8-2u-mfO.title" = "Note";
+"hM8-2u-mfO.title" = "Notes";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "kIR-YF-4do"; */
-"kIR-YF-4do.text" = "Etichetta";
+"kIR-YF-4do.text" = "Label";
 
 /* Class = "UITabBarItem"; title = "Setting"; ObjectID = "mPm-B7-yNt"; */
-"mPm-B7-yNt.title" = "Impostazioni";
+"mPm-B7-yNt.title" = "Settings";
 
 /* Class = "UILabel"; text = "Note "; ObjectID = "nUx-HH-pYG"; */
-"nUx-HH-pYG.text" = "Note ";
+"nUx-HH-pYG.text" = "Notes ";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "nsl-Bg-zGs"; */
-"nsl-Bg-zGs.normalTitle" = "Pulsante";
+"nsl-Bg-zGs.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "sQJ-IR-xdq"; */
-"sQJ-IR-xdq.text" = "Etichetta";
+"sQJ-IR-xdq.text" = "Label";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "veQ-EO-ssB"; */
-"veQ-EO-ssB.text" = "Titolo";
+"veQ-EO-ssB.text" = "Title";
