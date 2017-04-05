@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageViewController: UIViewController  {
+class ImageViewController: UIViewController, UINavigationControllerDelegate {
     
     
     
@@ -17,20 +17,10 @@ class ImageViewController: UIViewController  {
     var media : Media? = nil
     let CS = CryptoString()
 	
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goBack"{
-                self.navigationController?.isNavigationBarHidden=true
-            }
-        else if segue.identifier == "goBackDelete"{
-            MediaPersistenceManager.deleteItem(item: media!)
-            MediaPersistenceManager.saveContext()
-            self.navigationController?.isNavigationBarHidden=true
-        }
-    }
-    
-    @IBAction func goBack(_ sender: Any) {
-    self.performSegue(withIdentifier: "goBack", sender: nil)
+    @IBAction func DeleteImage(_ sender: Any) {
+        MediaPersistenceManager.deleteItem(item: media!)
+        MediaPersistenceManager.saveContext()
+        self.navigationController?.popViewController(animated: true)
     }
     
 	override func viewDidLoad() {
