@@ -473,17 +473,17 @@
                     <connections>
                         <outlet property="gestureView" destination="RvV-6K-IVq" id="DDw-zz-m5D"/>
                         <outlet property="navBar" destination="fTj-FY-y2V" id="SsI-1T-ILo"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="okGesture" id="mkf-qj-pMQ"/>
+                        <segue destination="rJE-jY-DJn" kind="show" identifier="okGesture" id="nhe-si-Uuo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0O-6D-iKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2383.1999999999998" y="-1352.473763118441"/>
         </scene>
-        <!--View Controller-->
+        <!--Mini Show Controller-->
         <scene sceneID="AQv-Vl-cLE">
             <objects>
-                <viewController id="rJE-jY-DJn" sceneMemberID="viewController">
+                <viewController id="rJE-jY-DJn" customClass="MiniShowController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Cf-qd-LZL"/>
                         <viewControllerLayoutGuide type="bottom" id="Msh-WN-64Q"/>
@@ -491,12 +491,27 @@
                     <view key="view" contentMode="scaleToFill" id="dqX-4v-3Rf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yqk-kb-BT4">
+                                <rect key="frame" x="16" y="28" width="343" height="619"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yqk-kb-BT4" firstAttribute="leading" secondItem="dqX-4v-3Rf" secondAttribute="leadingMargin" id="0ym-07-dhW"/>
+                            <constraint firstItem="Msh-WN-64Q" firstAttribute="top" secondItem="yqk-kb-BT4" secondAttribute="bottom" constant="20" id="Ha6-dy-4Qn"/>
+                            <constraint firstItem="yqk-kb-BT4" firstAttribute="trailing" secondItem="dqX-4v-3Rf" secondAttribute="trailingMargin" id="XZZ-tZ-eDc"/>
+                            <constraint firstItem="yqk-kb-BT4" firstAttribute="top" secondItem="5Cf-qd-LZL" secondAttribute="bottom" constant="8" id="mt3-yC-nZb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgViewShowTut" destination="yqk-kb-BT4" id="qnU-AS-1Dj"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="finishTut" id="Lol-NC-bxp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2a-nL-kVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1455" y="-1352"/>
+            <point key="canvasLocation" x="-1455.2" y="-1352.473763118441"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6yE-2W-oq9">
@@ -818,7 +833,7 @@
         <image name="tresh" width="144" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dn4-2O-bFI"/>
+        <segue reference="Lol-NC-bxp"/>
         <segue reference="1Zw-r5-ujK"/>
         <segue reference="agr-yB-yHE"/>
     </inferredMetricsTieBreakers>

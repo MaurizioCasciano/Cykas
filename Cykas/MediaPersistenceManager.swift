@@ -32,7 +32,19 @@ class MediaPersistenceManager {
         }
         return image
     }
-    
+    static func deleteAllItem(){
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Media")
+        
+        // Create Batch Delete Request
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try getContext().execute(batchDeleteRequest)
+            
+        } catch {
+            // Error Handling
+        }
+    }
     static func deleteItem( item : Media){
         let context = getContext()
         context.delete(item)
