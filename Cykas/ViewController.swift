@@ -23,7 +23,6 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     @IBOutlet var clearButton: UIButton!
     @IBOutlet var gestureView: GestureView!
     
-    @IBOutlet var templateTextField: UITextField!
     var template:PennyPincherTemplate!
 	
 	var QRCODEONLY = true
@@ -95,7 +94,6 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
 			view.bringSubview(toFront: gestureLabel)
 			view.bringSubview(toFront: clearButton)
 			view.bringSubview(toFront: gestureView)
-			view.bringSubview(toFront: templateTextField)
 			
 			// Initialize QR Code Frame to highlight the QR code
 			qrCodeFrameView = UIView()
