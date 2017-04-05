@@ -5,11 +5,19 @@
         <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
+        <attribute name="binaryDate" optional="YES" attributeType="Binary" syncable="YES"/>
+    <entity name="Media" representedClassName="Media" syncable="YES">
+    </entity>
     <entity name="TemplateGesture" representedClassName="TemplateGesture" syncable="YES">
         <attribute name="point" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Video" representedClassName="Video" syncable="YES">
+        <attribute name="binaryData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageVideo" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
     <elements>
         <element name="Notes" positionX="-63" positionY="-9" width="128" height="90"/>
         <element name="TemplateGesture" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Media" positionX="-63" positionY="9" width="128" height="60"/>
     </elements>
 </model>
