@@ -298,7 +298,6 @@
 				FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */,
 				FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */,
 				9D7483FD1E95210E0058E6B0 /* ViewExtension.swift */,
-				9D7483FD1E95210E0058E6B0 /* File.swift */,
 				C329503B1E95294000DDFAA6 /* CryptoString.swift */,
 			);
 			path = Cykas;
@@ -438,7 +437,7 @@
 				TargetAttributes = {
 					13DC5AB61E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 7HD9H4B8M3;
+						DevelopmentTeam = BRD4WW9Y7C;
 						ProvisioningStyle = Automatic;
 					};
 					13DC5ACD1E8BC7AF00EBC24F = {
@@ -728,14 +727,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7HD9H4B8M3;
+				DEVELOPMENT_TEAM = BRD4WW9Y7C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ALBA.Cykas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -745,14 +744,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7HD9H4B8M3;
+				DEVELOPMENT_TEAM = BRD4WW9Y7C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ALBA.Cykas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

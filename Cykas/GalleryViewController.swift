@@ -126,8 +126,10 @@ UICollectionViewDataSource {
                 let CS = CryptoString()
                 let data:Data = Encrypter.decrypt(data: images[selectedIndexPath.row].binaryDate! as Data,password:CS.cryptoString!)
                 let img  = UIImage(data:data)!
-                let imageVC = segue.destination as! ImageViewController
-				imageVC.uiImage = img 
+                let nav = segue.destination as! UINavigationController
+                let imageVC = nav.topViewController as! ImageViewController
+				imageVC.uiImage = img
+                imageVC.media = images[selectedIndexPath.row]
             }
 		}
 	}

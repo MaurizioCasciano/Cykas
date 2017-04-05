@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E6P-Kp-zYf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E6P-Kp-zYf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -177,7 +177,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="imageView" destination="hlO-F5-6yu" id="d6o-xt-t4a"/>
-                                                    <segue destination="fvh-SG-Ec1" kind="show" identifier="showPhoto" id="d26-Wr-a6b"/>
+                                                    <segue destination="Tlb-jC-DnM" kind="show" identifier="showPhoto" id="d26-Wr-a6b"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stH-7w-IZu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="1910" y="-356"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="Mqb-Li-b7Z">
@@ -231,7 +231,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNb-Ii-7Pi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="549"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,16 +239,31 @@
                             <constraint firstItem="TNb-Ii-7Pi" firstAttribute="leading" secondItem="t2g-XI-aev" secondAttribute="leading" id="3ks-eJ-Adu"/>
                             <constraint firstAttribute="trailing" secondItem="TNb-Ii-7Pi" secondAttribute="trailing" id="7FG-cv-ohN"/>
                             <constraint firstItem="n9v-tY-kWx" firstAttribute="top" secondItem="TNb-Ii-7Pi" secondAttribute="bottom" id="Fuc-S7-eaN"/>
-                            <constraint firstItem="TNb-Ii-7Pi" firstAttribute="top" secondItem="t2g-XI-aev" secondAttribute="top" id="JPl-I4-ABD"/>
+                            <constraint firstItem="TNb-Ii-7Pi" firstAttribute="top" secondItem="njO-5n-mOQ" secondAttribute="bottom" constant="10" id="nrF-0f-Csc"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="KUC-93-ZeQ">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="4h7-ZW-hFj">
+                            <connections>
+                                <action selector="goBack:" destination="fvh-SG-Ec1" id="hML-K0-8yK"/>
+                                <segue destination="G4b-RN-M7c" kind="show" identifier="goBack" id="b4P-XJ-3gU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="3mb-wV-kbk">
+                            <connections>
+                                <segue destination="G4b-RN-M7c" kind="show" id="Hph-mm-zGc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="TNb-Ii-7Pi" id="Lcb-En-8f7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6f0-wT-WOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640.8000000000002" y="-321.58920539730138"/>
+            <point key="canvasLocation" x="2535" y="-1164"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Xjc-Hs-C1N">
@@ -716,7 +731,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pP7-bY-njK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="823" y="-357"/>
         </scene>
         <!--Setting-->
         <scene sceneID="vo8-8I-NLl">
@@ -777,6 +792,24 @@
             </objects>
             <point key="canvasLocation" x="388" y="-1164"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rTJ-ma-e7f">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="leC-rf-aA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tlb-jC-DnM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Yi-u6-hT9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fvh-SG-Ec1" kind="relationship" relationship="rootViewController" id="agr-yB-yHE"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2709.5999999999999" y="-355.7721139430285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Archive Icon" width="29" height="26"/>
@@ -789,7 +822,8 @@
         <image name="tresh" width="144" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mkf-qj-pMQ"/>
+        <segue reference="Hph-mm-zGc"/>
         <segue reference="1Zw-r5-ujK"/>
+        <segue reference="mkf-qj-pMQ"/>
     </inferredMetricsTieBreakers>
 </document>

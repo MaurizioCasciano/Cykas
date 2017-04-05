@@ -29,43 +29,44 @@ class SecretInitViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        // Encryption
-        
-        let data:NSData = UIImageJPEGRepresentation(#imageLiteral(resourceName: "foto"), 1)! as NSData
-        let password = "Secret password "
-        let hashPass=password.sha512()
-        let ciphertext = RNCryptor.encrypt(data: data as Data, withPassword: hashPass)
-
-        
-        // Create and add the view to the screen.
-        
-        // All done!
-
-        
-
-        // Move to a background thread to do some long running work
-        for _ in 1...max{
-            DispatchQueue.global(qos: .userInitiated).async {
-                do {
-                    _ = try RNCryptor.decrypt(data: ciphertext, withPassword: hashPass)
-                    //let finalImage = UIImage(data : originalData as Data)!
-                    
-                    
-                } catch {
-                    print(error)
-                }
-                
-                // Bounce back to the main thread to update the UI
-                DispatchQueue.main.async {
-                    self.counter+=1
-                    if(self.counter>=100){
-                     self.performSegue(withIdentifier: "navigationSegue", sender: nil)
-                    }
-                }
-            }
-           
-            
-        }
+        self.performSegue(withIdentifier: "navigationSegue", sender: nil)
+//        // Encryption
+//        
+//        let data:NSData = UIImageJPEGRepresentation(#imageLiteral(resourceName: "foto"), 1)! as NSData
+//        let password = "Secret password "
+//        let hashPass=password.sha512()
+//        let ciphertext = RNCryptor.encrypt(data: data as Data, withPassword: hashPass)
+//
+//        
+//        // Create and add the view to the screen.
+//        
+//        // All done!
+//
+//        
+//
+//        // Move to a background thread to do some long running work
+//        for _ in 1...max{
+//            DispatchQueue.global(qos: .userInitiated).async {
+//                do {
+//                    _ = try RNCryptor.decrypt(data: ciphertext, withPassword: hashPass)
+//                    //let finalImage = UIImage(data : originalData as Data)!
+//                    
+//                    
+//                } catch {
+//                    print(error)
+//                }
+//                
+//                // Bounce back to the main thread to update the UI
+//                DispatchQueue.main.async {
+//                    self.counter+=1
+//                    if(self.counter>=100){
+//                     self.performSegue(withIdentifier: "navigationSegue", sender: nil)
+//                    }
+//                }
+//            }
+//           
+//            
+//        }
       
     }
     
