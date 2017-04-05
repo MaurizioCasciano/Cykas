@@ -86,6 +86,7 @@
 		D868D2AC1E93E86900DEFEE9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */; };
 		D87289411E94EFF600F35F9D /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872893F1E94EFF600F35F9D /* Notes+CoreDataClass.swift */; };
 		D87289421E94EFF600F35F9D /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87289401E94EFF600F35F9D /* Notes+CoreDataProperties.swift */; };
+		D8D5B9DF1E954AAA001D0E8D /*  Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8D5B9DE1E954AAA001D0E8D /*  Localizable.strings */; };
 		FA3DC3A61E94D9A3001A060A /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */; };
 		FA3DC3A81E94FD94001A060A /* ChangeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		135471241E95657000C5253F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		135471251E95657000C5253F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		135471261E95675C00C5253F /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		135471271E95675C00C5253F /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		137F7E001E92F00E00A1AB9E /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		137F7E021E92F2D700A1AB9E /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		137F7E041E92F79D00A1AB9E /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -206,6 +211,9 @@
 		D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D872893F1E94EFF600F35F9D /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D87289401E94EFF600F35F9D /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D8D5B9DC1E954A3B001D0E8D /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		D8D5B9DD1E954A3B001D0E8D /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D8D5B9DE1E954AAA001D0E8D /*  Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = " Localizable.strings"; sourceTree = "<group>"; };
 		FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeGestureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +249,7 @@
 		13DC5AAE1E8BC7AF00EBC24F = {
 			isa = PBXGroup;
 			children = (
+				D8D5B9DE1E954AAA001D0E8D /*  Localizable.strings */,
 				D872893F1E94EFF600F35F9D /* Notes+CoreDataClass.swift */,
 				D87289401E94EFF600F35F9D /* Notes+CoreDataProperties.swift */,
 				C3AD470A1E94DB4100F07033 /* Media+CoreDataProperties.swift */,
@@ -437,12 +446,12 @@
 				TargetAttributes = {
 					13DC5AB61E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BRD4WW9Y7C;
+						DevelopmentTeam = HXS684F792;
 						ProvisioningStyle = Automatic;
 					};
 					13DC5ACD1E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 7HD9H4B8M3;
+						DevelopmentTeam = HXS684F792;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 13DC5AB61E8BC7AF00EBC24F;
 					};
@@ -493,6 +502,7 @@
 				9D92951C1E951A8F003211CF /* File34.gif in Resources */,
 				9D92950C1E951A8F003211CF /* File18.gif in Resources */,
 				9D9294FE1E951A8F003211CF /* File4.gif in Resources */,
+				D8D5B9DF1E954AAA001D0E8D /*  Localizable.strings in Resources */,
 				9D9294FF1E951A8F003211CF /* File5.gif in Resources */,
 				9D9295021E951A8F003211CF /* File8.gif in Resources */,
 				9D9295211E951A8F003211CF /* File39.gif in Resources */,
@@ -615,6 +625,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				13DC5ABF1E8BC7AF00EBC24F /* Base */,
+				135471241E95657000C5253F /* it */,
+				135471261E95675C00C5253F /* en-GB */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -623,6 +635,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				13DC5AC71E8BC7AF00EBC24F /* Base */,
+				135471251E95657000C5253F /* it */,
+				135471271E95675C00C5253F /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -634,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -684,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -727,14 +743,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = HXS684F792;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
+				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -744,14 +760,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = HXS684F792;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico;
+				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -762,7 +778,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 7HD9H4B8M3;
+				DEVELOPMENT_TEAM = HXS684F792;
 				INFOPLIST_FILE = CykasTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio.CykasTests;
@@ -777,7 +793,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 7HD9H4B8M3;
+				DEVELOPMENT_TEAM = HXS684F792;
 				INFOPLIST_FILE = CykasTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.casciano.maurizio.CykasTests;

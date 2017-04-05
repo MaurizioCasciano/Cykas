@@ -23,7 +23,11 @@ UICollectionViewDataSource {
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
 	}
-	
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        images = MediaPersistenceManager.fetchData()
+        collectionView.reloadData()
+    }
     @IBAction func didImportClick(_ sender: UIBarButtonItem) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -126,8 +130,7 @@ UICollectionViewDataSource {
                 let CS = CryptoString()
                 let data:Data = Encrypter.decrypt(data: images[selectedIndexPath.row].binaryDate! as Data,password:CS.cryptoString!)
                 let img  = UIImage(data:data)!
-                let nav = segue.destination as! UINavigationController
-                let imageVC = nav.topViewController as! ImageViewController
+                let imageVC = segue.destination as! ImageViewController
 				imageVC.uiImage = img
                 imageVC.media = images[selectedIndexPath.row]
             }

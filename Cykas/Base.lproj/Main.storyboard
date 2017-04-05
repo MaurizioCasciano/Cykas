@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E6P-Kp-zYf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E6P-Kp-zYf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,30 +55,21 @@
                                     <action selector="didTapClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAt-6M-c5p"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DTj-tG-KDV" userLabel="templateTextField">
-                                <rect key="frame" x="16" y="120" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5k0-kZ-gl6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Up-0l-Xaa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5k0-kZ-gl6" secondAttribute="trailing" id="5EN-V9-sPY"/>
                             <constraint firstItem="sQJ-IR-xdq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BzF-Gs-7fd"/>
-                            <constraint firstItem="DTj-tG-KDV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CBz-xB-O0j"/>
-                            <constraint firstItem="fMy-gG-hIK" firstAttribute="top" secondItem="DTj-tG-KDV" secondAttribute="bottom" constant="417" id="L3m-vz-f8f"/>
                             <constraint firstItem="fMy-gG-hIK" firstAttribute="trailing" secondItem="5k0-kZ-gl6" secondAttribute="trailing" id="QsJ-BD-WpM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5k0-kZ-gl6" secondAttribute="bottom" constant="18" id="VIx-7F-Pb7"/>
-                            <constraint firstItem="DTj-tG-KDV" firstAttribute="top" secondItem="sQJ-IR-xdq" secondAttribute="bottom" constant="8" id="Xni-2t-5xc"/>
                             <constraint firstItem="E4T-Za-fON" firstAttribute="trailing" secondItem="sQJ-IR-xdq" secondAttribute="trailing" id="cJC-KZ-wd6"/>
                             <constraint firstItem="sQJ-IR-xdq" firstAttribute="top" secondItem="E4T-Za-fON" secondAttribute="bottom" constant="8" id="dkD-ck-jPi"/>
                             <constraint firstItem="sQJ-IR-xdq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eG5-7M-7FS"/>
                             <constraint firstItem="5k0-kZ-gl6" firstAttribute="top" secondItem="sQJ-IR-xdq" secondAttribute="bottom" constant="516.5" id="fAL-Ai-ATL"/>
                             <constraint firstItem="sQJ-IR-xdq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fqw-5o-LHu"/>
-                            <constraint firstItem="DTj-tG-KDV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iWj-8v-QPr"/>
                             <constraint firstItem="E4T-Za-fON" firstAttribute="leading" secondItem="5k0-kZ-gl6" secondAttribute="leading" id="iia-dz-uET"/>
+                            <constraint firstItem="5k0-kZ-gl6" firstAttribute="top" secondItem="fMy-gG-hIK" secondAttribute="bottom" constant="8" symbolic="YES" id="pdb-9D-Nq1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -86,7 +77,6 @@
                         <outlet property="gestureLabel" destination="sQJ-IR-xdq" id="iwe-HA-yLT"/>
                         <outlet property="gestureView" destination="8bC-Xf-vdC" id="MFP-wp-7S5"/>
                         <outlet property="messageLabel" destination="5k0-kZ-gl6" id="mG7-Me-6PQ"/>
-                        <outlet property="templateTextField" destination="DTj-tG-KDV" id="7ec-16-TKB"/>
                         <outlet property="titleLabel" destination="E4T-Za-fON" id="68o-AF-YzJ"/>
                         <segue destination="0ry-Qc-t43" kind="show" identifier="secretSegue" id="4BY-0u-6C9"/>
                     </connections>
@@ -177,7 +167,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="imageView" destination="hlO-F5-6yu" id="d6o-xt-t4a"/>
-                                                    <segue destination="Tlb-jC-DnM" kind="show" identifier="showPhoto" id="d26-Wr-a6b"/>
+                                                    <segue destination="fvh-SG-Ec1" kind="show" identifier="showPhoto" id="JpR-ak-asL"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -231,31 +221,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNb-Ii-7Pi">
-                                <rect key="frame" x="0.0" y="74" width="375" height="549"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="499"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhe-cP-0hk">
+                                <rect key="frame" x="34" y="583" width="307" height="30"/>
+                                <state key="normal" title="Delete Image">
+                                    <color key="titleColor" red="1" green="0.00080809444919999998" blue="0.094836760039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="DeleteImage:" destination="fvh-SG-Ec1" eventType="touchUpInside" id="orV-GR-eG3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TNb-Ii-7Pi" firstAttribute="leading" secondItem="t2g-XI-aev" secondAttribute="leading" id="3ks-eJ-Adu"/>
                             <constraint firstAttribute="trailing" secondItem="TNb-Ii-7Pi" secondAttribute="trailing" id="7FG-cv-ohN"/>
-                            <constraint firstItem="n9v-tY-kWx" firstAttribute="top" secondItem="TNb-Ii-7Pi" secondAttribute="bottom" id="Fuc-S7-eaN"/>
+                            <constraint firstItem="yhe-cP-0hk" firstAttribute="top" secondItem="TNb-Ii-7Pi" secondAttribute="bottom" constant="10" id="XMk-l6-jj3"/>
+                            <constraint firstItem="n9v-tY-kWx" firstAttribute="top" secondItem="yhe-cP-0hk" secondAttribute="bottom" constant="10" id="eIX-Bh-6uG"/>
+                            <constraint firstItem="n9v-tY-kWx" firstAttribute="top" secondItem="TNb-Ii-7Pi" secondAttribute="bottom" constant="50" id="ezo-PL-O1i"/>
+                            <constraint firstItem="yhe-cP-0hk" firstAttribute="leading" secondItem="t2g-XI-aev" secondAttribute="leadingMargin" constant="18" id="iXM-0n-ONA"/>
                             <constraint firstItem="TNb-Ii-7Pi" firstAttribute="top" secondItem="njO-5n-mOQ" secondAttribute="bottom" constant="10" id="nrF-0f-Csc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yhe-cP-0hk" secondAttribute="trailing" constant="18" id="qka-I8-Oxe"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="KUC-93-ZeQ">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="4h7-ZW-hFj">
-                            <connections>
-                                <action selector="goBack:" destination="fvh-SG-Ec1" id="hML-K0-8yK"/>
-                                <segue destination="G4b-RN-M7c" kind="show" identifier="goBack" id="b4P-XJ-3gU"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="3mb-wV-kbk">
-                            <connections>
-                                <segue destination="G4b-RN-M7c" kind="show" id="Hph-mm-zGc"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="TNb-Ii-7Pi" id="Lcb-En-8f7"/>
@@ -263,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6f0-wT-WOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2535" y="-1164"/>
+            <point key="canvasLocation" x="3655" y="-371"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Xjc-Hs-C1N">
@@ -409,6 +399,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCodeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eJI-vq-ngx">
                                 <rect key="frame" x="35" y="49" width="109" height="148"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="DcR-sK-gLX"/>
                                     <constraint firstAttribute="width" constant="109" id="sVW-SJ-B36"/>
                                 </constraints>
                             </imageView>
@@ -424,11 +415,16 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uw1-Cs-3Td" userLabel="gifContainer">
                                 <rect key="frame" x="112" y="497" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="VEc-Bm-rW4"/>
+                                    <constraint firstAttribute="width" constant="150" id="wVz-Ux-rb8"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Pbd-2m-j3K" firstAttribute="trailing" secondItem="K5o-Qs-sdC" secondAttribute="trailingMargin" id="043-vt-P0V"/>
+                            <constraint firstItem="uw1-Cs-3Td" firstAttribute="centerX" secondItem="K5o-Qs-sdC" secondAttribute="centerX" id="3Cs-Jb-fgh"/>
                             <constraint firstItem="uw1-Cs-3Td" firstAttribute="top" secondItem="Pbd-2m-j3K" secondAttribute="bottom" constant="300" id="5Pa-EE-NC4"/>
                             <constraint firstItem="Pbd-2m-j3K" firstAttribute="bottom" secondItem="eJI-vq-ngx" secondAttribute="bottom" id="75f-aJ-4wJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uw1-Cs-3Td" secondAttribute="trailing" constant="97" id="F0c-3K-ic9"/>
@@ -752,11 +748,11 @@
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="672.41379310344837"/>
         </scene>
-        <!--Item-->
+        <!--Notes-->
         <scene sceneID="9ts-i0-Ugw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wnk-KX-G3y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="Create Icon" id="Ytc-M7-3y3"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="Create Icon" id="Ytc-M7-3y3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Su-i3-bFm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -795,7 +791,6 @@
         <!--Navigation Controller-->
         <scene sceneID="rTJ-ma-e7f">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="leC-rf-aA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tlb-jC-DnM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Yi-u6-hT9">
@@ -807,6 +802,7 @@
                         <segue destination="fvh-SG-Ec1" kind="relationship" relationship="rootViewController" id="agr-yB-yHE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="leC-rf-aA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2709.5999999999999" y="-355.7721139430285"/>
         </scene>
@@ -822,8 +818,8 @@
         <image name="tresh" width="144" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hph-mm-zGc"/>
+        <segue reference="Dn4-2O-bFI"/>
         <segue reference="1Zw-r5-ujK"/>
-        <segue reference="mkf-qj-pMQ"/>
+        <segue reference="agr-yB-yHE"/>
     </inferredMetricsTieBreakers>
 </document>
