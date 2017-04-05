@@ -277,21 +277,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsl-Bg-zGs">
-                                <rect key="frame" x="321" y="88" width="24" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="next"/>
-                                <connections>
-                                    <action selector="Delete:" destination="A0M-LL-RX5" eventType="touchUpInside" id="W0u-Lt-2eE"/>
-                                    <segue destination="etR-J6-z8M" kind="show" id="9hf-O7-a6t"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDb-ca-yyz">
-                                <rect key="frame" x="321" y="147" width="24" height="24"/>
+                                <rect key="frame" x="321" y="156" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="next"/>
                                 <connections>
-                                    <action selector="GhangeGesture:" destination="A0M-LL-RX5" eventType="touchUpInside" id="JX9-zU-txA"/>
+                                    <action selector="DeleteFiles:" destination="A0M-LL-RX5" eventType="touchUpInside" id="zgv-MV-Hi4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cambia Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-nk-NJa">
@@ -301,6 +292,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsl-Bg-zGs">
+                                <rect key="frame" x="321" y="87" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="next"/>
+                                <connections>
+                                    <segue destination="etR-J6-z8M" kind="show" id="9hf-O7-a6t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -338,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLe-Ph-dHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.8" y="1605.2473763118442"/>
+            <point key="canvasLocation" x="1721" y="1908"/>
         </scene>
         <!--Exit View Controller-->
         <scene sceneID="qat-qj-Xuk">

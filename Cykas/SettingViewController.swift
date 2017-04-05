@@ -9,11 +9,36 @@ import UIKit
 
 class SettingViewController: UIViewController {
     
-    @IBAction func Delete(_ sender: UIButton) {
+    @IBAction func DeleteFiles(_ sender: UIButton) {
+        
+        
+        
+        let addActionSheet = UIAlertController.init(
+            title: "Elimina Files",
+            message: "Vuoi eliminare tutti i files ?",
+            preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
+        
+
+        addActionSheet.addAction(UIAlertAction.init(title: "Cancel ", style: .cancel, handler: nil))
+
+        
+        addActionSheet.addAction(UIAlertAction.init(title: "Yes ",style: .default,
+                                      handler: {(action: UIAlertAction) in self.DeleteAllFiles()}))
+        
+        
+        
+        self.present(addActionSheet, animated: true, completion: nil)
+        
     }
     
-    @IBAction func GhangeGesture(_ sender: UIButton) {
+    
+    func DeleteAllFiles(){
+        print("bisogna eliminare tutto");
     }
+    
+    
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
