@@ -21,8 +21,9 @@ class MediaPersistenceManager {
     static func newItem(_ img : UIImage) -> Media {
         let context = getContext()
         let image = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Media
-        let picture = UIImageJPEGRepresentation(img , 1)! as NSData
-        image.binaryDate = picture
+        let picture = UIImageJPEGRepresentation(img , 1)!
+        image.binaryDate = Encrypter.encrypt(data: picture  , password: PersistenceManager.fetchData().description.sha256()) as NSData
+        print ("Cripto quando aggiungo: \(PersistenceManager.fetchData().description.sha256())")
         do{
             try context.save()
         }catch let error as NSError{
