@@ -34,6 +34,7 @@ class SettingViewController: UIViewController {
     func DeleteAllFiles(){
         NotePersistenceManager.deleteAllItem()
         MediaPersistenceManager.deleteAllItem()
+        exit(0)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
