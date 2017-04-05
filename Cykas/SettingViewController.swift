@@ -9,6 +9,12 @@ import UIKit
 
 class SettingViewController: UIViewController {
     
+    @IBAction func Delete(_ sender: UIButton) {
+    }
+    
+    @IBAction func GhangeGesture(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

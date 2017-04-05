@@ -39,6 +39,8 @@
 		D868D2AA1E93E86900DEFEE9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */; };
 		D868D2AB1E93E86900DEFEE9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A81E93E86900DEFEE9 /* ItemCell.swift */; };
 		D868D2AC1E93E86900DEFEE9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */; };
+		FA3DC3A61E94D9A3001A060A /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */; };
+		FA3DC3A81E94FD94001A060A /* ChangeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		D868D2A81E93E86900DEFEE9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
+		FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeGestureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,8 @@
 				137F7E001E92F00E00A1AB9E /* ImageViewController.swift */,
 				137F7E021E92F2D700A1AB9E /* GalleryViewController.swift */,
 				137F7E041E92F79D00A1AB9E /* GalleryCollectionViewCell.swift */,
+				FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */,
+				FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 			files = (
 				137F7E051E92F79D00A1AB9E /* GalleryCollectionViewCell.swift in Sources */,
 				C36B955A1E9237A7000F432B /* PersistenceManager.swift in Sources */,
+				FA3DC3A61E94D9A3001A060A /* ExitViewController.swift in Sources */,
 				9D9F349B1E9261B600EE3F94 /* CameraViewController.swift in Sources */,
 				13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */,
 				D868D2AB1E93E86900DEFEE9 /* ItemCell.swift in Sources */,
@@ -369,6 +376,7 @@
 				9D9F349D1E9261E600EE3F94 /* SettingViewController.swift in Sources */,
 				137F7E031E92F2D700A1AB9E /* GalleryViewController.swift in Sources */,
 				13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */,
+				FA3DC3A81E94FD94001A060A /* ChangeGestureViewController.swift in Sources */,
 				D868D2AA1E93E86900DEFEE9 /* ItemsViewController.swift in Sources */,
 				C32A00C91E924FD10020FB7A /* TutorialViewController.swift in Sources */,
 				9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */,

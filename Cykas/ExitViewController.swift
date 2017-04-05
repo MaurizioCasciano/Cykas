@@ -12,7 +12,9 @@ class ExitViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        exit(0)
+        
+       
         // Do any additional setup after loading the view.
     }
 
