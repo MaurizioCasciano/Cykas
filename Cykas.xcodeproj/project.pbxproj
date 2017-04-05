@@ -19,6 +19,7 @@
 		13DC5AD31E8BC7AF00EBC24F /* CykasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5AD21E8BC7AF00EBC24F /* CykasTests.swift */; };
 		13DC5ADE1E8BC7AF00EBC24F /* CykasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */; };
 		9D2E54321E8D053400406718 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E54311E8D053400406718 /* GestureView.swift */; };
+		9D7483FE1E95210E0058E6B0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7483FD1E95210E0058E6B0 /* File.swift */; };
 		9D757DAD1E8EA68100561BBB /* PennyPincher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D757DAC1E8EA68100561BBB /* PennyPincher.framework */; };
 		9D757DAE1E8EA68100561BBB /* PennyPincher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D757DAC1E8EA68100561BBB /* PennyPincher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A3F101E923F05000603E1 /* Encrypter.swift */; };
@@ -79,10 +80,10 @@
 		D868D2AA1E93E86900DEFEE9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */; };
 		D868D2AB1E93E86900DEFEE9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A81E93E86900DEFEE9 /* ItemCell.swift */; };
 		D868D2AC1E93E86900DEFEE9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */; };
-		FA3DC3A61E94D9A3001A060A /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */; };
-		FA3DC3A81E94FD94001A060A /* ChangeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */; };
 		D87289411E94EFF600F35F9D /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872893F1E94EFF600F35F9D /* Notes+CoreDataClass.swift */; };
 		D87289421E94EFF600F35F9D /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87289401E94EFF600F35F9D /* Notes+CoreDataProperties.swift */; };
+		FA3DC3A61E94D9A3001A060A /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */; };
+		FA3DC3A81E94FD94001A060A /* ChangeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		13DC5ADD1E8BC7AF00EBC24F /* CykasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CykasUITests.swift; sourceTree = "<group>"; };
 		13DC5ADF1E8BC7AF00EBC24F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D2E54311E8D053400406718 /* GestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
+		9D7483FD1E95210E0058E6B0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		9D757DAC1E8EA68100561BBB /* PennyPincher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PennyPincher.framework; sourceTree = "<group>"; };
 		9D7A3F101E923F05000603E1 /* Encrypter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encrypter.swift; sourceTree = "<group>"; };
 		9D9294D31E951A8F003211CF /* File1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = File1.gif; sourceTree = "<group>"; };
@@ -194,10 +196,10 @@
 		D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		D868D2A81E93E86900DEFEE9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
-		FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeGestureViewController.swift; sourceTree = "<group>"; };
 		D872893F1E94EFF600F35F9D /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D87289401E94EFF600F35F9D /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
+		FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeGestureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +286,7 @@
 				137F7E041E92F79D00A1AB9E /* GalleryCollectionViewCell.swift */,
 				FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */,
 				FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */,
+				9D7483FD1E95210E0058E6B0 /* File.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				13DC5ABB1E8BC7AF00EBC24F /* AppDelegate.swift in Sources */,
 				FA3DC3A81E94FD94001A060A /* ChangeGestureViewController.swift in Sources */,
 				D868D2AA1E93E86900DEFEE9 /* ItemsViewController.swift in Sources */,
+				9D7483FE1E95210E0058E6B0 /* File.swift in Sources */,
 				C32A00C91E924FD10020FB7A /* TutorialViewController.swift in Sources */,
 				9DD2B1901E90FF2F00383B24 /* SecretInitViewController.swift in Sources */,
 			);

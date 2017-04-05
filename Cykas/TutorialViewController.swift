@@ -17,6 +17,7 @@ class TutorialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.alert(message: "Now you must insert a gesture, we use it as password. If you lost it , you will lost all file", title: "BE ALERT!")
         pennyPincherGestureRecognizer.enableMultipleStrokes = true
         pennyPincherGestureRecognizer.allowedTimeBetweenMultipleStrokes = 0.2
         pennyPincherGestureRecognizer.cancelsTouchesInView = false
