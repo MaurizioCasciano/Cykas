@@ -108,9 +108,6 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
 			}
 		}
 		
-		
-		
-        
 	}
 
 

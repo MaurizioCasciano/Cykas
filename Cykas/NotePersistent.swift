@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CryptoSwift
 class NotePersistenceManager {
     
     static let name = "Notes"
@@ -20,9 +21,9 @@ class NotePersistenceManager {
     static func newEmptyItem() -> Notes {
         let context = getContext()
         let Notes = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Notes
-        Notes.name = "Note"
-        Notes.data = Date() as NSDate
-        Notes.content=""
+        Notes.name = NSData()
+        Notes.data = NSData()
+        Notes.content = NSData()
         do{
             try context.save()
         }catch let error as NSError{

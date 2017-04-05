@@ -8,15 +8,43 @@
 
 import UIKit
 
+
 class InitViewController: UIViewController {
-var gesture = [TemplateGesture]()
+    var gesture = [TemplateGesture]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var imageArray = [UIImage(named: "File1.gif")!]
+        
+        for i in 2...40{
+            var x:String="File"+String(i)+".gif"
+            imageArray.append(UIImage(named:x)!)
+        }
+        gifContainer.animationImages = imageArray
+        gifContainer.animationDuration = 3
+        gifContainer.animationRepeatCount = 1
+        gifContainer.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            self.callNext()
+        })
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
         // Do any additional setup after loading the view.
+        
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    
+    @IBOutlet var gifContainer: UIImageView!
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    func callNext()  {
         gesture = PersistenceManager.fetchData()
         if (gesture.isEmpty){
             self.performSegue(withIdentifier: "TutorialView", sender: nil)
@@ -29,25 +57,21 @@ var gesture = [TemplateGesture]()
              }
              template = PennyPincher.createTemplate("pass", points: y)!
              pennyPincherGestureRecognizer.templates.append(template)*/
+            
             self.performSegue(withIdentifier: "QRView", sender: nil)
         }
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        
     }
     
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
