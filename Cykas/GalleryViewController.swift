@@ -15,60 +15,61 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
 UICollectionViewDataSource {
 	
 	@IBOutlet var collectionView: UICollectionView!
-	var images: [UIImage] = [UIImage]()
-	
+	var images: [Media] = [Media]()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		images = MediaPersistenceManager.fetchData()
 		self.collectionView.delegate = self
 		self.collectionView.dataSource = self
 	}
 	
-	@IBAction func didImportClick(_ sender: UIBarButtonItem) {
-		let imagePickerController = UIImagePickerController()
-		imagePickerController.delegate = self
-		
-		let addActionSheet = UIAlertController.init(
-			title: "Photo Source",
-			message: "Choose a source",
-			preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
-		
-		if UIImagePickerController.isSourceTypeAvailable(.camera){
-			addActionSheet.addAction(
-				UIAlertAction.init(
-					title: "Camera",
-					style: .default,
-					handler: {
-						(action: UIAlertAction)in
-						imagePickerController.sourceType = .camera
-						imagePickerController.cameraCaptureMode = .photo
-						imagePickerController.modalPresentationStyle = .fullScreen
-						self.present(imagePickerController, animated: true, completion: nil)
-				}
-				)
-			)
-		}
-		
-		if(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)){
-			addActionSheet.addAction(
-				UIAlertAction.init(
-					title: "Photo Library ",
-					style: .default,
-					handler: {
-						(action: UIAlertAction)in
-						imagePickerController.sourceType = .photoLibrary
-						self.present(imagePickerController, animated: true, completion: nil)
-				}
-				)
-			)
-		}
-		
-		addActionSheet.addAction(UIAlertAction.init(title: "Cancel ", style: .cancel, handler: nil))
-		
-		self.present(addActionSheet, animated: true, completion: nil)
-	}
-	
+    @IBAction func didImportClick(_ sender: UIBarButtonItem) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        
+        let addActionSheet = UIAlertController.init(
+            title: "Photo Source",
+            message: "Choose a source",
+            preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            addActionSheet.addAction(
+                UIAlertAction.init(
+                    title: "Camera",
+                    style: .default,
+                    handler: {
+                        (action: UIAlertAction)in
+                        imagePickerController.sourceType = .camera
+                        imagePickerController.cameraCaptureMode = .photo
+                        imagePickerController.modalPresentationStyle = .fullScreen
+                        self.present(imagePickerController, animated: true, completion: nil)
+                }
+                )
+            )
+        }
+        
+        if(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)){
+            addActionSheet.addAction(
+                UIAlertAction.init(
+                    title: "Photo Library ",
+                    style: .default,
+                    handler: {
+                        (action: UIAlertAction)in
+                        imagePickerController.sourceType = .photoLibrary
+                        imagePickerController.mediaTypes = ["public.image", "public.movie"]
+                        self.present(imagePickerController, animated: true, completion: nil)
+                }
+                )
+            )
+        }
+        
+        addActionSheet.addAction(UIAlertAction.init(title: "Cancel ", style: .cancel, handler: nil))
+        
+        self.present(addActionSheet, animated: true, completion: nil)
+    }
+ 
+    
 	/**
 	*User picked a photo
 	*/
@@ -76,8 +77,7 @@ UICollectionViewDataSource {
 		
 		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
 		
-		self.images.append(image)
-		
+		images.append(MediaPersistenceManager.newItem(image))
 		self.collectionView.reloadData()
 		picker.dismiss(animated: true, completion: nil)
 		
@@ -121,9 +121,8 @@ UICollectionViewDataSource {
 		
 		cell.layer.borderColor = UIColor.blue.cgColor
 		cell.layer.borderWidth = 1
-		
-		cell.imageView.image = self.images[indexPath.row]
-		
+        let data:NSData = images[indexPath.row].binaryDate!
+		cell.imageView.image = UIImage(data:data as Data)
 		return cell
 	}
 	
@@ -131,10 +130,11 @@ UICollectionViewDataSource {
 		if segue.identifier == "showPhoto"{
 			if let selectedIndexPath =
 				collectionView.indexPathsForSelectedItems?.first {
-				let image = self.images[selectedIndexPath.row]
-				let imageVC = segue.destination as! ImageViewController
-				imageVC.uiImage = image
-			}
+                let data:NSData = images[selectedIndexPath.row].binaryDate!
+                let img  = UIImage(data:data as Data)!
+                let imageVC = segue.destination as! ImageViewController
+				imageVC.uiImage = img 
+            }
 		}
 	}
 }

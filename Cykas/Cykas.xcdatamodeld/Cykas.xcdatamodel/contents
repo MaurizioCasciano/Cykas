@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Notes" representedClassName="Notes" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Media" representedClassName="Media" syncable="YES">
+        <attribute name="binaryDate" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="Notes" representedClassName="Notes" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,7 +12,8 @@
         <attribute name="point" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TemplateGesture" positionX="-63" positionY="-18" width="128" height="60"/>
         <element name="Notes" positionX="-63" positionY="-9" width="128" height="90"/>
+        <element name="TemplateGesture" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Media" positionX="-63" positionY="9" width="128" height="60"/>
     </elements>
 </model>
