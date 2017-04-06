@@ -142,7 +142,23 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-              //  messageLabel.text = metadataObj.stringValue
+                let addActionSheet = UIAlertController.init(
+                    title: "Go To:",
+                    message: metadataObj.stringValue,
+                    preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
+                
+                
+                addActionSheet.addAction(UIAlertAction.init(title: "No", style: .cancel, handler: nil))
+                
+                
+                addActionSheet.addAction(UIAlertAction.init(title: "Yes ",style: .default,
+                                                            handler: {(action: UIAlertAction) in
+                                                                UIApplication.shared.open(URL(string: "https://www.google.com/search?q="+metadataObj.stringValue)!, options: [:], completionHandler: nil)
+                                                                
+                }))
+                
+                self.present(addActionSheet, animated: true, completion: nil)
+                
             }
         }
     }
@@ -270,7 +286,6 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         self.present(alert, animated: true,
                      completion: nil)
     }
-    
     
 }
 
