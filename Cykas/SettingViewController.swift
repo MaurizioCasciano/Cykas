@@ -12,7 +12,7 @@ class SettingViewController: UIViewController {
     var items = [Notes]()
     var images: [Media] = [Media]()
     
-    @IBAction func DeleteFiles(_ sender: UIButton) {
+    @IBAction func DeleteFiles(_ sender: UIStackView) {
         
         let addActionSheet = UIAlertController.init(
             title: "Elimina Files",
