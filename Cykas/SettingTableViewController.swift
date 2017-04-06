@@ -15,8 +15,8 @@ class SettingTableViewController: UITableViewController {
     var images = [Media]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        labels.append("Cambia Gesture")
-        labels.append("Elimina Tutto")
+        labels.append("Change Gesture")
+        labels.append("Delete All")
         imgs.append(#imageLiteral(resourceName: "t1"))
         imgs.append(#imageLiteral(resourceName: "tresh"))
         items =  NotePersistenceManager.fetchData()
