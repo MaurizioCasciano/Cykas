@@ -37,7 +37,7 @@ class TutorialViewController: UIViewController {
     let msg10 = NSLocalizedString("Please insert gesture", comment: "Please insert gesture")
     
     
-    let msg11 = NSLocalizedString(    "Second gesture do not match, insert again or press cancel to redo you initial gesture", comment:     "Second gesture do not match, insert again or press cancel to redo you initial gesture"
+    let msg11 = NSLocalizedString("Second gesture do not match, insert again or press cancel to redo you initial gesture", comment:     "Second gesture do not match, insert again or press cancel to redo you initial gesture"
 )
 
 

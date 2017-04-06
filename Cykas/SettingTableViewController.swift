@@ -87,7 +87,7 @@ class SettingTableViewController: UITableViewController {
         func DeleteAllFiles(){
             NotePersistenceManager.deleteAllItem()
             MediaPersistenceManager.deleteAllItem()
-            exit(0)
+            self.alert(message: "Files delete with successfull" , title: "Success")
         }
     /*
     // Override to support conditional editing of the table view.
