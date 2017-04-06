@@ -13,14 +13,18 @@ class SettingViewController: UIViewController {
     var images: [Media] = [Media]()
     
     @IBAction func DeleteFiles(_ sender: UIButton) {
-        
+		
+		let title = NSLocalizedString("Elimina Tutto", comment: "Elimina tutti i file")
+		let msg = NSLocalizedString("Vuoi eliminare tutti i files?", comment: "Sei sicuro di voler eliminare tutti i file?")
+		
         let addActionSheet = UIAlertController.init(
-            title: "Elimina Files",
-            message: "Vuoi eliminare tutti i files ?",
+            title: title,
+            message: msg,
             preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
-        
+		
+		let title2 = NSLocalizedString("Cancel", comment: "Cancel deleting all files")
 
-        addActionSheet.addAction(UIAlertAction.init(title: "Cancel ", style: .cancel, handler: nil))
+        addActionSheet.addAction(UIAlertAction.init(title: title2, style: .cancel, handler: nil))
 
         
         addActionSheet.addAction(UIAlertAction.init(title: "Yes ",style: .default,

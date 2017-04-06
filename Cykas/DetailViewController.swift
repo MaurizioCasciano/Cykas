@@ -39,10 +39,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         super.viewWillDisappear(animated)
         let name=nameField.text
         let content=contentField.text
-        let date=dateLabel.text
+        let datadat = Date()
+        let date = dateFormatter.string(from: datadat)
         let namedata = name?.data(using: .utf8) as NSData?
         let contentdata = content?.data(using: .utf8) as NSData?
-        let datadata = date?.data(using: .utf8) as NSData?
+        let datadata = date.data(using: .utf8) as NSData?
         item.name = Encrypter.encrypt(data: namedata! as Data, password: CS.cryptoString!) as NSData
         item.content = Encrypter.encrypt(data: contentdata! as Data, password: CS.cryptoString!) as NSData
         item.data = Encrypter.encrypt(data: datadata! as Data, password: CS.cryptoString!) as NSData

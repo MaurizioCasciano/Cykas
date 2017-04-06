@@ -14,26 +14,29 @@ import CryptoSwift
 import CoreData
 
 class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOutputObjectsDelegate{
-
+    
     private let pennyPincherGestureRecognizer = PennyPincherGestureRecognizer()
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var messageLabel: UILabel!
-    @IBOutlet var gestureLabel: UILabel!
+   // @IBOutlet var titleLabel: UILabel!
+    //@IBOutlet var messageLabel: UILabel!
+    //@IBOutlet var gestureLabel: UILabel!
    
-    @IBOutlet var clearButton: UIButton!
+   // @IBOutlet var clearButton: UIButton!
+    @IBOutlet weak var labelQR: UILabel!
+    @IBOutlet weak var imgQR: UIImageView!
     @IBOutlet var gestureView: GestureView!
     
     var template:PennyPincherTemplate!
-	
-	var QRCODEONLY = true
-	
+    
+    var QRCODEONLY = true
+    
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
+    @IBOutlet weak var StackView: UIStackView!
     var gesture = [TemplateGesture]()
-	override func viewDidLoad() {
-		super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         gesture = PersistenceManager.fetchData()
         var y = [CGPoint]()
         for pointgesture in gesture{
@@ -89,11 +92,14 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
 			
 			
 			// Move the message label and top bar to the front
-			view.bringSubview(toFront: messageLabel)
-			view.bringSubview(toFront: titleLabel)
-			view.bringSubview(toFront: gestureLabel)
-			view.bringSubview(toFront: clearButton)
+			//view.bringSubview(toFront: messageLabel)
+			//view.bringSubview(toFront: titleLabel)
+			//view.bringSubview(toFront: gestureLabel)
+			//view.bringSubview(toFront: clearButton)
+            view.bringSubview(toFront: labelQR)
+            view.bringSubview(toFront: imgQR)
 			view.bringSubview(toFront: gestureView)
+            view.bringSubview(toFront: StackView)
 			
 			// Initialize QR Code Frame to highlight the QR code
 			qrCodeFrameView = UIView()
@@ -110,18 +116,20 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
 
 
     
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
     
-
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            messageLabel.text = "No QR code is detected"
+            //messageLabel.text = "No QR code is detected"
             return
         }
         
@@ -134,7 +142,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
+              //  messageLabel.text = metadataObj.stringValue
             }
         }
     }
@@ -145,7 +153,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         return true
     }
     
-        
+    
     func didRecognize(_ pennyPincherGestureRecognizer: PennyPincherGestureRecognizer) {
         switch pennyPincherGestureRecognizer.state {
         case .ended, .cancelled, .failed:
@@ -158,20 +166,20 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     private func updateRecognizerResult() {
         print("update recognizer")
         guard let (template, similarity) = pennyPincherGestureRecognizer.result else {
-            gestureLabel.text = "Could not recognize."
+          //  gestureLabel.text = "Could not recognize."
             return
         }
         
         let similarityString = String(format: "%.2f", similarity)
-        gestureLabel.text = "Template: \(template.id), Similarity: \(similarityString)"
+        //gestureLabel.text = "Template: \(template.id), Similarity: \(similarityString)"
         if(Double(similarityString)!>8.0){
             AuthenticateWithTouchID()
         }
     }
     
-
+    
     @IBAction func didTapClear(_ sender: Any) {
-        gestureLabel.text = "Inserire la nuova gesture e premere add"
+      //  gestureLabel.text = "Inserire la nuova gesture e premere add"
         for point in gesture{
             PersistenceManager.deleteItem(item: point)
         }
@@ -180,7 +188,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         pennyPincherGestureRecognizer.templates.removeAll()
         gestureView.clear()
     }
-
+    
     func AuthenticateWithTouchID() {
         let context = LAContext()
         
@@ -220,7 +228,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
                             }
                             
                         } else {
-                           // self.notifyUser("Authentication Successful",err: "You now have full access")
+                            // self.notifyUser("Authentication Successful",err: "You now have full access")
                             self.performSegue(withIdentifier: "secretSegue", sender: nil)
                             
                         }
@@ -232,16 +240,19 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
                 
             case LAError.Code.touchIDNotEnrolled.rawValue:
                 notifyUser("TouchID is not enrolled",
-                           err: error?.localizedDescription)
+                           err: "If you want use this app, you need to set a touch id ")
+                
                 
             case LAError.Code.passcodeNotSet.rawValue:
                 notifyUser("A passcode has not been set",
-                           err: error?.localizedDescription)
-
+                           err: "If you want use this app, you need to set a touch id ")
+     
+                
+                
             default:
                 notifyUser("TouchID not available",
-                           err: error?.localizedDescription)
-
+                           err: "If you want use this app, you need to set a touch id ")
+                
             }
         }
     }
@@ -259,7 +270,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         self.present(alert, animated: true,
                      completion: nil)
     }
-
-
+    
+    
 }
 

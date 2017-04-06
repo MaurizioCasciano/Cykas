@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Cykas/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext" target-language="it">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3" build-num="8E162"/>
+    </header>
+    <body/>
+  </file>
+  <file original="Cykas/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="it">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3" build-num="8E162"/>
+    </header>
+    <body>
+      <trans-unit id="2AT-2f-EYL.title">
+        <source>Exit</source>
+        <target>Esci</target>
+        <note>Class = "UITabBarItem"; title = "Exit"; ObjectID = "2AT-2f-EYL";</note>
+      </trans-unit>
+      <trans-unit id="6Ff-WW-Bmf.title">
+        <source>Notes</source>
+        <target>Note</target>
+        <note>Class = "UITableViewController"; title = "Notes"; ObjectID = "6Ff-WW-Bmf";</note>
+      </trans-unit>
+      <trans-unit id="6JE-KC-t00.title">
+        <source>Settings</source>
+        <target>Impostazioni</target>
+        <note>Class = "UINavigationItem"; title = "Settings"; ObjectID = "6JE-KC-t00";</note>
+      </trans-unit>
+      <trans-unit id="8hl-TZ-9Ik.title">
+        <source>InitView</source>
+        <target>View Iniziale</target>
+        <note>Class = "UIViewController"; title = "InitView"; ObjectID = "8hl-TZ-9Ik";</note>
+      </trans-unit>
+      <trans-unit id="BHx-f3-E2w.text">
+        <source>Elimina Tutto</source>
+        <target>Elimina Tutto</target>
+        <note>Class = "UILabel"; text = "Elimina Tutto"; ObjectID = "BHx-f3-E2w";</note>
+      </trans-unit>
+      <trans-unit id="BYZ-38-t0r.title">
+        <source>QRView</source>
+        <target>QRView</target>
+        <note>Class = "UIViewController"; title = "QRView"; ObjectID = "BYZ-38-t0r";</note>
+      </trans-unit>
+      <trans-unit id="D6x-5I-7SI.text">
+        <source>Label</source>
+        <target>Etichetta</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "D6x-5I-7SI";</note>
+      </trans-unit>
+      <trans-unit id="Itr-Fb-xEQ.title">
+        <source>Archive</source>
+        <target>Media</target>
+        <note>Class = "UITabBarItem"; title = "Archive"; ObjectID = "Itr-Fb-xEQ";</note>
+      </trans-unit>
+      <trans-unit id="JDb-ca-yyz.normalTitle">
+        <source>Button</source>
+        <target>Pulsante</target>
+        <note>Class = "UIButton"; normalTitle = "Button"; ObjectID = "JDb-ca-yyz";</note>
+      </trans-unit>
+      <trans-unit id="L3a-i5-5Kv.title">
+        <source>Inserisci Gesture</source>
+        <target>Inserisci Gesture</target>
+        <note>Class = "UIViewController"; title = "Inserisci Gesture"; ObjectID = "L3a-i5-5Kv";</note>
+      </trans-unit>
+      <trans-unit id="Pbd-2m-j3K.text">
+        <source>QRCode Reader</source>
+        <target>Lettore QRCode</target>
+        <note>Class = "UILabel"; text = "QRCode Reader"; ObjectID = "Pbd-2m-j3K";</note>
+      </trans-unit>
+      <trans-unit id="TdY-Z8-Gry.text">
+        <source>QRCode Reader</source>
+        <note>Class = "UILabel"; text = "QRCode Reader"; ObjectID = "TdY-Z8-Gry";</note>
+      </trans-unit>
+      <trans-unit id="VK0-qs-sqe.title">
+        <source>Title</source>
+        <target>Titolo</target>
+        <note>Class = "UINavigationItem"; title = "Title"; ObjectID = "VK0-qs-sqe";</note>
+      </trans-unit>
+      <trans-unit id="W13-4p-rzP.title">
+        <source>Archive</source>
+        <target>Media</target>
+        <note>Class = "UINavigationItem"; title = "Archive"; ObjectID = "W13-4p-rzP";</note>
+      </trans-unit>
+      <trans-unit id="Wnh-AB-7ec.text">
+        <source>Label</source>
+        <target>Etichetta</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "Wnh-AB-7ec";</note>
+      </trans-unit>
+      <trans-unit id="Yoe-wK-8ms.text">
+        <source>Date Created</source>
+        <target>Data di creazione</target>
+        <note>Class = "UILabel"; text = "Date Created"; ObjectID = "Yoe-wK-8ms";</note>
+      </trans-unit>
+      <trans-unit id="Ytc-M7-3y3.title">
+        <source>Notes</source>
+        <target>Note</target>
+        <note>Class = "UITabBarItem"; title = "Notes"; ObjectID = "Ytc-M7-3y3";</note>
+      </trans-unit>
+      <trans-unit id="fA7-nk-NJa.text">
+        <source>Cambia Gesture</source>
+        <target>Cambia Gesture</target>
+        <note>Class = "UILabel"; text = "Cambia Gesture"; ObjectID = "fA7-nk-NJa";</note>
+      </trans-unit>
+      <trans-unit id="hM8-2u-mfO.title">
+        <source>Notes</source>
+        <target>Note</target>
+        <note>Class = "UINavigationItem"; title = "Notes"; ObjectID = "hM8-2u-mfO";</note>
+      </trans-unit>
+      <trans-unit id="kIR-YF-4do.text">
+        <source>Label</source>
+        <target>Etichetta</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "kIR-YF-4do";</note>
+      </trans-unit>
+      <trans-unit id="mPm-B7-yNt.title">
+        <source>Setting</source>
+        <target>Impostazioni</target>
+        <note>Class = "UITabBarItem"; title = "Setting"; ObjectID = "mPm-B7-yNt";</note>
+      </trans-unit>
+      <trans-unit id="nUx-HH-pYG.text">
+        <source>Note </source>
+        <target>Note </target>
+        <note>Class = "UILabel"; text = "Note "; ObjectID = "nUx-HH-pYG";</note>
+      </trans-unit>
+      <trans-unit id="nsl-Bg-zGs.normalTitle">
+        <source>Button</source>
+        <target>Pulsante</target>
+        <note>Class = "UIButton"; normalTitle = "Button"; ObjectID = "nsl-Bg-zGs";</note>
+      </trans-unit>
+      <trans-unit id="txm-wk-fyC.normalTitle">
+        <source>Export</source>
+        <note>Class = "UIButton"; normalTitle = "Export"; ObjectID = "txm-wk-fyC";</note>
+      </trans-unit>
+      <trans-unit id="veQ-EO-ssB.text">
+        <source>Title</source>
+        <target>Titolo</target>
+        <note>Class = "UILabel"; text = "Title"; ObjectID = "veQ-EO-ssB";</note>
+      </trans-unit>
+      <trans-unit id="yhe-cP-0hk.normalTitle">
+        <source>Delete Image</source>
+        <note>Class = "UIButton"; normalTitle = "Delete Image"; ObjectID = "yhe-cP-0hk";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Cykas/Info.plist" source-language="en" datatype="plaintext" target-language="it">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3" build-num="8E162"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName">
+        <source>QR Reader</source>
+      </trans-unit>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Cykas/Localizable.strings" source-language="en" datatype="plaintext" target-language="it">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3" build-num="8E162"/>
+    </header>
+    <body>
+      <trans-unit id="Annulla">
+        <source>Annulla</source>
+        <note>Annulla elimina tutti i file</note>
+      </trans-unit>
+      <trans-unit id="Elimina Tutto">
+        <source>Elimina Tutto</source>
+        <note>Elimina tutti i file</note>
+      </trans-unit>
+      <trans-unit id="Vuoi eliminare tutti i files?">
+        <source>Vuoi eliminare tutti i files?</source>
+        <note>Sei sicuro di voler eliminare tutti i file?</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="CykasTests/Info.plist" source-language="en" datatype="plaintext" target-language="it">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3" build-num="8E162"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="CykasUITests/Info.plist" source-language="en" datatype="plaintext" target-language="it">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.3" build-num="8E162"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
