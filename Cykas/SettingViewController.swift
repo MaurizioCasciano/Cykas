@@ -22,7 +22,7 @@ class SettingViewController: UIViewController {
             message: msg,
             preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
 		
-		let title2 = NSLocalizedString("Annulla", comment: "Annulla elimina tutti i file")
+		let title2 = NSLocalizedString("Cancel", comment: "Cancel deleting all files")
 
         addActionSheet.addAction(UIAlertAction.init(title: title2, style: .cancel, handler: nil))
 

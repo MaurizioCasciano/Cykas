@@ -16,11 +16,6 @@
         <target>Exit</target>
         <note>Class = "UITabBarItem"; title = "Exit"; ObjectID = "2AT-2f-EYL";</note>
       </trans-unit>
-      <trans-unit id="5k0-kZ-gl6.text">
-        <source>         </source>
-        <target>         </target>
-        <note>Class = "UILabel"; text = "         "; ObjectID = "5k0-kZ-gl6";</note>
-      </trans-unit>
       <trans-unit id="6Ff-WW-Bmf.title">
         <source>Notes</source>
         <target>Notes</target>
@@ -30,11 +25,6 @@
         <source>Settings</source>
         <target>Settings</target>
         <note>Class = "UINavigationItem"; title = "Settings"; ObjectID = "6JE-KC-t00";</note>
-      </trans-unit>
-      <trans-unit id="8hZ-1K-9GS.text">
-        <source>0%</source>
-        <target>0%</target>
-        <note>Class = "UILabel"; text = "0%"; ObjectID = "8hZ-1K-9GS";</note>
       </trans-unit>
       <trans-unit id="8hl-TZ-9Ik.title">
         <source>InitView</source>
@@ -56,11 +46,6 @@
         <target>Label</target>
         <note>Class = "UILabel"; text = "Label"; ObjectID = "D6x-5I-7SI";</note>
       </trans-unit>
-      <trans-unit id="E4T-Za-fON.text">
-        <source>QRCode Reader</source>
-        <target>QRCode Reader</target>
-        <note>Class = "UILabel"; text = "QRCode Reader"; ObjectID = "E4T-Za-fON";</note>
-      </trans-unit>
       <trans-unit id="Itr-Fb-xEQ.title">
         <source>Archive</source>
         <target>Archive</target>
@@ -80,6 +65,10 @@
         <source>QRCode Reader</source>
         <target>QRCode Reader</target>
         <note>Class = "UILabel"; text = "QRCode Reader"; ObjectID = "Pbd-2m-j3K";</note>
+      </trans-unit>
+      <trans-unit id="TdY-Z8-Gry.text">
+        <source>QRCode Reader</source>
+        <note>Class = "UILabel"; text = "QRCode Reader"; ObjectID = "TdY-Z8-Gry";</note>
       </trans-unit>
       <trans-unit id="VK0-qs-sqe.title">
         <source>Title</source>
@@ -111,11 +100,6 @@
         <target>Change Gesture</target>
         <note>Class = "UILabel"; text = "Cambia Gesture"; ObjectID = "fA7-nk-NJa";</note>
       </trans-unit>
-      <trans-unit id="fMy-gG-hIK.normalTitle">
-        <source>Clear</source>
-        <target>Clear</target>
-        <note>Class = "UIButton"; normalTitle = "Clear"; ObjectID = "fMy-gG-hIK";</note>
-      </trans-unit>
       <trans-unit id="hM8-2u-mfO.title">
         <source>Notes</source>
         <target>Notes</target>
@@ -141,10 +125,9 @@
         <target>Button</target>
         <note>Class = "UIButton"; normalTitle = "Button"; ObjectID = "nsl-Bg-zGs";</note>
       </trans-unit>
-      <trans-unit id="sQJ-IR-xdq.text">
-        <source>Label</source>
-        <target>Label</target>
-        <note>Class = "UILabel"; text = "Label"; ObjectID = "sQJ-IR-xdq";</note>
+      <trans-unit id="txm-wk-fyC.normalTitle">
+        <source>Export</source>
+        <note>Class = "UIButton"; normalTitle = "Export"; ObjectID = "txm-wk-fyC";</note>
       </trans-unit>
       <trans-unit id="veQ-EO-ssB.text">
         <source>Title</source>
