@@ -189,6 +189,29 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         gestureView.clear()
     }
     
+    let msg1 = NSLocalizedString("Access requires authentication", comment: "Richiesto accesso")
+    let msg2 = NSLocalizedString("Session cancelled", comment: "Sessione cancellata")
+    let msg3 = NSLocalizedString("Please try again", comment: "Riprova")
+    let msg4 = NSLocalizedString("Authentication", comment: "Autenticazione")
+    let msg5 = NSLocalizedString("Password option selected", comment: "Password option selected")
+    let msg6 = NSLocalizedString("Authentication failed", comment: "Autentucazione fallita")
+    
+    let msg7 = NSLocalizedString("TouchID is not enrolled", comment: "TouchID non settato")
+    let msg8 = NSLocalizedString("If you want use this app, you need to set a touch id ", comment: "TouchID non settato")
+    
+    let msg9 = NSLocalizedString("A passcode has not been set", comment: "A passcode has not been set")
+    let msg10 = NSLocalizedString("TouchID not available", comment: "TouchID not available")
+
+    
+    
+    
+
+    
+    
+
+    
+
+    
     func AuthenticateWithTouchID() {
         let context = LAContext()
         
@@ -201,7 +224,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
             // Device can use TouchID
             context.evaluatePolicy(
                 LAPolicy.deviceOwnerAuthenticationWithBiometrics,
-                localizedReason: "Access requires authentication",
+                localizedReason: msg1,
                 reply: {(success, error) in
                     DispatchQueue.main.async {
                         
@@ -210,20 +233,20 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
                             switch error!._code {
                                 
                             case LAError.Code.systemCancel.rawValue:
-                                self.notifyUser("Session cancelled",
+                                self.notifyUser(self.msg2,
                                                 err: error?.localizedDescription)
                                 
                             case LAError.Code.userCancel.rawValue:
-                                self.notifyUser("Please try again",
+                                self.notifyUser(self.msg3,
                                                 err: error?.localizedDescription)
                                 
                             case LAError.Code.userFallback.rawValue:
-                                self.notifyUser("Authentication",
-                                                err: "Password option selected")
+                                self.notifyUser(self.msg4,
+                                                err: self.msg5)
                                 // Custom code to obtain password here
                                 
                             default:
-                                self.notifyUser("Authentication failed",
+                                self.notifyUser(self.msg6,
                                                 err: error?.localizedDescription)
                             }
                             
@@ -239,19 +262,19 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
             switch error!.code{
                 
             case LAError.Code.touchIDNotEnrolled.rawValue:
-                notifyUser("TouchID is not enrolled",
-                           err: "If you want use this app, you need to set a touch id ")
+                notifyUser(msg7,
+                           err: msg8)
                 
                 
             case LAError.Code.passcodeNotSet.rawValue:
-                notifyUser("A passcode has not been set",
-                           err: "If you want use this app, you need to set a touch id ")
+                notifyUser(msg9,
+                           err: msg8)
      
                 
                 
             default:
-                notifyUser("TouchID not available",
-                           err: "If you want use this app, you need to set a touch id ")
+                notifyUser(msg10,
+                           err: msg8)
                 
             }
         }

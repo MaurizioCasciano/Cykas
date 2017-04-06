@@ -14,8 +14,10 @@ class SettingViewController: UIViewController {
     
     @IBAction func DeleteFiles(_ sender: UIButton) {
 		
-		let title = NSLocalizedString("Elimina Tutto", comment: "Elimina tutti i file")
-		let msg = NSLocalizedString("Vuoi eliminare tutti i files?", comment: "Sei sicuro di voler eliminare tutti i file?")
+		let title = NSLocalizedString("Delete All", comment: "Elimina tutti i file")
+		let msg = NSLocalizedString("Do you want delete all files?", comment: "Sei sicuro di voler eliminare tutti i file?")
+        
+        
 		
         let addActionSheet = UIAlertController.init(
             title: title,

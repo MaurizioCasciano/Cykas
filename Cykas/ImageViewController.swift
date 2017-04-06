@@ -16,11 +16,14 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate {
 	var uiImage: UIImage = UIImage()
     var media : Media? = nil
     let CS = CryptoString()
+    
+    let msg = NSLocalizedString("Delete file", comment: "Elimina file")
+    let msg1 = NSLocalizedString("Do you want delete this file?", comment: "Sei sicuro di voler eliminare questo file?")
 	
     @IBAction func DeleteImage(_ sender: Any) {
         let addActionSheet = UIAlertController.init(
-            title: "Delete file",
-            message: "Do you want delete this file?",
+            title: msg,
+            message: msg1,
             preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
         
         
