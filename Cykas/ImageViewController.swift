@@ -18,9 +18,24 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate {
     let CS = CryptoString()
 	
     @IBAction func DeleteImage(_ sender: Any) {
-        MediaPersistenceManager.deleteItem(item: media!)
-        MediaPersistenceManager.saveContext()
-        self.navigationController?.popViewController(animated: true)
+        let addActionSheet = UIAlertController.init(
+            title: "Delete file",
+            message: "Do you want delete this file?",
+            preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
+        
+        
+        addActionSheet.addAction(UIAlertAction.init(title: "No", style: .cancel, handler: nil))
+        
+        
+        addActionSheet.addAction(UIAlertAction.init(title: "Yes ",style: .default,
+                                                    handler: {(action: UIAlertAction) in
+                                                        MediaPersistenceManager.deleteItem(item: self.media!)
+                                                        MediaPersistenceManager.saveContext()
+                                                        self.navigationController?.popViewController(animated: true)
+        }))
+        
+         self.present(addActionSheet, animated: true, completion: nil)
+
     }
     
 	override func viewDidLoad() {
