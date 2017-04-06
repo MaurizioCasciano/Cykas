@@ -31,19 +31,20 @@ class NotePersistenceManager {
         }
         return Notes
     }
-    static func deleteAllItem(){
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Notes")
-        
-        // Create Batch Delete Request
-        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        
-        do {
-            try getContext().execute(batchDeleteRequest)
-            
-        } catch {
-            // Error Handling
+    static func newItem(nome :NSData , dat:NSData , cont:NSData) -> Notes {
+        let context = getContext()
+        let Notes = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Notes
+        Notes.name = nome
+        Notes.data = dat
+        Notes.content = cont
+        do{
+            try context.save()
+        }catch let error as NSError{
+            print("Error \(error.code)")
         }
+        return Notes
     }
+    
     static func deleteItem( item : Notes){
         let context = getContext()
         context.delete(item)

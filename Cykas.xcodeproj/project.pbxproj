@@ -86,7 +86,7 @@
 		C3AD47081E94DAF500F07033 /* MediaPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD47071E94DAF500F07033 /* MediaPersistenceManager.swift */; };
 		C3AD470B1E94DB4100F07033 /* Media+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD47091E94DB4100F07033 /* Media+CoreDataClass.swift */; };
 		C3AD470C1E94DB4100F07033 /* Media+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD470A1E94DB4100F07033 /* Media+CoreDataProperties.swift */; };
-		D868D2A61E93E76300DEFEE9 /* NotePersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A51E93E76300DEFEE9 /* NotePersistent.swift */; };
+		D868D2A61E93E76300DEFEE9 /* NotePersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A51E93E76300DEFEE9 /* NotePersistenceManager.swift */; };
 		D868D2AA1E93E86900DEFEE9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */; };
 		D868D2AB1E93E86900DEFEE9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A81E93E86900DEFEE9 /* ItemCell.swift */; };
 		D868D2AC1E93E86900DEFEE9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */; };
@@ -217,7 +217,7 @@
 		C3AD47071E94DAF500F07033 /* MediaPersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPersistenceManager.swift; sourceTree = "<group>"; };
 		C3AD47091E94DB4100F07033 /* Media+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C3AD470A1E94DB4100F07033 /* Media+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D868D2A51E93E76300DEFEE9 /* NotePersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotePersistent.swift; sourceTree = "<group>"; };
+		D868D2A51E93E76300DEFEE9 /* NotePersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotePersistenceManager.swift; sourceTree = "<group>"; };
 		D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		D868D2A81E93E86900DEFEE9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		D868D2A91E93E86900DEFEE9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -305,7 +305,7 @@
 				13DC5AC91E8BC7AF00EBC24F /* Info.plist */,
 				13DC5AC11E8BC7AF00EBC24F /* Cykas.xcdatamodeld */,
 				9D2E54311E8D053400406718 /* GestureView.swift */,
-				D868D2A51E93E76300DEFEE9 /* NotePersistent.swift */,
+				D868D2A51E93E76300DEFEE9 /* NotePersistenceManager.swift */,
 				9DD2B18F1E90FF2F00383B24 /* SecretInitViewController.swift */,
 				9D7A3F101E923F05000603E1 /* Encrypter.swift */,
 				D868D2A71E93E86900DEFEE9 /* ItemsViewController.swift */,
@@ -595,7 +595,7 @@
 				9D9F349B1E9261B600EE3F94 /* CameraViewController.swift in Sources */,
 				13DC5ABD1E8BC7AF00EBC24F /* ViewController.swift in Sources */,
 				D868D2AB1E93E86900DEFEE9 /* ItemCell.swift in Sources */,
-				D868D2A61E93E76300DEFEE9 /* NotePersistent.swift in Sources */,
+				D868D2A61E93E76300DEFEE9 /* NotePersistenceManager.swift in Sources */,
 				D868D2AC1E93E86900DEFEE9 /* DetailViewController.swift in Sources */,
 				9D7A3F111E923F05000603E1 /* Encrypter.swift in Sources */,
 				9D9F34971E92614E00EE3F94 /* ArchiveViewController.swift in Sources */,
