@@ -38,6 +38,24 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate {
 
     }
     @IBAction func Export(_ sender: Any) {
+        let addActionSheet = UIAlertController.init(
+            title: "Export Image",
+            message: "Do you want export this Image?",
+            preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
+        
+        
+        addActionSheet.addAction(UIAlertAction.init(title: "No", style: .cancel, handler: nil))
+        
+        
+        addActionSheet.addAction(UIAlertAction.init(title: "Yes ",style: .default,
+                                                    handler: {(action: UIAlertAction) in
+                                                        UIImageWriteToSavedPhotosAlbum(self.uiImage, nil, nil, nil);
+                                                        MediaPersistenceManager.deleteItem(item: self.media!)
+                                                        MediaPersistenceManager.saveContext()
+                                                        self.navigationController?.popViewController(animated: true)
+        }))
+        
+        self.present(addActionSheet, animated: true, completion: nil)
     }
     
 	override func viewDidLoad() {

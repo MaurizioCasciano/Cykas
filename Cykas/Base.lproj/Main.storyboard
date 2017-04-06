@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E6P-Kp-zYf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E6P-Kp-zYf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -57,11 +57,40 @@
                         <outlet property="imgQR" destination="g8N-IW-qzB" id="9yP-kT-Tgg"/>
                         <outlet property="labelQR" destination="TdY-Z8-Gry" id="xPV-rg-nmJ"/>
                         <segue destination="G4b-RN-M7c" kind="show" identifier="secretSegue" id="G2P-Pw-SBV"/>
+                        <segue destination="oZ2-18-TG5" kind="show" identifier="Url" id="54d-3N-gSL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2194.4000000000001" y="-341.37931034482762"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="chH-9c-ZwK">
+            <objects>
+                <viewController id="oZ2-18-TG5" customClass="WebViewController" customModule="Cykas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SLI-gv-Scw"/>
+                        <viewControllerLayoutGuide type="bottom" id="O5v-mT-hLu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MZv-Js-vNS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oW6-SV-Yxc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="web" destination="oW6-SV-Yxc" id="zxO-9h-mPN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiL-HJ-6ew" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1740" y="470.91454272863569"/>
         </scene>
         <!--Archive-->
         <scene sceneID="nD5-Ca-2bu">
@@ -453,7 +482,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yqk-kb-BT4">
-                                <rect key="frame" x="16" y="72" width="343" height="531"/>
+                                <rect key="frame" x="16" y="28" width="343" height="619"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -773,6 +802,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Dn4-2O-bFI"/>
         <segue reference="lpc-9a-Kop"/>
-        <segue reference="1Zw-r5-ujK"/>
+        <segue reference="g8T-IM-D2q"/>
     </inferredMetricsTieBreakers>
 </document>
