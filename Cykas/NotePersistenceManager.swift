@@ -31,6 +31,24 @@ class NotePersistenceManager {
         }
         return Notes
     }
+    static func newItem(nome :NSData , dat:NSData , cont:NSData) -> Notes {
+        let context = getContext()
+        let Notes = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! Notes
+        Notes.name = nome
+        Notes.data = dat
+        Notes.content = cont
+        do{
+            try context.save()
+        }catch let error as NSError{
+            print("Error \(error.code)")
+        }
+        return Notes
+    }
+    
+    static func deleteItem( item : Notes){
+        let context = getContext()
+        context.delete(item)
+    }
     static func deleteAllItem(){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Notes")
         
@@ -44,11 +62,6 @@ class NotePersistenceManager {
             // Error Handling
         }
     }
-    static func deleteItem( item : Notes){
-        let context = getContext()
-        context.delete(item)
-    }
-    
     static func saveContext()
     {
         let context = getContext()
