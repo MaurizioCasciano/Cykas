@@ -10,7 +10,7 @@ import UIKit
 import PennyPincher
 
 class TutorialViewController: UIViewController {
-
+    var nav:UINavigationController = UINavigationController()
     private let pennyPincherGestureRecognizer = PennyPincherGestureRecognizer()
     var i = 0
     @IBOutlet var gestureView: GestureView!
@@ -24,6 +24,7 @@ class TutorialViewController: UIViewController {
         if(!flag){
              mssg = "Now you should insert a gesture, we use it as password for your secret archive. You should insert a continuos gesture, try to not lift your finger"
         }else{
+            self.navigationController?.isNavigationBarHidden=true
             mssg = "Insert your new gesture"
         }
         self.alert(message: mssg, title: "BE ALERT!")
@@ -89,7 +90,7 @@ class TutorialViewController: UIViewController {
         }
         let similarityString = String(format: "%.2f", similarity)
         if(Double(similarityString)!>8.0){
-             self.performSegue(withIdentifier: "okGesture", sender: nil)
+            self.performSegue(withIdentifier: "okGesture", sender: nil)
             self.alert(message: "Gesture recorded", title: "Excellent!")
            
         }else{
@@ -122,7 +123,6 @@ class TutorialViewController: UIViewController {
         }
         let similarityString = String(format: "%.2f", similarity)
         if(Double(similarityString)!>8.0){
-            self.alert(message: "Gesture recorded", title: "Excellent!")
             if(flag){
                 var CS = CryptoString()
                 class notaTemp{
@@ -181,8 +181,8 @@ class TutorialViewController: UIViewController {
                 for item in images{
                     MediaPersistenceManager.newItem(item)
                 }
-                NotePersistenceManager.saveContext()
-                self.performSegue(withIdentifier: "okGesture", sender: nil)
+                MediaPersistenceManager.saveContext()
+                
             }
         }else{
             gestureView.clear()
@@ -199,6 +199,10 @@ class TutorialViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             //ErrorLabel.text = "Inserire dinuovo la gesture o premi cancel per reinserire la gesture iniziale"
         }
+        let alertController = UIAlertController(title: "Gesture Change", message: "Restart the App for make persistent the changement", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Ok", style: .default, handler: {(action: UIAlertAction) in exit(0)})
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
         
     }
 
