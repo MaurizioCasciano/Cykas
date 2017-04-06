@@ -57,8 +57,8 @@ class SettingTableViewController: UITableViewController {
       
         if segue.identifier == "inserisciGesture"{
             let currentrow = tableView.indexPathForSelectedRow?.row
-            let currentlabel = labels[currentrow!]
-            if(currentlabel == "Elimina Tutto"){
+            let img = imgs[currentrow!]
+            if(img == imgs[1]){
                 let addActionSheet = UIAlertController.init(
                     title: "Elimina Files",
                     message: "Vuoi eliminare tutti i files ?",
@@ -75,10 +75,11 @@ class SettingTableViewController: UITableViewController {
                 
                 self.present(addActionSheet, animated: true, completion: nil)
             }
-            else if(currentlabel == "Cambia Gesture"){
+            else if(img == imgs[0]){
                 let nextdestination = segue.destination as! TutorialViewController
-                nextdestination.nav = self.navigationController!
                 nextdestination.flag=true
+                nextdestination.nav = self.navigationController!
+                
             }
         }
     }
