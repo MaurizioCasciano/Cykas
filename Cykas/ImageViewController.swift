@@ -37,6 +37,8 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate {
          self.present(addActionSheet, animated: true, completion: nil)
 
     }
+    @IBAction func Export(_ sender: Any) {
+    }
     
 	override func viewDidLoad() {
 		self.imageView.image = self.uiImage
