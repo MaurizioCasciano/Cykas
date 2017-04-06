@@ -18,22 +18,57 @@ class TutorialViewController: UIViewController {
     @IBOutlet var navBar: UINavigationBar!
     var temp:PennyPincherTemplate? = nil
     
+    
+    let msg = NSLocalizedString("Now you should insert a gesture, we use it as password for your secret archive. You should insert a continuos gesture, try to not lift your finger", comment: "Now you should insert a gesture, we use it as password for your secret archive. You should insert a continuos gesture, try to not lift your finger")
+    let msg1 = NSLocalizedString("Insert your new gesture", comment: "Insert your new gesture")
+    let msg2 = NSLocalizedString("BE ALERT!", comment: "attento")
+    let msg3 = NSLocalizedString("Insert gesture ", comment: "inserisci gesture")
+    let msg4 = NSLocalizedString("Insert gesture again, for ensure that you draw it correct", comment: "Insert gesture again, for ensure that you draw it correct")
+    let msg5 = NSLocalizedString("Insert again", comment: "attento")
+
+    let msg6 = NSLocalizedString("Good!", comment: "Bene!")
+    
+    let msg7 = NSLocalizedString("Gesture recorded", comment: "Gesture recorded")
+    
+    let msg8 = NSLocalizedString("Retry", comment: "Retry")
+    let msg9 = NSLocalizedString("Cancel", comment: "Cancel")
+    
+    let msg10 = NSLocalizedString("Please insert gesture", comment: "Please insert gesture")
+    
+    
+    let msg11 = NSLocalizedString(    "Second gesture do not match, insert again or press cancel to redo you initial gesture", comment:     "Second gesture do not match, insert again or press cancel to redo you initial gesture"
+)
+
+    
+    
+
+
+    
+    
+    
+    
+
+
+
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var mssg = ""
         if(!flag){
-             mssg = "Now you should insert a gesture, we use it as password for your secret archive. You should insert a continuos gesture, try to not lift your finger"
+             mssg = msg
         }else{
-            mssg = "Insert your new gesture"
+            mssg = msg1
         }
-        self.alert(message: mssg, title: "BE ALERT!")
+        self.alert(message: mssg, title: msg2)
         pennyPincherGestureRecognizer.enableMultipleStrokes = true
         pennyPincherGestureRecognizer.allowedTimeBetweenMultipleStrokes = 0.2
         pennyPincherGestureRecognizer.cancelsTouchesInView = false
         pennyPincherGestureRecognizer.addTarget(self, action: #selector(didRecognize(_:)))
         
         gestureView.addGestureRecognizer(pennyPincherGestureRecognizer)
-        navBar.topItem?.title = "Insert gesture "
+        navBar.topItem?.title = msg3
         // Do any additional setup after loading the view.
     }
 
@@ -62,8 +97,8 @@ class TutorialViewController: UIViewController {
                     for point in gestureView.points{
                         PersistenceManager.newItem(point)
                     }
-                    self.alert(message: "Insert gesture again, for ensure that you draw it correct", title: "Good!")
-                    navBar.topItem?.title = "Insert again"
+                    self.alert(message: msg4, title: msg6)
+                    navBar.topItem?.title = msg5
                     i+=1;
                     print(gestureView.points.description.sha1())
                     gestureView.clear()
@@ -72,8 +107,8 @@ class TutorialViewController: UIViewController {
                     if(temp != nil) {
                         pennyPincherGestureRecognizer.templates.append(temp!)
                     }
-                    self.alert(message: "Insert gesture again, for ensure that you draw it correct", title: "Good!")
-                    navBar.topItem?.title = "Insert again"
+                    self.alert(message: msg4, title: msg6)
+                    navBar.topItem?.title = msg5
                     i+=1;
                     gestureView.clear()
                 }
@@ -90,21 +125,21 @@ class TutorialViewController: UIViewController {
         let similarityString = String(format: "%.2f", similarity)
         if(Double(similarityString)!>8.0){
              self.performSegue(withIdentifier: "okGesture", sender: nil)
-            self.alert(message: "Gesture recorded", title: "Excellent!")
+            self.alert(message: msg7, title: msg6)
            
         }else{
              gestureView.clear()
             
-            let alertController = UIAlertController(title: title, message: "Second gesture do not match, insert again or press cancel to redo you initial gesture", preferredStyle: .alert)
-            let OKAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
-            let CancelAction = UIAlertAction(title: "Cancel", style: .cancel,handler:{ (action: UIAlertAction!) in
+            let alertController = UIAlertController(title: title, message: msg11, preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: msg8, style: .default, handler: nil)
+            let CancelAction = UIAlertAction(title: msg9, style: .cancel,handler:{ (action: UIAlertAction!) in
                 let gesture = PersistenceManager.fetchData()
                 for point in gesture{
                     PersistenceManager.deleteItem(item: point)
                 }
                 PersistenceManager.saveContext()
                 self.i = 0
-                self.navBar.topItem?.title = "Please insert gesture"
+                self.navBar.topItem?.title = self.msg10
                 self.gestureView.clear()
             })
             
@@ -122,7 +157,7 @@ class TutorialViewController: UIViewController {
         }
         let similarityString = String(format: "%.2f", similarity)
         if(Double(similarityString)!>8.0){
-            self.alert(message: "Gesture recorded", title: "Excellent!")
+            self.alert(message: msg7, title: msg6)
             if(flag){
                 var CS = CryptoString()
                 class notaTemp{
@@ -186,12 +221,12 @@ class TutorialViewController: UIViewController {
             }
         }else{
             gestureView.clear()
-            let alertController = UIAlertController(title: title, message: "Second gesture do not match, insert again or press cancel to redo you initial gesture", preferredStyle: .alert)
-            let OKAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
-            let CancelAction = UIAlertAction(title: "Cancel", style: .cancel,handler:{ (action: UIAlertAction!) in
+            let alertController = UIAlertController(title: title, message: msg11, preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: msg8, style: .default, handler: nil)
+            let CancelAction = UIAlertAction(title: msg9, style: .cancel,handler:{ (action: UIAlertAction!) in
                 self.pennyPincherGestureRecognizer.templates.removeAll()
                 self.i=0
-                self.navBar.topItem?.title = "Please insert gesture"
+                self.navBar.topItem?.title = self.msg10
                 self.gestureView.clear()
             })
             alertController.addAction(OKAction)
