@@ -28,13 +28,21 @@ UICollectionViewDataSource {
         images = MediaPersistenceManager.fetchData()
         collectionView.reloadData()
     }
+    
+    let msg = NSLocalizedString("Choose a source", comment: "Scegli file")
+    let msg2 = NSLocalizedString("Photo Source", comment: "Photo Source")
+    let msg3 = NSLocalizedString("Photo Library ", comment: "Galleria ")
+    let msg4 = NSLocalizedString("Cancel ", comment: "Annulla ")
+
+
+    
     @IBAction func didImportClick(_ sender: UIBarButtonItem) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         
         let addActionSheet = UIAlertController.init(
-            title: "Photo Source",
-            message: "Choose a source",
+            title: msg2,
+            message: msg,
             preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
         
         if UIImagePickerController.isSourceTypeAvailable(.camera){
@@ -53,10 +61,12 @@ UICollectionViewDataSource {
             )
         }
         
+        
+        
         if(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)){
             addActionSheet.addAction(
                 UIAlertAction.init(
-                    title: "Photo Library ",
+                    title: msg3,
                     style: .default,
                     handler: {
                         (action: UIAlertAction)in
@@ -67,7 +77,7 @@ UICollectionViewDataSource {
             )
         }
         
-        addActionSheet.addAction(UIAlertAction.init(title: "Cancel ", style: .cancel, handler: nil))
+        addActionSheet.addAction(UIAlertAction.init(title: msg4, style: .cancel, handler: nil))
         
         self.present(addActionSheet, animated: true, completion: nil)
     }
