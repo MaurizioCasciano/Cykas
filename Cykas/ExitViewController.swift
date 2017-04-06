@@ -12,12 +12,21 @@ class ExitViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        exit(0)
         
+
        
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        let alertController = UIAlertController(title: "Are you sure?", message: "Touch on YES to exit", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "YES", style: .default, handler: {(action: UIAlertAction) in exit(0)})
+        let CancelAction = UIAlertAction(title: "NO", style: .cancel, handler: nil)
+        alertController.addAction(OKAction)
+        alertController.addAction(CancelAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

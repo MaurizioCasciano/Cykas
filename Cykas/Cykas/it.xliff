@@ -162,27 +162,27 @@
     </header>
     <body>
       <trans-unit id="A passcode has not been set">
-        <source>A passcode has not been set</source>
+        <source>Il touch ID non è stato ancora settato</source>
         <note>A passcode has not been set</note>
       </trans-unit>
       <trans-unit id="Access requires authentication">
-        <source>Access requires authentication</source>
+        <source>Richiesto accesso</source>
         <note>Richiesto accesso</note>
       </trans-unit>
       <trans-unit id="Authentication">
-        <source>Authentication</source>
+        <source>Autenticazione</source>
         <note>Autenticazione</note>
       </trans-unit>
       <trans-unit id="Authentication failed">
-        <source>Authentication failed</source>
+        <source>Autenticazione fallita</source>
         <note>Autentucazione fallita</note>
       </trans-unit>
       <trans-unit id="BE ALERT!">
-        <source>BE ALERT!</source>
+        <source>Attenzione !</source>
         <note>attento</note>
       </trans-unit>
       <trans-unit id="Cancel">
-        <source>Cancel</source>
+        <source>Annulla</source>
         <note>Cancel
    Cancel deleting all files</note>
       </trans-unit>
@@ -191,63 +191,64 @@
         <note>Annulla</note>
       </trans-unit>
       <trans-unit id="Choose a source">
-        <source>Choose a source</source>
+        <source>Scegli File</source>
         <note>Scegli file</note>
       </trans-unit>
       <trans-unit id="Delete All">
-        <source>Delete All</source>
+        <source>Elimina tutti i files</source>
         <note>Elimina tutti i file</note>
       </trans-unit>
       <trans-unit id="Delete file">
-        <source>Delete file</source>
+        <source>Elimina file</source>
         <note>Elimina file</note>
       </trans-unit>
       <trans-unit id="Do you want delete all files?">
-        <source>Do you want delete all files?</source>
+        <source>Sei sicuro di voler eliminare tutti i file?</source>
         <note>Sei sicuro di voler eliminare tutti i file?</note>
       </trans-unit>
       <trans-unit id="Do you want delete this file?">
-        <source>Do you want delete this file?</source>
+        <source>Sei sicuro di voler eliminare questo file?</source>
         <note>Sei sicuro di voler eliminare questo file?</note>
       </trans-unit>
       <trans-unit id="Gesture recorded">
-        <source>Gesture recorded</source>
+        <source>Gesture registrata</source>
         <note>Gesture recorded</note>
       </trans-unit>
       <trans-unit id="Good!">
-        <source>Good!</source>
+        <source>Bene !</source>
         <note>Bene!</note>
       </trans-unit>
       <trans-unit id="If you want use this app, you need to set a touch id ">
-        <source>If you want use this app, you need to set a touch id </source>
+        <source>Se vuoi usare questa app, devi settare il touch ID </source>
         <note>TouchID non settato</note>
       </trans-unit>
       <trans-unit id="Insert again">
-        <source>Insert again</source>
+        <source>Inserisci di nuovo</source>
         <note>attento</note>
       </trans-unit>
       <trans-unit id="Insert gesture ">
-        <source>Insert gesture </source>
+        <source>Inserisci gesture </source>
         <note>inserisci gesture</note>
       </trans-unit>
       <trans-unit id="Insert gesture again, for ensure that you draw it correct">
-        <source>Insert gesture again, for ensure that you draw it correct</source>
+        <source>IInserisci la gesture di nuovo, per essere sicuro che sia corretta</source>
         <note>Insert gesture again, for ensure that you draw it correct</note>
       </trans-unit>
       <trans-unit id="Insert your new gesture">
-        <source>Insert your new gesture</source>
+        <source>Inserisci la nuova gesture</source>
         <note>Insert your new gesture</note>
       </trans-unit>
       <trans-unit id="Now you should insert a gesture, we use it as password for your secret archive. You should insert a continuos gesture, try to not lift your finger">
-        <source>Now you should insert a gesture, we use it as password for your secret archive. You should insert a continuos gesture, try to not lift your finger</source>
+        <source>Ora devi inserire la gesture, che useramo come password per il tuo archivio segreto. Devi
+         inserire una linea continua, cerca di non staccare il dito dallo schermo</source>
         <note>Now you should insert a gesture, we use it as password for your secret archive. You should insert a continuos gesture, try to not lift your finger</note>
       </trans-unit>
       <trans-unit id="Password option selected">
-        <source>Password option selected</source>
+        <source>Password option selezionata</source>
         <note>Password option selected</note>
       </trans-unit>
       <trans-unit id="Photo Library ">
-        <source>Photo Library </source>
+        <source>Galleria </source>
         <note>Galleria</note>
       </trans-unit>
       <trans-unit id="Photo Source">
@@ -255,31 +256,31 @@
         <note>Photo Source</note>
       </trans-unit>
       <trans-unit id="Please insert gesture">
-        <source>Please insert gesture</source>
+        <source>Inserisci la gesture per piacere</source>
         <note>Please insert gesture</note>
       </trans-unit>
       <trans-unit id="Please try again">
-        <source>Please try again</source>
+        <source>Riprova per piacere</source>
         <note>Riprova</note>
       </trans-unit>
       <trans-unit id="Retry">
-        <source>Retry</source>
+        <source>Riprova</source>
         <note>Retry</note>
       </trans-unit>
       <trans-unit id="Second gesture do not match, insert again or press cancel to redo you initial gesture">
-        <source>Second gesture do not match, insert again or press cancel to redo you initial gesture</source>
+        <source>Le due gesture non corrispondono, inserisci di nuovo o premi annulla per ripetere la gesture iniziale</source>
         <note>Second gesture do not match, insert again or press cancel to redo you initial gesture</note>
       </trans-unit>
       <trans-unit id="Session cancelled">
-        <source>Session cancelled</source>
+        <source>Sessione cancellata</source>
         <note>Sessione cancellata</note>
       </trans-unit>
       <trans-unit id="TouchID is not enrolled">
-        <source>TouchID is not enrolled</source>
+        <source>TouchID non è registrato</source>
         <note>TouchID non settato</note>
       </trans-unit>
       <trans-unit id="TouchID not available">
-        <source>TouchID not available</source>
+        <source>TouchID non disponibile</source>
         <note>TouchID not available</note>
       </trans-unit>
     </body>

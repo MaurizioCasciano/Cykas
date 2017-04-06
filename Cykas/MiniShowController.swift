@@ -15,7 +15,7 @@ class MiniShowController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        imgViewShowTut.image=UIImage(named:"tut1.png")
+        imgViewShowTut.image=UIImage(named:"tut1.jpg")
         let swipeRight = UISwipeGestureRecognizer(target: self, action:  #selector(MiniShowController.respondToSwipeGesture(gesture:)))
         let swipeLeft = UISwipeGestureRecognizer(target: self, action:  #selector(MiniShowController.respondToSwipeGesture(gesture:)))
         
@@ -23,9 +23,10 @@ class MiniShowController: UIViewController {
         swipeLeft.direction = UISwipeGestureRecognizerDirection.left
         self.view.addGestureRecognizer(swipeRight)
         self.view.addGestureRecognizer(swipeLeft)
-        
+        lblSwipeLeft.isHidden=true
     }
     
+    @IBOutlet var lblSwipeLeft: UILabel!
     @IBOutlet var imgViewShowTut: UIImageView!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -41,9 +42,10 @@ class MiniShowController: UIViewController {
                 
             case UISwipeGestureRecognizerDirection.left:
                 current=current+1
+                lblSwipeLeft.isHidden=false
                 print("Now current is:\(current) ")
-                if(current>5){
-                    current=5
+                if(current>6){
+                    current=6
                     self.performSegue(withIdentifier: "finishTut", sender: nil)
                     
                 }else{
@@ -51,7 +53,7 @@ class MiniShowController: UIViewController {
                                       duration: 0.3,
                                       options: .transitionCrossDissolve,
                                       animations: {
-                                        self.imgViewShowTut.image = UIImage(named:"tut"+String(self.current)+".png")
+                                        self.imgViewShowTut.image = UIImage(named:"tut"+String(self.current)+".jpg")
                                         
                     },
                                       completion: nil)
@@ -65,11 +67,14 @@ class MiniShowController: UIViewController {
                 if(current<1){
                     current=1
                 }else{
+                    if(current==1){
+                    lblSwipeLeft.isHidden=true
+                    }
                     UIView.transition(with: self.imgViewShowTut,
                                       duration: 0.3,
                                       options: .transitionCrossDissolve,
                                       animations: {
-                                        self.imgViewShowTut.image=UIImage(named:"tut"+String(self.current)+".png")
+                                        self.imgViewShowTut.image=UIImage(named:"tut"+String(self.current)+".jpg")
                                         
                     },
                                       completion: nil)
