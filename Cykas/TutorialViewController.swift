@@ -10,6 +10,7 @@ import UIKit
 import PennyPincher
 
 class TutorialViewController: UIViewController {
+    
     var nav:UINavigationController = UINavigationController()
     private let pennyPincherGestureRecognizer = PennyPincherGestureRecognizer()
     var i = 0
@@ -39,18 +40,7 @@ class TutorialViewController: UIViewController {
     let msg11 = NSLocalizedString(    "Second gesture do not match, insert again or press cancel to redo you initial gesture", comment:     "Second gesture do not match, insert again or press cancel to redo you initial gesture"
 )
 
-    
-    
 
-
-    
-    
-    
-    
-
-
-
-    
     
     
     override func viewDidLoad() {
