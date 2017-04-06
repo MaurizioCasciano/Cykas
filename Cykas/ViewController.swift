@@ -38,6 +38,9 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     override func viewDidLoad() {
         super.viewDidLoad()
         gesture = PersistenceManager.fetchData()
+       /* for p in gesture{
+            PersistenceManager.deleteItem(item: p)
+        }*/
         var y = [CGPoint]()
         for pointgesture in gesture{
             y.append(CGPointFromString(pointgesture.point!))

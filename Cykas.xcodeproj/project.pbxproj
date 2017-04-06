@@ -83,6 +83,8 @@
 		C36B95551E92348D000F432B /* TemplateGesture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */; };
 		C36B95561E92348D000F432B /* TemplateGesture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */; };
 		C36B955A1E9237A7000F432B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B95591E9237A7000F432B /* PersistenceManager.swift */; };
+		C37707461E967C1A008500D8 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37707451E967C1A008500D8 /* SettingTableViewController.swift */; };
+		C37707481E967FD7008500D8 /* SettingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37707471E967FD7008500D8 /* SettingItemCell.swift */; };
 		C3AD47081E94DAF500F07033 /* MediaPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD47071E94DAF500F07033 /* MediaPersistenceManager.swift */; };
 		C3AD470B1E94DB4100F07033 /* Media+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD47091E94DB4100F07033 /* Media+CoreDataClass.swift */; };
 		C3AD470C1E94DB4100F07033 /* Media+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD470A1E94DB4100F07033 /* Media+CoreDataProperties.swift */; };
@@ -214,6 +216,8 @@
 		C36B95531E92348D000F432B /* TemplateGesture+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C36B95541E92348D000F432B /* TemplateGesture+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TemplateGesture+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C36B95591E9237A7000F432B /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		C37707451E967C1A008500D8 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		C37707471E967FD7008500D8 /* SettingItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingItemCell.swift; sourceTree = "<group>"; };
 		C3AD47071E94DAF500F07033 /* MediaPersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPersistenceManager.swift; sourceTree = "<group>"; };
 		C3AD47091E94DB4100F07033 /* Media+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C3AD470A1E94DB4100F07033 /* Media+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 				9D7483FD1E95210E0058E6B0 /* ViewExtension.swift */,
 				C329503B1E95294000DDFAA6 /* CryptoString.swift */,
 				9DE147351E9583C1001FC7FB /* MiniShowController.swift */,
+				C37707451E967C1A008500D8 /* SettingTableViewController.swift */,
+				C37707471E967FD7008500D8 /* SettingItemCell.swift */,
 			);
 			path = Cykas;
 			sourceTree = "<group>";
@@ -470,7 +476,7 @@
 				TargetAttributes = {
 					13DC5AB61E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 574K56W88Q;
+						DevelopmentTeam = BRD4WW9Y7C;
 						ProvisioningStyle = Automatic;
 					};
 					13DC5ACD1E8BC7AF00EBC24F = {
@@ -584,9 +590,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37707461E967C1A008500D8 /* SettingTableViewController.swift in Sources */,
 				C3AD47081E94DAF500F07033 /* MediaPersistenceManager.swift in Sources */,
 				137F7E051E92F79D00A1AB9E /* GalleryCollectionViewCell.swift in Sources */,
 				D87289421E94EFF600F35F9D /* Notes+CoreDataProperties.swift in Sources */,
+				C37707481E967FD7008500D8 /* SettingItemCell.swift in Sources */,
 				C3AD470B1E94DB4100F07033 /* Media+CoreDataClass.swift in Sources */,
 				9DE147361E9583C1001FC7FB /* MiniShowController.swift in Sources */,
 				C36B955A1E9237A7000F432B /* PersistenceManager.swift in Sources */,
@@ -773,14 +781,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 574K56W88Q;
+				DEVELOPMENT_TEAM = BRD4WW9Y7C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MannaggTutt1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domenico1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -790,14 +798,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 574K56W88Q;
+				DEVELOPMENT_TEAM = BRD4WW9Y7C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MannaggTutt1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domenico1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
