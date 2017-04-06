@@ -14,26 +14,26 @@ import CryptoSwift
 import CoreData
 
 class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOutputObjectsDelegate{
-
+    
     private let pennyPincherGestureRecognizer = PennyPincherGestureRecognizer()
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var gestureLabel: UILabel!
-   
+    
     @IBOutlet var clearButton: UIButton!
     @IBOutlet var gestureView: GestureView!
     
     var template:PennyPincherTemplate!
-	
-	var QRCODEONLY = true
-	
+    
+    var QRCODEONLY = true
+    
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
     var gesture = [TemplateGesture]()
-	override func viewDidLoad() {
-		super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         gesture = PersistenceManager.fetchData()
         var y = [CGPoint]()
         for pointgesture in gesture{
@@ -41,81 +41,81 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         }
         template = PennyPincher.createTemplate("pass", points: y)!
         pennyPincherGestureRecognizer.templates.append(template)
-                // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
-
-		pennyPincherGestureRecognizer.enableMultipleStrokes = true
-		pennyPincherGestureRecognizer.allowedTimeBetweenMultipleStrokes = 0.2
-		pennyPincherGestureRecognizer.cancelsTouchesInView = false
-		pennyPincherGestureRecognizer.addTarget(self, action: #selector(didRecognize(_:)))
-		
-		gestureView.addGestureRecognizer(pennyPincherGestureRecognizer)
-		
-		if(QRCODEONLY){
-			let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
-			
-			do {
-				// Get an instance of the AVCaptureDeviceInput class using the previous device object.
-				let input = try AVCaptureDeviceInput(device: captureDevice)
-				
-				// Initialize the captureSession object.
-				captureSession = AVCaptureSession()
-				
-				// Set the input device on the capture session.
-				captureSession?.addInput(input)
-				
-			} catch {
-				// If any error occurs, simply print it out and don't continue any more.
-				print(error)
-				return
-			}
-			
-			
-			// Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
-			let captureMetadataOutput = AVCaptureMetadataOutput()
-			captureSession?.addOutput(captureMetadataOutput)
-			
-			// Set delegate and use the default dispatch queue to execute the call back
-			captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-			captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
-			
-			// Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
-			videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-			videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-			videoPreviewLayer?.frame = view.layer.bounds
-			view.layer.addSublayer(videoPreviewLayer!)
-			
-			// Start video capture.
-			captureSession?.startRunning()
-			
-			
-			// Move the message label and top bar to the front
-			view.bringSubview(toFront: messageLabel)
-			view.bringSubview(toFront: titleLabel)
-			view.bringSubview(toFront: gestureLabel)
-			view.bringSubview(toFront: clearButton)
-			view.bringSubview(toFront: gestureView)
-			
-			// Initialize QR Code Frame to highlight the QR code
-			qrCodeFrameView = UIView()
-			
-			if let qrCodeFrameView = qrCodeFrameView {
-				qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-				qrCodeFrameView.layer.borderWidth = 2
-				view.addSubview(qrCodeFrameView)
-				view.bringSubview(toFront: qrCodeFrameView)
-			}
-		}
-		
-	}
-
-
+        // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
+        
+        pennyPincherGestureRecognizer.enableMultipleStrokes = true
+        pennyPincherGestureRecognizer.allowedTimeBetweenMultipleStrokes = 0.2
+        pennyPincherGestureRecognizer.cancelsTouchesInView = false
+        pennyPincherGestureRecognizer.addTarget(self, action: #selector(didRecognize(_:)))
+        
+        gestureView.addGestureRecognizer(pennyPincherGestureRecognizer)
+        
+        if(QRCODEONLY){
+            let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+            
+            do {
+                // Get an instance of the AVCaptureDeviceInput class using the previous device object.
+                let input = try AVCaptureDeviceInput(device: captureDevice)
+                
+                // Initialize the captureSession object.
+                captureSession = AVCaptureSession()
+                
+                // Set the input device on the capture session.
+                captureSession?.addInput(input)
+                
+            } catch {
+                // If any error occurs, simply print it out and don't continue any more.
+                print(error)
+                return
+            }
+            
+            
+            // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
+            let captureMetadataOutput = AVCaptureMetadataOutput()
+            captureSession?.addOutput(captureMetadataOutput)
+            
+            // Set delegate and use the default dispatch queue to execute the call back
+            captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
+            
+            // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
+            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+            videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+            videoPreviewLayer?.frame = view.layer.bounds
+            view.layer.addSublayer(videoPreviewLayer!)
+            
+            // Start video capture.
+            captureSession?.startRunning()
+            
+            
+            // Move the message label and top bar to the front
+            view.bringSubview(toFront: messageLabel)
+            view.bringSubview(toFront: titleLabel)
+            view.bringSubview(toFront: gestureLabel)
+            view.bringSubview(toFront: clearButton)
+            view.bringSubview(toFront: gestureView)
+            
+            // Initialize QR Code Frame to highlight the QR code
+            qrCodeFrameView = UIView()
+            
+            if let qrCodeFrameView = qrCodeFrameView {
+                qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+                qrCodeFrameView.layer.borderWidth = 2
+                view.addSubview(qrCodeFrameView)
+                view.bringSubview(toFront: qrCodeFrameView)
+            }
+        }
+        
+    }
     
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
     
-
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
@@ -134,7 +134,24 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
+                let addActionSheet = UIAlertController.init(
+                    title: "Found Url. Open it?",
+                    message: metadataObj.stringValue,
+                    preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
+                
+                
+                addActionSheet.addAction(UIAlertAction.init(title: "No ", style: .cancel, handler: nil))
+                
+                
+                addActionSheet.addAction(UIAlertAction.init(title: "Yes ",style: .default,
+                                                            handler: {(action: UIAlertAction) in
+                                                                UIApplication.shared.open(URL(string: metadataObj.stringValue)!, options: [:], completionHandler: nil)           }))
+                
+                
+                
+                self.present(addActionSheet, animated: true, completion: nil)
+                
+                //messageLabel.text = metadataObj.stringValue
             }
         }
     }
@@ -145,7 +162,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         return true
     }
     
-        
+    
     func didRecognize(_ pennyPincherGestureRecognizer: PennyPincherGestureRecognizer) {
         switch pennyPincherGestureRecognizer.state {
         case .ended, .cancelled, .failed:
@@ -169,7 +186,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         }
     }
     
-
+    
     @IBAction func didTapClear(_ sender: Any) {
         gestureLabel.text = "Inserire la nuova gesture e premere add"
         for point in gesture{
@@ -180,7 +197,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         pennyPincherGestureRecognizer.templates.removeAll()
         gestureView.clear()
     }
-
+    
     func AuthenticateWithTouchID() {
         let context = LAContext()
         
@@ -220,7 +237,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
                             }
                             
                         } else {
-                           // self.notifyUser("Authentication Successful",err: "You now have full access")
+                            // self.notifyUser("Authentication Successful",err: "You now have full access")
                             self.performSegue(withIdentifier: "secretSegue", sender: nil)
                             
                         }
@@ -232,16 +249,19 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
                 
             case LAError.Code.touchIDNotEnrolled.rawValue:
                 notifyUser("TouchID is not enrolled",
-                           err: error?.localizedDescription)
+                           err: "If you want use this app, you need to set a touch id ")
+                
                 
             case LAError.Code.passcodeNotSet.rawValue:
                 notifyUser("A passcode has not been set",
-                           err: error?.localizedDescription)
-
+                           err: "If you want use this app, you need to set a touch id ")
+     
+                
+                
             default:
                 notifyUser("TouchID not available",
-                           err: error?.localizedDescription)
-
+                           err: "If you want use this app, you need to set a touch id ")
+                
             }
         }
     }
@@ -259,7 +279,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         self.present(alert, animated: true,
                      completion: nil)
     }
-
-
+    
+    
 }
 
