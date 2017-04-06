@@ -44,8 +44,8 @@ class MiniShowController: UIViewController {
                 current=current+1
                 lblSwipeLeft.isHidden=false
                 print("Now current is:\(current) ")
-                if(current>6){
-                    current=6
+                if(current>7){
+                    current=7
                     self.performSegue(withIdentifier: "finishTut", sender: nil)
                     
                 }else{
