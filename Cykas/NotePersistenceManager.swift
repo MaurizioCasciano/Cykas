@@ -49,7 +49,19 @@ class NotePersistenceManager {
         let context = getContext()
         context.delete(item)
     }
-    
+    static func deleteAllItem(){
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Notes")
+        
+        // Create Batch Delete Request
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try getContext().execute(batchDeleteRequest)
+            
+        } catch {
+            // Error Handling
+        }
+    }
     static func saveContext()
     {
         let context = getContext()
