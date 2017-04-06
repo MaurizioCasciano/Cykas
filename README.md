@@ -4,3 +4,4 @@
 
 ## Contributors
 * Maurizio Casciano
+* Domenico Antonio Tropeano
