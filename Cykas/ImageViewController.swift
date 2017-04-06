@@ -22,6 +22,8 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate {
         MediaPersistenceManager.saveContext()
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func Export(_ sender: Any) {
+    }
     
 	override func viewDidLoad() {
 		self.imageView.image = self.uiImage

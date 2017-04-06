@@ -16,11 +16,13 @@ import CoreData
 class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOutputObjectsDelegate{
 
     private let pennyPincherGestureRecognizer = PennyPincherGestureRecognizer()
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var messageLabel: UILabel!
-    @IBOutlet var gestureLabel: UILabel!
+   // @IBOutlet var titleLabel: UILabel!
+    //@IBOutlet var messageLabel: UILabel!
+    //@IBOutlet var gestureLabel: UILabel!
    
-    @IBOutlet var clearButton: UIButton!
+   // @IBOutlet var clearButton: UIButton!
+    @IBOutlet weak var labelQR: UILabel!
+    @IBOutlet weak var imgQR: UIImageView!
     @IBOutlet var gestureView: GestureView!
     
     var template:PennyPincherTemplate!
@@ -31,6 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
+    @IBOutlet weak var StackView: UIStackView!
     var gesture = [TemplateGesture]()
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -89,11 +92,14 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
 			
 			
 			// Move the message label and top bar to the front
-			view.bringSubview(toFront: messageLabel)
-			view.bringSubview(toFront: titleLabel)
-			view.bringSubview(toFront: gestureLabel)
-			view.bringSubview(toFront: clearButton)
+			//view.bringSubview(toFront: messageLabel)
+			//view.bringSubview(toFront: titleLabel)
+			//view.bringSubview(toFront: gestureLabel)
+			//view.bringSubview(toFront: clearButton)
+            view.bringSubview(toFront: labelQR)
+            view.bringSubview(toFront: imgQR)
 			view.bringSubview(toFront: gestureView)
+            view.bringSubview(toFront: StackView)
 			
 			// Initialize QR Code Frame to highlight the QR code
 			qrCodeFrameView = UIView()
@@ -121,7 +127,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            messageLabel.text = "No QR code is detected"
+            //messageLabel.text = "No QR code is detected"
             return
         }
         
@@ -134,7 +140,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
+              //  messageLabel.text = metadataObj.stringValue
             }
         }
     }
@@ -158,12 +164,12 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     private func updateRecognizerResult() {
         print("update recognizer")
         guard let (template, similarity) = pennyPincherGestureRecognizer.result else {
-            gestureLabel.text = "Could not recognize."
+          //  gestureLabel.text = "Could not recognize."
             return
         }
         
         let similarityString = String(format: "%.2f", similarity)
-        gestureLabel.text = "Template: \(template.id), Similarity: \(similarityString)"
+        //gestureLabel.text = "Template: \(template.id), Similarity: \(similarityString)"
         if(Double(similarityString)!>8.0){
             AuthenticateWithTouchID()
         }
@@ -171,7 +177,7 @@ class ViewController: UIViewController, UITextFieldDelegate,AVCaptureMetadataOut
     
 
     @IBAction func didTapClear(_ sender: Any) {
-        gestureLabel.text = "Inserire la nuova gesture e premere add"
+      //  gestureLabel.text = "Inserire la nuova gesture e premere add"
         for point in gesture{
             PersistenceManager.deleteItem(item: point)
         }
