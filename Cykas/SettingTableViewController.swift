@@ -13,10 +13,29 @@ class SettingTableViewController: UITableViewController {
     var imgs = [UIImage]()
     var items = [Notes]()
     var images = [Media]()
+    let msg = NSLocalizedString("Change Gesture", comment: "Change Gesture")
+    let msg1 = NSLocalizedString("Delete All", comment: "Delete All")
+    let msg2 = NSLocalizedString("Cancel ", comment: "Cancel ")
+    let msg3 = NSLocalizedString("Yes ", comment: "Yes ")
+    let msg4 = NSLocalizedString("Files delete with successfull", comment: "Files delete with successfull")
+    let msg5 = NSLocalizedString("Success", comment: "Success")
+    
+    let msg6 = NSLocalizedString("Elimina Files", comment: "Elimina Files")
+    
+    let msg7 = NSLocalizedString("Vuoi eliminare tutti i files ?", comment: "Vuoi eliminare tutti i files ?")
+    
+    
+    
+
+    
+
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        labels.append("Change Gesture")
-        labels.append("Delete All")
+        labels.append(msg)
+        labels.append(msg1)
         imgs.append(#imageLiteral(resourceName: "t1"))
         imgs.append(#imageLiteral(resourceName: "tresh"))
         items =  NotePersistenceManager.fetchData()
@@ -57,28 +76,28 @@ class SettingTableViewController: UITableViewController {
       
         if segue.identifier == "inserisciGesture"{
             let currentrow = tableView.indexPathForSelectedRow?.row
-            let currentlabel = labels[currentrow!]
-            if(currentlabel == "Elimina Tutto"){
+            let img = imgs[currentrow!]
+            if(img == imgs[1]){
                 let addActionSheet = UIAlertController.init(
-                    title: "Elimina Files",
-                    message: "Vuoi eliminare tutti i files ?",
+                    title: msg6,
+                    message: msg7,
                     preferredStyle: UIAlertControllerStyle.init(rawValue: 1)!)
                 
                 
-                addActionSheet.addAction(UIAlertAction.init(title: "Cancel ", style: .cancel, handler: nil))
+                addActionSheet.addAction(UIAlertAction.init(title: msg2, style: .cancel, handler: nil))
                 
                 
-                addActionSheet.addAction(UIAlertAction.init(title: "Yes ",style: .default,
+                addActionSheet.addAction(UIAlertAction.init(title: msg3,style: .default,
                                                             handler: {(action: UIAlertAction) in self.DeleteAllFiles()}))
                 
                 
                 
                 self.present(addActionSheet, animated: true, completion: nil)
             }
-            else if(currentlabel == "Cambia Gesture"){
+            else if(img == imgs[0]){
                 let nextdestination = segue.destination as! TutorialViewController
-                nextdestination.nav = self.navigationController!
                 nextdestination.flag=true
+                
             }
         }
     }
@@ -86,7 +105,7 @@ class SettingTableViewController: UITableViewController {
         func DeleteAllFiles(){
             NotePersistenceManager.deleteAllItem()
             MediaPersistenceManager.deleteAllItem()
-            exit(0)
+            self.alert(message: msg4 , title:msg5 )
         }
     /*
     // Override to support conditional editing of the table view.
