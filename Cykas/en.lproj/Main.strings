@@ -1,0 +1,78 @@
+
+/* Class = "UITabBarItem"; title = "Exit"; ObjectID = "2AT-2f-EYL"; */
+"2AT-2f-EYL.title" = "Exit";
+
+/* Class = "UITableViewController"; title = "Notes"; ObjectID = "6Ff-WW-Bmf"; */
+"6Ff-WW-Bmf.title" = "Notes";
+
+/* Class = "UIViewController"; title = "InitView"; ObjectID = "8hl-TZ-9Ik"; */
+"8hl-TZ-9Ik.title" = "InitView";
+
+/* Class = "UIViewController"; title = "QRView"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "QRView";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "D6x-5I-7SI"; */
+"D6x-5I-7SI.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Archive"; ObjectID = "Itr-Fb-xEQ"; */
+"Itr-Fb-xEQ.title" = "Archive";
+
+/* Class = "UIViewController"; title = "Inserisci Gesture"; ObjectID = "L3a-i5-5Kv"; */
+"L3a-i5-5Kv.title" = "Inserisci Gesture";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Lza-yi-MDy"; */
+"Lza-yi-MDy.text" = "Label";
+
+/* Class = "UILabel"; text = "QRCode Reader"; ObjectID = "Pbd-2m-j3K"; */
+"Pbd-2m-j3K.text" = "QRCode Reader";
+
+/* Class = "UILabel"; text = "QRCode Reader"; ObjectID = "TdY-Z8-Gry"; */
+"TdY-Z8-Gry.text" = "QRCode Reader";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "VK0-qs-sqe"; */
+"VK0-qs-sqe.title" = "Title";
+
+/* Class = "UINavigationItem"; title = "Archive"; ObjectID = "W13-4p-rzP"; */
+"W13-4p-rzP.title" = "Archive";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Wnh-AB-7ec"; */
+"Wnh-AB-7ec.text" = "Label";
+
+/* Class = "UILabel"; text = "Date Created"; ObjectID = "Yoe-wK-8ms"; */
+"Yoe-wK-8ms.text" = "Date Created";
+
+/* Class = "UITabBarItem"; title = "Notes"; ObjectID = "Ytc-M7-3y3"; */
+"Ytc-M7-3y3.title" = "Notes";
+
+/* Class = "UIButton"; normalTitle = ">"; ObjectID = "Zvt-J9-6ft"; */
+"Zvt-J9-6ft.normalTitle" = ">";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "cRd-Z8-J0C"; */
+"cRd-Z8-J0C.title" = "Settings";
+
+/* Class = "UILabel"; text = "<"; ObjectID = "dns-0P-LMB"; */
+"dns-0P-LMB.text" = "<";
+
+/* Class = "UINavigationItem"; title = "Notes"; ObjectID = "hM8-2u-mfO"; */
+"hM8-2u-mfO.title" = "Notes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kIR-YF-4do"; */
+"kIR-YF-4do.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Setting"; ObjectID = "mPm-B7-yNt"; */
+"mPm-B7-yNt.title" = "Setting";
+
+/* Class = "UILabel"; text = "Note "; ObjectID = "nUx-HH-pYG"; */
+"nUx-HH-pYG.text" = "Note ";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "pEA-iP-6yc"; */
+"pEA-iP-6yc.text" = ">";
+
+/* Class = "UIButton"; normalTitle = "Export"; ObjectID = "txm-wk-fyC"; */
+"txm-wk-fyC.normalTitle" = "Export";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "veQ-EO-ssB"; */
+"veQ-EO-ssB.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Delete Image"; ObjectID = "yhe-cP-0hk"; */
+"yhe-cP-0hk.normalTitle" = "Delete Image";

@@ -99,6 +99,7 @@
 		D87289421E94EFF600F35F9D /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87289401E94EFF600F35F9D /* Notes+CoreDataProperties.swift */; };
 		FA3DC3A61E94D9A3001A060A /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */; };
 		FA3DC3A81E94FD94001A060A /* ChangeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */; };
+		FA72BEAC1E9783BA00F6475F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA72BEAE1E9783BA00F6475F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,9 @@
 		D87289401E94EFF600F35F9D /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FA3DC3A51E94D9A3001A060A /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		FA3DC3A71E94FD94001A060A /* ChangeGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeGestureViewController.swift; sourceTree = "<group>"; };
+		FA72BEAD1E9783BA00F6475F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA72BEAF1E9783BC00F6475F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA8B85FE1E977D9A00083238 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +310,7 @@
 				C36B95591E9237A7000F432B /* PersistenceManager.swift */,
 				13DC5AC61E8BC7AF00EBC24F /* LaunchScreen.storyboard */,
 				13DC5AC91E8BC7AF00EBC24F /* Info.plist */,
+				FA72BEAE1E9783BA00F6475F /* Localizable.strings */,
 				13DC5AC11E8BC7AF00EBC24F /* Cykas.xcdatamodeld */,
 				9D2E54311E8D053400406718 /* GestureView.swift */,
 				D868D2A51E93E76300DEFEE9 /* NotePersistenceManager.swift */,
@@ -482,7 +487,7 @@
 				TargetAttributes = {
 					13DC5AB61E8BC7AF00EBC24F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BRD4WW9Y7C;
+						DevelopmentTeam = 574K56W88Q;
 						ProvisioningStyle = Automatic;
 					};
 					13DC5ACD1E8BC7AF00EBC24F = {
@@ -506,6 +511,7 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = 13DC5AAE1E8BC7AF00EBC24F;
 			productRefGroup = 13DC5AB81E8BC7AF00EBC24F /* Products */;
@@ -558,6 +564,7 @@
 				9D9295121E951A8F003211CF /* File24.gif in Resources */,
 				9D92951E1E951A8F003211CF /* File36.gif in Resources */,
 				9D9295031E951A8F003211CF /* File9.gif in Resources */,
+				FA72BEAC1E9783BA00F6475F /* Localizable.strings in Resources */,
 				13DC5AC01E8BC7AF00EBC24F /* Main.storyboard in Resources */,
 				9DF4D8591E96D34E00C12D6A /* tut2.jpg in Resources */,
 				9D9295171E951A8F003211CF /* File29.gif in Resources */,
@@ -673,6 +680,7 @@
 				13DC5ABF1E8BC7AF00EBC24F /* Base */,
 				135471241E95657000C5253F /* it */,
 				135471261E95675C00C5253F /* en-GB */,
+				FA8B85FE1E977D9A00083238 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -685,6 +693,15 @@
 				135471271E95675C00C5253F /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FA72BEAE1E9783BA00F6475F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA72BEAD1E9783BA00F6475F /* en */,
+				FA72BEAF1E9783BC00F6475F /* it */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -789,14 +806,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = 574K56W88Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toniCors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -806,14 +823,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BRD4WW9Y7C;
+				DEVELOPMENT_TEAM = 574K56W88Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Cykas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.domenico1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.toniCors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
