@@ -5,3 +5,6 @@
 ## Contributors
 * Maurizio Casciano
 * Domenico Antonio Tropeano
+* Antonio Alberini
+* Antonio Corsuto
+* Marco Feoli
